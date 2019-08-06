@@ -61,27 +61,24 @@
 	
 	\title{Robust Game-Theoretic Decision-Making for Autonomous Vehicles}
 	
-	\maketitle
-	\thispagestyle{empty}
-	\pagestyle{empty}
-
 	%% Group authors per affiliation:
 	\author{
-		Gokul S.~Sankar,  Kyoungseok Han and Ilya Kolmanovsky% <-this % stops a space 
+		Gokul S.~Sankar,  Kyoungseok Han and Ilya Kolmanovsky% <-this % stops a space
 		\thanks{Gokul~S.~Sankar,  Kyoungseok Han and Ilya Kolmanovsky are with the Department of Aerospace Engineering, University of Michigan, Ann Arbor, MI, USA. Emails: {\tt\small ggowrisa@umich.edu} (G.~Sankar), 
 			{\tt\small kyoungsh@umich.edu} (K.~Han) and  {\tt\small ilya@umich.edu} (I.~Kolmanovsky) }%
 	}
-	%==========================================================================%
 	
+	
+	%============================================================================================%
+	
+	\maketitle
+	\thispagestyle{empty}
+	\pagestyle{empty}
 	
 	
 	\begin{abstract}
 		
 	\end{abstract}
-	
-	
-
-	%==========================================================================%
 	
 	\section{Introduction}
 	\label{sec:intro}
@@ -101,13 +98,9 @@
 	
 	\textcolor{red}{red: not super-clear}, \textcolor{blue}{blue: added or modified.}
 	
-
-
 	\subsection{Notation}
 
 
-
-	%==========================================================================%
 
 	\section{Probelm statement}
 	\label{sec:problem_statement}
@@ -172,37 +165,38 @@
 			\node[above left = 1.15cm and -7.5cm of blue,]{B};
 			
 			\end{tikzpicture}
-			\par
-		\end{centering}
-	\protect\caption{Possible lane changing sequences; ``aggressive motion planning"= \{(A,A1),\,(A1,B1),\,(B1,B)\}, ``balanced motion planning"=$\{\left(A,A2\right),\,\left(A2,B2\right),\,\left(B2,B\right)\}$ and ``conservative motion planning"=$\left\{\left(A,A3\right),\,\left(A3,B3\right),\,\left(B3,B\right)\right\}$ that can be chosen by the autonomous vehicle (blue) based on the motion of other non-autonomous vehicles (red).}
-	\label{fig:lane_changing}
+			\par\end{centering}
+		\protect\caption{Possible lane changing sequences; ``aggressive motion planning"= \{(A,A1),\,(A1,B1),\,(B1,B)\}, ``balanced motion planning"=$\{\left(A,A2\right),\,\left(A2,B2\right),\,\left(B2,B\right)\}$ and ``conservative motion planning"=$\left\{\left(A,A3\right),\,\left(A3,B3\right),\,\left(B3,B\right)\right\}$ that can be chosen by the autonomous vehicle (blue) based on the motion of other non-autonomous vehicles (red).}
+		\label{fig:lane_changing}
 	\end{figure}
 	
 	
-	%==========================================================================%
+
 
 	\section{Vehicle dynamic model}
 	\label{sec:model}
 
-	The  vehicle dynamics are represented by the following discrete model \cite{Kong2015}
+The  vehicle dynamics are represented by the following discrete model \cite{Kong2015}
 
-	\begin{subequations}
-		\begin{align}
-			x\left(t+1\right) & = 	x\left(t\right) + v\left(t\right) \cos\left(\psi \left(t\right) + \beta \left(t\right) \right) \Delta t + w_x\left(t\right)\\ 
-			y\left(t+1\right) & = 	y\left(t\right) + v\left(t\right) \sin\left(\psi \left(t\right) + \beta \left(t\right) \right) \Delta t + w_y\left(t\right) \\ 
-			\psi\left(t+1\right) & = 	\psi\left(t\right) + \frac{v\left(t\right)}{l_r} \sin\left( \beta \left(t\right) \right) \Delta t \\ 
-			v\left(t+1\right) & = 	v\left(t\right) + a\left(t\right)  \Delta t\\
-			\beta\left(t\right) & = \arctan\left(\frac{l_r}{l_r+l_f}\tan\left(\delta_f\left(t\right)\right)\right),
-		\end{align}
-	\label{eq:mod}
-	\end{subequations}
+\begin{subequations}
+\begin{align}
+x\left(t+1\right) & = 	x\left(t\right) + v\left(t\right) \cos\left(\psi \left(t\right) + \beta \left(t\right) \right) \Delta t + w_x\left(t\right)\\ 
+y\left(t+1\right) & = 	y\left(t\right) + v\left(t\right) \sin\left(\psi \left(t\right) + \beta \left(t\right) \right) \Delta t + w_y\left(t\right) \\ 
+\psi\left(t+1\right) & = 	\psi\left(t\right) + \frac{v\left(t\right)}{l_r} \sin\left( \beta \left(t\right) \right) \Delta t \\ 
+v\left(t+1\right) & = 	v\left(t\right) + a\left(t\right)  \Delta t\\
+\beta\left(t\right) & = \arctan\left(\frac{l_r}{l_r+l_f}\tan\left(\delta_f\left(t\right)\right)\right),
+\end{align}
+\label{eq:mod}
+\end{subequations}
 
 
-	\noindent where  $t$ denotes the discrete time instant; the pair $\left(x\left(t\right),\,y\left(t\right)\right)$  represent the global position of the center of mass of the vehicle; the vehicle's speed is denoted by $v\left(t\right)$; 	$\beta\left(t\right)$ is the angle of $v\left(t\right)$ with respect to the longitudinal axis of the vehicle; $\psi\left(t\right)$ denotes the vehicle’s yaw angle (the angle between the vehicle’s heading direction and the global x-direction); $a\left(t\right)$ denotes the vehicle’s acceleration at time $t$;  $\Delta t$ denotes the time step size; $\delta_f\left(t\right)$  represents the front steering angle; and  $l_f$  and $l_r$  are the distance of the center of the mass of the vehicle to the front and rear axles, respectively; $w_x\left(t\right)$  and $w_x\left(t\right)$ denote the uncertainty in the position of the center of mass, respectively. It is assumed the uncertainties originate from a closed and compact disturbance set, ${\mathcal{W}} \coloneqq  \left\{ w = \left(w_x,\,w_y\right) |\zeta w\leq\theta,\,\zeta\in\mathbb{R}^{a\times 2},\,\theta\in\mathbb{R}^{b}\right\}$, with $b \in 2\mathbb{Z}^{+}$. The disturbance set is assumed to contain the origin. Furthermore, it is assumed that the rear wheels cannot be steered. Therefore, the control input to the model \eqref{eq:mod}, represented by $\gamma\left(t\right) = \left(a\left(t\right),\, \delta_f\left(t\right)\right)$, is the acceleration and front steering angle pair. 
+\noindent where  $t$ denotes the discrete time instant; the pair $\left(x\left(t\right),\,y\left(t\right)\right)$  represent the global position of the center of mass of the vehicle; the vehicle's speed is denoted by $v\left(t\right)$; 	$\beta\left(t\right)$ is the angle of $v\left(t\right)$ with respect to the longitudinal axis of the vehicle; $\psi\left(t\right)$ denotes the vehicle’s yaw angle (the angle between the vehicle’s heading direction and the global x-direction); $a\left(t\right)$ denotes the vehicle’s acceleration at time $t$;  $\Delta t$ denotes the time step size; $\delta_f\left(t\right)$  represents the front steering angle; and  $l_f$  and $l_r$  are the distance of the center of the mass of the vehicle to the front and rear axles, respectively; $w_x\left(t\right)$  and $w_x\left(t\right)$ denote the uncertainty in the position of the center of mass, respectively. It is assumed the uncertainties originate from a closed and compact disturbance set, ${\mathcal{W}} \coloneqq  \left\{ w = \left(w_x,\,w_y\right) |\zeta w\leq\theta,\,\zeta\in\mathbb{R}^{a\times 2},\,\theta\in\mathbb{R}^{b}\right\}$, with $b \in 2\mathbb{Z}^{+}$. The disturbance set is assumed to contain the origin. Furthermore, it is assumed that the rear wheels cannot be steered. Therefore, the control input to the model \eqref{eq:mod}, represented by $\gamma\left(t\right) = \left(a\left(t\right),\, \delta_f\left(t\right)\right)$, is the acceleration and front steering angle pair. 
 
 	
-	%==========================================================================%
-
+	
+	\noindent where  $t$ denotes the discrete time instant; the pair $\left(x_t,\,y_t\right)$  represent the global position of the center of mass of the vehicle; the vehicle's speed is denoted by $v_t$; $\beta_t$ is the angle of $v_t$ with respect to the longitudinal axis of the vehicle; $\psi_t$ denotes the vehicle’s yaw angle (the angle between the vehicle’s heading direction and the global x-direction); $a_t$ denotes the vehicle’s acceleration at time $t$;  $\Delta t$ denotes the time step size; $\delta_f$  represents the front steering angle; and  $l_f$  and $l_r$  are the distance of the center of the mass of the vehicle to the front and rear axles, respectively; $w^x_t$  and $w^y_t$ denote the uncertainty in the position of the center of mass, respectively. It is assumed the uncertainties originate from a closed and compact disturbance set, \textcolor{red}{ ${\mathcal{W}} \coloneqq  \left\{ w = \left(w^x,\,w^y\right) |\zeta w\leq\theta,\,\zeta\in\mathbb{R}^{a\times 2},\,\theta\in\mathbb{R}^{b}\right\}$, with $b \in 2\mathbb{Z}^{+}$ }. The disturbance set is assumed to contain the origin. Furthermore, it is assumed that the rear wheels cannot be steered. The control input to the model \eqref{eq:mod} at time step $t$, represented by $\gamma = \left(a ,\, \delta_f \right)$, is the acceleration [$\text{m/s}^2$] and front steering angle [rad] pair. 
+	
+	
 	
 	\section{Game-theoretic decision making}
 	\label{sec:controller}
@@ -212,7 +206,6 @@
 	
 	
 	\subsection{Action choice}
-	\label{sec:action_choice}
 	
 	The decision making process of the vehicle in choosing the optimal input pair follows a receding horizon strategy. A sequence of actions, $\boldsymbol{\gamma^{t}} = \left\{\gamma_{t},\,\gamma_{t+1},\,\cdots,\,\gamma_{t+N-1}\right\}$, is chosen that maximizes a cumulative reward given by
 	
@@ -341,8 +334,6 @@
 	\end{align}
 	
 	
-
-	%==========================================================================%
 	
 	\section{Simulation results}
 	\label{sec:sim_results}
@@ -403,19 +394,15 @@
 	\end{figure*}
 	
 	
-	%==========================================================================%
+	
 	
 	\section{Conclusions}
 	\label{sec:conclusions}
 	
-
-	%==========================================================================%
-
 	\section*{Acknowledgement}
 	We would like to express out appreciation to the Nan Li who provided expertise that greatly assisted the research and it should be noted that the code publicly available (\url{https://github.com/gokulsivasankar/RobustDecisionMaking}) is based on his previous study \cite{Li2018}.
 
 
-	%==========================================================================%
 
 	\bibliographystyle{ieeetr}
 	\bibliography{Reference}
