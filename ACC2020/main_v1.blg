@@ -3,47 +3,57 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main_v1.aux
 The style file: ieeetr.bst
 Database file #1: Reference.bib
-Name 1 in "Jin I. Ge, Bastian Schurmann, Richard M. Murray, and Matthias Althoff" has a comma at the end for entry Jinge
-while executing---line 969 of file ieeetr.bst
-You've used 12 entries,
+Warning--I didn't find a database entry for "okuda2014survey"
+Warning--I didn't find a database entry for "lazar2018maximizing"
+Warning--I didn't find a database entry for "griffiths2015rational"
+Warning--I didn't find a database entry for "claussmann2015path"
+Warning--I didn't find a database entry for "brechtel2014probabilistic"
+Warning--I didn't find a database entry for "sadigh2016planning"
+Warning--I didn't find a database entry for "stahl1993evolution"
+Warning--I didn't find a database entry for "li2017game"
+Warning--I didn't find a database entry for "li2018game"
+Warning--I didn't find a database entry for "tian2018adaptive"
+Warning--I didn't find a database entry for "Jinge"
+Warning--I didn't find a database entry for "kong2015kinematic"
+You've used 0 entries,
             1876 wiz_defined-function locations,
-            548 strings with 6171 characters,
-and the built_in function-call counts, 4244 in all, are:
-= -- 423
-> -- 152
+            490 strings with 3670 characters,
+and the built_in function-call counts, 20 in all, are:
+= -- 0
+> -- 0
 < -- 0
-+ -- 55
-- -- 43
-* -- 300
-:= -- 562
-add.period$ -- 12
-call.type$ -- 12
-change.case$ -- 12
++ -- 0
+- -- 0
+* -- 2
+:= -- 9
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 231
-empty$ -- 411
-format.name$ -- 43
-if$ -- 1042
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 12
-newline$ -- 39
-num.names$ -- 12
-pop$ -- 57
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 165
+skip$ -- 1
 stack$ -- 0
-substring$ -- 352
-swap$ -- 100
+substring$ -- 0
+swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 45
-width$ -- 14
-write$ -- 125
-(There was 1 error message)
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There were 12 warnings)

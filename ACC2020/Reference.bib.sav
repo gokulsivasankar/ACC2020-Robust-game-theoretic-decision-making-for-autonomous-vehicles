@@ -1,0 +1,117 @@
+% Encoding: UTF-8
+
+@InProceedings{Okuda2014,
+  author       = {Okuda, Ryosuke and Kajiwara, Yuki and Terashima, Kazuaki},
+  title        = {A survey of technical trend of ADAS and autonomous driving},
+  booktitle    = {Technical Papers of 2014 International Symposium on VLSI Design, Automation and Test},
+  year         = {2014},
+  pages        = {1--4},
+  organization = {IEEE},
+}
+
+@InProceedings{Lazar2018,
+  author       = {Lazar, Daniel A and Pedarsani, Ramtin and Chandrasekher, Kabir and Sadigh, Dorsa},
+  title        = {Maximizing road capacity using cars that influence people},
+  booktitle    = {2018 IEEE Conference on Decision and Control (CDC)},
+  year         = {2018},
+  pages        = {1801--1808},
+  organization = {IEEE},
+}
+
+@Article{Griffiths2015,
+  author    = {Griffiths, Thomas L and Lieder, Falk and Goodman, Noah D},
+  title     = {Rational use of cognitive resources: Levels of analysis between the computational and the algorithmic},
+  journal   = {Topics in cognitive science},
+  year      = {2015},
+  volume    = {7},
+  number    = {2},
+  pages     = {217--229},
+  publisher = {Wiley Online Library},
+}
+
+@InProceedings{Claussmann2015,
+  author       = {Claussmann, Laur{\`e}ne and Carvalho, Ashwin and Schildbach, Georg},
+  title        = {A path planner for autonomous driving on highways using a human mimicry approach with binary decision diagrams},
+  booktitle    = {2015 European Control Conference (ECC)},
+  year         = {2015},
+  pages        = {2976--2982},
+  organization = {IEEE},
+}
+
+@InProceedings{Brechtel2014,
+  author       = {Brechtel, Sebastian and Gindele, Tobias and Dillmann, R{\"u}diger},
+  title        = {Probabilistic decision-making under uncertainty for autonomous driving using continuous POMDPs},
+  booktitle    = {17th International IEEE Conference on Intelligent Transportation Systems (ITSC)},
+  year         = {2014},
+  pages        = {392--399},
+  organization = {IEEE},
+}
+
+@InProceedings{Sadigh2016,
+  author       = {Sadigh, Dorsa and Sastry, Shankar and Seshia, Sanjit A and Dragan, Anca D},
+  title        = {Planning for autonomous cars that leverage effects on human actions.},
+  booktitle    = {Robotics: Science and Systems},
+  year         = {2016},
+  volume       = {2},
+  organization = {Ann Arbor, MI, USA},
+}
+
+@InProceedings{Kong2015,
+  author       = {Kong, Jason and Pfeiffer, Mark and Schildbach, Georg and Borrelli, Francesco},
+  title        = {Kinematic and dynamic vehicle models for autonomous driving control design},
+  booktitle    = {2015 IEEE Intelligent Vehicles Symposium (IV)},
+  year         = {2015},
+  pages        = {1094--1099},
+  organization = {IEEE},
+}
+
+@Article{Stahl1993,
+  author    = {Stahl, Dale O},
+  title     = {Evolution of smartn players},
+  journal   = {Games and Economic Behavior},
+  year      = {1993},
+  volume    = {5},
+  number    = {4},
+  pages     = {604--617},
+  publisher = {Elsevier},
+}
+
+@Article{Li2017,
+  author    = {Li, Nan and Oyler, Dave W and Zhang, Mengxuan and Yildiz, Yildiray and Kolmanovsky, Ilya and Girard, Anouck R},
+  title     = {Game theoretic modeling of driver and vehicle interactions for verification and validation of autonomous vehicle control systems},
+  journal   = {IEEE Transactions on control systems technology},
+  year      = {2017},
+  volume    = {26},
+  number    = {5},
+  pages     = {1782--1797},
+  publisher = {IEEE},
+}
+
+@InProceedings{Li2018,
+  author       = {Li, Nan and Kolmanovsky, Ilya and Girard, Anouck and Yildiz, Yildiray},
+  title        = {Game theoretic modeling of vehicle interactions at unsignalized intersections and application to autonomous vehicle control},
+  booktitle    = {2018 Annual American Control Conference (ACC)},
+  year         = {2018},
+  pages        = {3215--3220},
+  organization = {IEEE},
+}
+
+@InProceedings{Tian2018,
+  author       = {Tian, Ran and Li, Sisi and Li, Nan and Kolmanovsky, Ilya and Girard, Anouck and Yildiz, Yildiray},
+  title        = {Adaptive game-theoretic decision making for autonomous vehicle control at roundabouts},
+  booktitle    = {2018 IEEE Conference on Decision and Control (CDC)},
+  year         = {2018},
+  pages        = {321--326},
+  organization = {IEEE},
+}
+
+@InProceedings{JinI.Ge2019,
+  author       = {Jin I. Ge, Bastian Schurmann, Richard M. Murray, and Matthias Althoff},
+  title        = {Risk-aware motion planning for automated vehicle among human-driven cars},
+  booktitle    = {2019 American Control Conference (ACC)},
+  year         = {2019},
+  pages        = {--},
+  organization = {IEEE},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
