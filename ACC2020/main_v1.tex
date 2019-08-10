@@ -288,7 +288,7 @@
  	
  	 We use a game theoretic model for this prediction.
  	
- 	Numerous experimental results from psychology, cognitive science, and economics have suggested a hierarchical struc- ture in human reasoning in games, see [13], [14], [15], [16]. The study of this reasoning hierarchy and its applications in game theoretic settings are addressed by the “level-k game theory.” In [5], [6], [17], the level-k game theory is exploited to model vehicle interactions in highway traffic. The model has been compared to human traffic data in [6]. In this paper, we also exploit level-k game theory to model vehicle interactions, in particular, at intersections. Recently, level-k modeling of human agents was also considered in aerospace and energy applications [18], [19], [20], where human-to- human and human-to-automation interactions play a central role.
+ 	Numerous experimental results from psychology, cognitive science, and economics have suggested a hierarchical structure in human reasoning in games, see [13], [14], [15], [16]. The study of this reasoning hierarchy and its applications in game theoretic settings are addressed by the “level-k game theory.” In [5], [6], [17], the level-k game theory is exploited to model vehicle interactions in highway traffic. The model has been compared to human traffic data in [6]. In this paper, we also exploit level-k game theory to model vehicle interactions, in particular, at intersections. Recently, level-k modeling of human agents was also considered in aerospace and energy applications [18], [19], [20], where human-to- human and human-to-automation interactions play a central role.
  	
  	
 	 The model is premised on the idea that strategic agents (drivers/vehicles at an intersection, in our setting) have different reasoning levels. In particular, the level k indicates an agent’s reasoning depth. The reasoning hierarchy starts from level-0. A level-0 agent makes instinctive decisions to pursue its goal without considering the interactions between itself and the others. On the contrary, a level-1 agent takes into account such interactions in its decision making process, in particular, by assuming that all the other agents in the game are level-0. Specifically, a level-1 agent assumes that all the other agents are level-0 so they make instinctive decisions; the level-1 agent predicts their actions as well as the evolutions of the game resulting from their actions based on this assumption; the level-1 agent then makes its own decision as the best response to such evolutions to pursue its own goal. Similarly, a level-k agent assumes that all the other agents are level-(k-1), makes predictions based on this assumption, and responds accordingly.
@@ -338,7 +338,12 @@
 	
 	\section{Simulation results}
 	\label{sec:sim_results}
-	The effectiveness of the proposed approach is confirmed through the case studies. Starting from the same initial conditions, 
+	The effectiveness of the proposed approach is verified through the case studies. Starting from the same initial conditions, the AV (blue car) switches to the left lane and the HVs (red cars) keep the lane as illustrated in Fig.~\ref{snapshots}. We specify the level-1 decision making strategy to all HVs. That is, cautious drivers are assumed, but unknown to AV. 
+	
+	The five panels on the left in Fig.~\ref{snapshots}(a) shows the behavior of each vehicle at 1 second intervals when the AV changes the lane aggressively. The uncertainty size from the perspective of AV is illustrated by red dashed line. In this case study, there is almost no safety margin as the AV takes an aggressive lane change strategy. As a result, the left steering input is initiated as soon as the simulation begins and lane change occurs between 60m and 70m. Looking more closely, due to the close distance between AV, the HV slightly moves to left at time $t=2 and 3$. It is possible to avoid collision because HV is cautious driver, but collision may happen if there is aggressive driver. This aggressive strategy should not be adopted because a certain degree of conservatism is preferred rather than car crashes.
+	
+	We next describe the 
+	
 	\begin{figure*}
 		\begin{centering}
 			\begin{tikzpicture}[scale=0.4,transform shape]
