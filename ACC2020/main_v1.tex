@@ -267,14 +267,25 @@
 	 	where the reference velocity is typically chosen as the legislated speed limit.
 	 \end{itemize}
  
+
+
  
  	\subsection{Level-k framework}
- 	\label{sec:level_k}
- 	
- 	
- 	
- 	
- 	The state of the traffic, $s_{t+j}$, at prediction steps $j=0,\,1,\,\cdots,\,N-1$ have to be known to compute the cumulative reward in \eqref{eq:cum_reward}.
+	 \label{sec:level_k}
+
+	 In a multi-agent traffic scenario, the interactive nature of the decision making process is captured by the features defined in the previous subsection. 
+	 
+	 features of the reward function take into account the states of the other agents in the 
+	 
+	 
+	 
+	 Based on the definitions of the features, the rewards of a vehicle not only depend on its own states and actions, but also depend on the states and actions of its opponent vehicle . Such an interdependence reflects the interactive nature of vehicle decision making in a multi- vehicle traffic scenario. 
+
+
+	 
+	 To compute the cumulative reward in \eqref{eq:cum_reward}, the state of the traffic, $s_{t+j}$, at prediction steps $j=0,\,1,\,\cdots,\,N-1$, are predicted using level-k game theoretic model.
+	 
+	 have to be known to compute the . 
  	
  	
  	, where 
@@ -338,11 +349,11 @@
 	
 	\section{Simulation results}
 	\label{sec:sim_results}
-	The effectiveness of the proposed approach is verified through the case studies. Starting from the same initial conditions, the AV (blue car) switches to the left lane and the HVs (red cars) keep the lane as illustrated in Fig.~\ref{snapshots}. We specify the level-1 decision making strategy to all HVs. That is, cautious drivers are assumed, but unknown to AV. 
+	The effectiveness of the proposed approach is verified through the case studies. Starting from the same initial conditions, the AV (blue car) switches to the left lane and the HVs (red cars) keep the lane as illustrated in Fig.~\ref{fig:snapshots}. We specify the level-1 decision making strategy to all HVs. That is, cautious drivers are assumed, but unknown to AV. 
 	
-	The five panels on the left in Fig.~\ref{snapshots}(a) shows the behavior of each vehicle at 1 second intervals when the AV changes the lane aggressively. The uncertainty size from the perspective of AV is illustrated by red dashed line. In this case study, there is almost no safety margin as the AV takes an aggressive lane change strategy. As a result, the left steering input is initiated as soon as the simulation begins and lane change occurs between 60m and 70m. Looking more closely, due to the close distance between AV, the HV slightly moves to left at time $t=2s \text{ and } 3s$. It is possible to avoid collision because HV is cautious driver, but collision may happen if there is aggressive driver. This aggressive strategy should not be adopted because a certain degree of conservatism is preferred rather than car crashes.
+	The five panels on the left in Fig.~\ref{fig:snapshots}(a) shows the behavior of each vehicle at 1 second intervals when the AV changes the lane aggressively. The uncertainty size from the perspective of AV is illustrated by red dashed line. In this case study, there is almost no safety margin as the AV takes an aggressive lane change strategy. As a result, the left steering input is initiated as soon as the simulation begins and lane change occurs between 60m and 70m. Looking more closely, due to the close distance between AV, the HV slightly moves to left at time $t=2s \text{ and } 3s$. It is possible to avoid collision because HV is cautious driver, but collision may happen if there is aggressive driver. This aggressive strategy should not be adopted because a certain degree of conservatism is preferred rather than car crashes.
 	
-	We next illustrate the results when adopting the conservative lane change strategy as shown in Fig.~\ref{snapshots}(c). Unlike the previous case, the large uncertainty 
+	We next illustrate the results when adopting the conservative lane change strategy as shown in Fig.~\ref{fig:snapshots}(c). Unlike the previous case, the large uncertainty 
 	
 	\begin{figure*}
 		\begin{centering}
@@ -427,7 +438,7 @@
 	%==========================================================================%
 
 	\section*{Acknowledgement}
-	We would like to express out appreciation to the Nan Li who provided expertise that greatly assisted the research and it should be noted that the code publicly available (\url{https://github.com/gokulsivasankar/RobustDecisionMaking}) is based on his previous study \cite{Li2018}.
+	We would like to express out appreciation to Nan Li who provided expertise that greatly assisted the research and it should be noted that the code publicly available (\url{https://github.com/gokulsivasankar/RobustDecisionMaking}) is based on his previous study \cite{Li2018}.
 
 
 	%==========================================================================%
