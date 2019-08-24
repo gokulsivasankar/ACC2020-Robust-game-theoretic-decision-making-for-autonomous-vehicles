@@ -76,7 +76,8 @@
 	
 	
 	\begin{abstract}
-		
+	This paper proposes a robust decision-making strategy for autonomous vehicles based on the game theory. Autonomous vehicles should be controlled by sophisticated negotiation skills with the other road participants, e.g., human-driven vehicles, pedestrians. In this paper, by modeling the interactions between the vehicles, autonomous vehicle can make reasonable decision that is not too conservative or aggressive. The behavior of the vehicles are modeled by cognitive hierarchy theory, e.g., level-\textit{k} framework, which demonstrates its effectiveness when describing human thinking process. By inferring the other vehicle's thoughts, autonomous vehicle can avoid the biased decision, i.e., conservative or aggressive. The effectiveness of the proposed approach is verified with the lane change scenario at the high-way.
+	
 	\end{abstract}
 	
 	
@@ -433,12 +434,16 @@
 	
 	\section{Conclusions}
 	\label{sec:conclusions}
-	
+	We proposed the robust decision-making strategy for autonomous vehicles when they share the road with the other road participants.We modeled the vehicle interactions using a level-k framework, then the decision of the autonomous vehicle was made based on the identified other vehicle's level in real-time. To avoid the conservative or aggressive behavior of autonomous vehicle, the accuracy of the level estimation was utilized to represent the uncertainty bounds of the interactive vehicles. Based on updated level estimation accuracy, the uncertainty bounds could be adjusted, and autonomous vehicle adaptively plans its motion for a given prediction horizon. Through the simulation verification, we could observe the reasonable behavior of autonomous vehicle, compared to the behaviors of conventional decision-making approaches.
 
 	%==========================================================================%
 
 	\section*{Acknowledgement}
+<<<<<<< HEAD
 	We would like to express out appreciation to Nan Li who provided expertise that greatly assisted the research and it should be noted that the code publicly available (\url{https://github.com/gokulsivasankar/RobustDecisionMaking}) is based on his previous study \cite{Li2018}.
+=======
+	We would like to express out appreciation to the Anouck Girard and Nan Li who provided expertise that greatly assisted the research and it should be noted that the code publicly available (\url{https://github.com/gokulsivasankar/RobustDecisionMaking}) is based on his previous study \cite{Li2018}.
+>>>>>>> 72e8a2cf5dfa8b3b2c70d18e369d3c9305d13e17
 
 
 	%==========================================================================%
