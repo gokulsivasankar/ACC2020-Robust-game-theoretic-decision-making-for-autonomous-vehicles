@@ -340,9 +340,9 @@
 	\label{sec:sim_results}
 	The effectiveness of the proposed approach is verified through the case studies. Starting from the same initial conditions, the AV (blue car) switches to the left lane and the HVs (red cars) keep the lane as illustrated in Fig.~\ref{snapshots}. We specify the level-1 decision making strategy to all HVs. That is, cautious drivers are assumed, but unknown to AV. 
 	
-	The five panels on the left in Fig.~\ref{snapshots}(a) shows the behavior of each vehicle at 1 second intervals when the AV changes the lane aggressively. The uncertainty size from the perspective of AV is illustrated by red dashed line. In this case study, there is almost no safety margin as the AV takes an aggressive lane change strategy. As a result, the left steering input is initiated as soon as the simulation begins and lane change occurs between 60m and 70m. Looking more closely, due to the close distance between AV, the HV slightly moves to left at time $t=2 and 3$. It is possible to avoid collision because HV is cautious driver, but collision may happen if there is aggressive driver. This aggressive strategy should not be adopted because a certain degree of conservatism is preferred rather than car crashes.
+	The five panels on the left in Fig.~\ref{snapshots}(a) shows the behavior of each vehicle at 1 second intervals when the AV changes the lane aggressively. The uncertainty size from the perspective of AV is illustrated by red dashed line. In this case study, there is almost no safety margin as the AV takes an aggressive lane change strategy. As a result, the left steering input is initiated as soon as the simulation begins and lane change occurs between 60m and 70m. Looking more closely, due to the close distance between AV, the HV slightly moves to left at time $t=2s \text{ and } 3s$. It is possible to avoid collision because HV is cautious driver, but collision may happen if there is aggressive driver. This aggressive strategy should not be adopted because a certain degree of conservatism is preferred rather than car crashes.
 	
-	We next describe the 
+	We next illustrate the results when adopting the conservative lane change strategy as shown in Fig.~\ref{snapshots}(c). Unlike the previous case, the large uncertainty 
 	
 	\begin{figure*}
 		\begin{centering}
@@ -382,11 +382,11 @@
 			\node (xlabelcon) [below = 1cm of con5, inner sep = 0pt] {\Huge Distance (m)};
 			
 			
-			\node (t0) [left = 0.25cm of agg1, inner sep = 0pt] {\Huge $t=0$};
-			\node (t1) [left = 0.25cm of agg2, inner sep = 0pt] {\Huge $t=1$};
-			\node (t2) [left = 0.25cm of agg3, inner sep = 0pt] {\Huge $t=2$};
-			\node (t3) [left = 0.25cm of agg4, inner sep = 0pt] {\Huge $t=3$};
-			\node (t4) [left = 0.25cm of agg5, inner sep = 0pt] {\Huge $t=4$};
+			\node (t0) [left = 0.25cm of agg1, inner sep = 0pt] {\Huge $t=0 s$};
+			\node (t1) [left = 0.25cm of agg2, inner sep = 0pt] {\Huge $t=1 s$};
+			\node (t2) [left = 0.25cm of agg3, inner sep = 0pt] {\Huge $t=2 s$};
+			\node (t3) [left = 0.25cm of agg4, inner sep = 0pt] {\Huge $t=3 s$};
+			\node (t4) [left = 0.25cm of agg5, inner sep = 0pt] {\Huge $t=4 s$};
 			
 			\node (agg) [above = 0.25cm of agg1, inner sep = 0pt] {\Huge (a) Aggressive};
 			\node (adp) [above = 0.25cm of adp1, inner sep = 0pt] {\Huge (b) Adaptive};
