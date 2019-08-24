@@ -76,7 +76,8 @@
 	
 	
 	\begin{abstract}
-		
+	This paper proposes a robust decision-making strategy for autonomous vehicles based on the game theory. Autonomous vehicles should be controlled by sophisticated negotiation skills with the other road participants, e.g., human-driven vehicles, pedestrians. In this paper, by modeling the interactions between the vehicles, autonomous vehicle can make reasonable decision that is not too conservative or aggressive. The behavior of the vehicles are modeled by cognitive hierarchy theory, e.g., level-\textit{k} framework, which demonstrates its effectiveness when describing human thinking process. By inferring the other vehicle's thoughts, autonomous vehicle can avoid the biased decision, i.e., conservative or aggressive. The effectiveness of the proposed approach is verified with the lane change scenario at the high-way.
+	
 	\end{abstract}
 	
 	
@@ -340,7 +341,7 @@
 	\label{sec:sim_results}
 	The effectiveness of the proposed approach is verified through the case studies. Starting from the same initial conditions, the AV (blue car) switches to the left lane and the HVs (red cars) keep the lane as illustrated in Fig.~\ref{snapshots}. We specify the level-1 decision making strategy to all HVs. That is, cautious drivers are assumed, but unknown to AV. 
 	
-	The five panels on the left in Fig.~\ref{snapshots}(a) shows the behavior of each vehicle at 1 second intervals when the AV changes the lane aggressively. The uncertainty size from the perspective of AV is illustrated by red dashed line. In this case study, there is almost no safety margin as the AV takes an aggressive lane change strategy. As a result, the left steering input is initiated as soon as the simulation begins and lane change occurs between 60m and 70m. Looking more closely, due to the close distance between AV, the HV slightly moves to left at time $t=2 and 3$. It is possible to avoid collision because HV is cautious driver, but collision may happen if there is aggressive driver. This aggressive strategy should not be adopted because a certain degree of conservatism is preferred rather than car crashes.
+	The five panels on the left in Fig.~\ref{snapshots}(a) shows the behavior of each vehicle at 1 second intervals when the AV changes the lane aggressively. The uncertainty size from the perspective of AV is illustrated by red dashed line. In this case study, there is almost no safety margin as the AV takes an aggressive lane change strategy. As a result, the left steering input is initiated as soon as the simulation begins and lane change occurs between 60m and 70m. Looking more closely, due to the close distance between AV, the HV slightly moves to left at time $t=2s \text{ and } 3s$. It is possible to avoid collision because HV is cautious driver, but collision may happen if there is aggressive driver. This aggressive strategy should not be adopted because a certain degree of conservatism is preferred rather than car crashes.
 	
 	We next illustrate the results when adopting the conservative lane change strategy as shown in Fig.~\ref{snapshots}(c). Unlike the previous case, the large uncertainty 
 	
@@ -382,11 +383,11 @@
 			\node (xlabelcon) [below = 1cm of con5, inner sep = 0pt] {\Huge Distance (m)};
 			
 			
-			\node (t0) [left = 0.25cm of agg1, inner sep = 0pt] {\Huge $t=0$};
-			\node (t1) [left = 0.25cm of agg2, inner sep = 0pt] {\Huge $t=1$};
-			\node (t2) [left = 0.25cm of agg3, inner sep = 0pt] {\Huge $t=2$};
-			\node (t3) [left = 0.25cm of agg4, inner sep = 0pt] {\Huge $t=3$};
-			\node (t4) [left = 0.25cm of agg5, inner sep = 0pt] {\Huge $t=4$};
+			\node (t0) [left = 0.25cm of agg1, inner sep = 0pt] {\Huge $t=0 s$};
+			\node (t1) [left = 0.25cm of agg2, inner sep = 0pt] {\Huge $t=1 s$};
+			\node (t2) [left = 0.25cm of agg3, inner sep = 0pt] {\Huge $t=2 s$};
+			\node (t3) [left = 0.25cm of agg4, inner sep = 0pt] {\Huge $t=3 s$};
+			\node (t4) [left = 0.25cm of agg5, inner sep = 0pt] {\Huge $t=4 s$};
 			
 			\node (agg) [above = 0.25cm of agg1, inner sep = 0pt] {\Huge (a) Aggressive};
 			\node (adp) [above = 0.25cm of adp1, inner sep = 0pt] {\Huge (b) Adaptive};
@@ -396,20 +397,38 @@
 			\end{tikzpicture}
 			\par\end{centering}
 		\protect\caption{.}
-		\label{snapshots}
+		\label{fig:snapshots}
 	\end{figure*}
+
+	\begin{figure}
+		\begin{centering}
+			\begin{tikzpicture}[scale=0.5,transform shape]
+			\node (origin) at (0,0) {};
+			
+			\node (fig)[below left = 0cm and 0cm of origin, minimum width = 0.cm, minimum height = 0cm, inner sep = 0pt]{\includegraphics[clip, trim = {1.25cm 0.8cm 1.5cm 1.25cm}]{level_ratio_history_adp29.jpg}};
+			
+			\node (xlabel) [below = 0.5cm of fig, inner sep = 0pt] {\LARGE Time (s)};
+		
+			\node (ylabel) [below left = -6.1cm and 1cm of fig, inner sep = 0pt, rotate = 90] {\huge $P_{K_{4}^2 = 0}$};
+			
+			\end{tikzpicture}
+			\par\end{centering}
+		\protect\caption{Probability that vehicle 4 can be modeled as level-0 from the perspective of the ego vehicle.}
+		\label{fig:level_history}
+	\end{figure}
+	
 	
 	
 	%==========================================================================%
 	
 	\section{Conclusions}
 	\label{sec:conclusions}
-	
+	We proposed the robust decision-making strategy for autonomous vehicles when they share the road with the other road participants.We modeled the vehicle interactions using a level-k framework, then the decision of the autonomous vehicle was made based on the identified other vehicle's level in real-time. To avoid the conservative or aggressive behavior of autonomous vehicle, the accuracy of the level estimation was utilized to represent the uncertainty bounds of the interactive vehicles. Based on updated level estimation accuracy, the uncertainty bounds could be adjusted, and autonomous vehicle adaptively plans its motion for a given prediction horizon. Through the simulation verification, we could observe the reasonable behavior of autonomous vehicle, compared to the behaviors of conventional decision-making approaches.
 
 	%==========================================================================%
 
 	\section*{Acknowledgement}
-	We would like to express out appreciation to the Nan Li who provided expertise that greatly assisted the research and it should be noted that the code publicly available (\url{https://github.com/gokulsivasankar/RobustDecisionMaking}) is based on his previous study \cite{Li2018}.
+	We would like to express out appreciation to the Anouck Girard and Nan Li who provided expertise that greatly assisted the research and it should be noted that the code publicly available (\url{https://github.com/gokulsivasankar/RobustDecisionMaking}) is based on his previous study \cite{Li2018}.
 
 
 	%==========================================================================%
