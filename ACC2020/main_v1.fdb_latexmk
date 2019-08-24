@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex main_v1"] 1566660834 "main_v1.aux" "main_v1.bbl" "main_v1" 1566661241
+["bibtex main_v1"] 1566662764 "main_v1.aux" "main_v1.bbl" "main_v1" 1566662767
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/base/ieeetr.bst" 1480098433 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
   "Reference.bib" 1565103553 4579 bdbf548812cd1d59563eb421fefb837b ""
-  "main_v1.aux" 1566661240 5192 b2cb5b1a9d1ca176782ae5d945785e88 ""
+  "main_v1.aux" 1566662767 5192 a01ad7e438d62a47a601854ac5aeaab9 ""
   (generated)
   "main_v1.blg"
   "main_v1.bbl"
-["pdflatex"] 1566661238 "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.tex" "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.pdf" "main_v1" 1566661241
-  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.aux" 1566661240 5192 b2cb5b1a9d1ca176782ae5d945785e88 ""
-  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.tex" 1566661237 31636 4d5e00e0358e2aef044336e49ef8ec35 ""
-  "/dev/null" 1566661241 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1566662765 "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.tex" "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.pdf" "main_v1" 1566662767
+  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.aux" 1566662767 5192 a01ad7e438d62a47a601854ac5aeaab9 ""
+  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.tex" 1566662760 32730 f9edbc59b53a6023fdcfa7850f44c6d7 ""
+  "/dev/null" 1566662767 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1480098689 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -306,14 +306,14 @@
   "Figures/plot_con6.jpg" 1565100815 877591 186ee23589afb89f7a9da758942bdb0a ""
   "Figures/plot_con8.jpg" 1565100815 883313 5b3486cf1a8521cfcdf2ddc7115eeeaa ""
   "Figures/red_car.pdf" 1565100815 43363 3acbd389e0f202e6b61c88cd3c98a123 ""
-  "main_v1.aux" 1566661240 5192 b2cb5b1a9d1ca176782ae5d945785e88 ""
-  "main_v1.bbl" 1566660834 3067 aad499d4aa911855490daf2007964742 "bibtex main_v1"
-  "main_v1.out" 1566661240 693 3829541eeca93c0108dccc602082e297 ""
-  "main_v1.tex" 1566661237 31636 4d5e00e0358e2aef044336e49ef8ec35 ""
+  "main_v1.aux" 1566662767 5192 a01ad7e438d62a47a601854ac5aeaab9 ""
+  "main_v1.bbl" 1566662765 3067 aad499d4aa911855490daf2007964742 "bibtex main_v1"
+  "main_v1.out" 1566662767 693 3829541eeca93c0108dccc602082e297 ""
+  "main_v1.tex" 1566662760 32730 f9edbc59b53a6023fdcfa7850f44c6d7 ""
   (generated)
   "main_v1.out"
+  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.pdf"
   "main_v1.log"
   "main_v1.pdf"
-  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.pdf"
-  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.log"
   "main_v1.aux"
+  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.log"
