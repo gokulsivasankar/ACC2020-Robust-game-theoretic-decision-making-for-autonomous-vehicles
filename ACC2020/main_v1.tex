@@ -278,11 +278,13 @@
 
 	In level-$k$ game theory, it is assumed that the decisions taken by the strategic agents are based on the predictions of the actions of the other agents and the agents can have have different reasoning levels. The reasoning depth of an agent is indicated by $k \in \left\{0,\,1,\,\cdots\right\}$. The hierarchy begins with agents at level-0, where the agents make instinctive decisions to achieve the objective without accounting for the interactions between other agents. On the other hand, the agents at level-$k$ $\forall k>0$, consider the interactions by assuming that the other agents are at level-$(k-1)$ and take decisions accordingly. For instance, a \nth{l} level-1 agent assumes other agents are at level-0 and predicts their action sequences, \actseqk{i}{0}, $\forall i \in \mathcal{O}$, to compute its own action sequence, \actseqk{l}{1}.
 	
-
-
+	The level-k game theory was adapted to model the vehicle-to-vehicle interactions at an unsignalized four-way intersection in \cite{Li2018}. It is assumed that level-0 vehicles consider the other vehicles in the traffic scenario as stationary obstacles. Therefore, these drivers implicitly assume the others will yield the right of way, and can be regarded `aggressive'. While the drivers are categorized into level-0, 1 and 2 in \cite{Li2018}, 
+	
 	% This reasoning hierarchy has been observed in human interactions for other application domains by experimental studies and it is shown that humans are commonly level-0, 1 and 2 reasoners [13], [14].
 
 
+
+	  and constructing the corresponding level-1 and 2 driver models using the procedure described above, we observe that the behavior of a level-0 driver and that of a level-2 driver are similar as they both represent aggressive drivers. Therefore, instead of considering three driver levels (level-0, 1 and 2), we consider two driver types, type-1 and 2, in this paper.
 	
 
 
@@ -312,7 +314,7 @@
  	
  	
 	
-	%  In [6], such a level-k game-theoretic framework is em- ployed to model the driver and vehicle interactive behavior at an unsignalized four-way intersection. By assuming that a level-0 driver treats the other vehicles on the road as stationary obstacles (this way, a level-0 driver may be viewed as an aggressive driver in human traffic, who usually assumes that the others will yield the right of way) and constructing the corresponding level-1 and 2 driver models using the procedure described above, we observe that the behavior of a level-0 driver and that of a level-2 driver are similar as they both represent aggressive drivers. Therefore, instead of considering three driver levels (level-0, 1 and 2), we consider two driver types, type-1 and 2, in this paper.
+	% 
 	
 	%  A type-1 driver model represents a conservative driver who predicts the opponent vehicle’s actions based on the assumption that the opponent vehicle’s driver is an instinctive decision maker, who maximizes her cumulative reward (4) by treating the other vehicles on the road as stationary obstacles. On the other hand, a type-2 driver model represents an aggressive driver who predicts the opponent vehicle’s actions by assuming that the opponent vehicle’s driver is a type-1 driver. Indeed, the type-1/2 driver model meets the level-1/2 driver model defined in the level-k game-theoretic framework described above.
 	 
