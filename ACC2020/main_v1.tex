@@ -76,7 +76,7 @@
 	
 	
 	\begin{abstract}
-	This paper proposes a robust decision-making strategy for autonomous vehicles based on the game theory. Autonomous vehicles should be controlled by sophisticated negotiation skills with the other road participants, e.g., human-driven vehicles, pedestrians. In this paper, by modeling the interactions between the vehicles, autonomous vehicle can make reasonable decision that is not too conservative or aggressive. The behavior of the vehicles are modeled by cognitive hierarchy theory, e.g., level-\textit{k} framework, which demonstrates its effectiveness when describing human thinking process. By inferring the other vehicle's thoughts, autonomous vehicle can avoid the biased decision, i.e., conservative or aggressive. The effectiveness of the proposed approach is verified with the lane change scenario at the high-way.
+	This paper proposes a robust decision-making strategy for autonomous vehicles based on the game theory. Autonomous vehicles should be controlled by sophisticated negotiation skills with the other road participants, e.g., human-driven vehicles, pedestrians. In this paper, by modeling the interactions between the vehicles, autonomous vehicle can make reasonable decision that is not too conservative or aggressive. The behavior of the vehicles is modeled by cognitive hierarchy theory, e.g., level-\textit{k} framework, which demonstrates its effectiveness when describing human thinking process. By inferring other vehicle's thoughts, autonomous vehicle can avoid the biased decision, i.e., conservative or aggressive. The effectiveness of the proposed approach is verified with the lane change scenario at the high-way.
 	
 	\end{abstract}
 	
@@ -87,7 +87,7 @@
 	\section{Introduction}
 	\label{sec:intro}
 
-	Despite many recent advances in connected and automated vehicles (CAVs) technology, the full automation systems that can provide the similar or better ability compared to the human drivers are still inherently flawed to be deployed in the market \cite{Okuda2014}. One of the most significant challenges is to plan the motion of the automated vehicles at the mixed-traffic conditions where the automated car coexists with the human-driven vehicles \cite{Lazar2018}. In particular, describing the human decision-making process is the most difficult since the humans do not always exhibit the optimized behavior due to limited rationality \cite{Griffiths2015}. In order to ensure the safety, a conservative driving policy of the automated vehicles where the all possible driving situations are considered has been suggested \cite{Claussmann2015, Brechtel2014}, but it may cause the disharmony with the human drivers. That is, too conservative behavior of the automated vehicles sometimes causes adverse effect on traffics, e.g., road congestion, car accidents, due to the uncertainties of the human drivers.
+	Despite many recent advances in connected and automated vehicles (CAVs) technology, the full automation systems that can provide the similar or better driving proficiency compared to the human drivers are still inherently flawed to be deployed in the market \cite{Okuda2014}. One of the most significant challenges is to plan the motion of the automated vehicles at the mixed-traffic conditions where the automated car coexists with the human-driven vehicles \cite{Lazar2018}. In particular, describing the human decision-making process is the most difficult since the humans do not always exhibit the optimized behavior due to limited rationality \cite{Griffiths2015}. In order to ensure the safety, a conservative driving policy of the automated vehicles where the all possible driving situations are considered has been suggested \cite{Claussmann2015, Brechtel2014}, but it may cause the disharmony with the human drivers. That is, too conservative behavior of the automated vehicles sometimes causes adverse effect on traffics, e.g., road congestion, car accidents, due to the uncertainties of the human drivers.
 	
 	If the human-driven vehicle's response according to traffics, i.e., behavior of the surrounding vehicles, can be predicted, far less conservative motion planning of the automated vehicle can be designed \cite{Sadigh2016}. As mentioned, however, modeling of the interaction between the vehicles may not very accurate. Moreover, since the communication time with the surrounding vehicles in reality is not sufficient to build the deterministic human driver models.
 	
@@ -95,15 +95,10 @@
 	
 	In this paper, we adaptively adjust the safety constraint sizes of the interactive human-driven vehicles according to the confidence level to establish a balanced motion planning between the aggressive and conservative motion planning. The interactive vehicle's aggressiveness level is estimated and it is proportional to the size of safety constraint of the human-driven vehicle. Based on this, the autonomous vehicle's future trajectory is planned, which maximizes the cumulative reward. In \cite{Jin2019}, the caution level of the human-driven vehicle is used to describe the aggressiveness of the HDV, but only constant caution level is assumed, which eventually determine the level of conservatism of AV. To resolve this, we incorporate the level-\textit{k} game theory with the caution level so that adaptive caution level is available, which enables adjustable motion planning of AV depending on the interactive vehicle's aggressiveness.
 	
-	The contributions of this paper are summarized as follows. First and foremost, a balanced motion planning of AV is 
-	\textcolor{blue}{(Contributions is not stated yet)}
+	The contributions of this paper are summarized as follows. Firstly, we modeled the human-driven vehicle's decision-making processes at high way using game theory, representing the a degree of the aggressiveness. Secondly, the uncertainties that is imposed in vehicle position is represented by the identified drivers aggressiveness and these bounds are utilized to make the robust decision-making strategy for the autonomous vehicles. Lastly, we verify the benefit of the proposed approach through simulations when comparing with the results that do not consider the position uncertainty.
 	
 	The rest of the paper is organized as follows. In Section II, the vehicle dynamic model with the bounded uncertainty is introduced. We next present the game-theoretic decision making algorithm and motion planning procedure in Section III, the effectiveness of the proposed approach is described in Section IV, and the paper is concluded in Section V.
 	
-	\textcolor{red}{red: not super-clear}, \textcolor{blue}{blue: added or modified.}
-	
-
-
 	\subsection{Notation}
 
 
@@ -113,11 +108,9 @@
 	\section{Probelm statement}
 	\label{sec:problem_statement}
 	
-	\textcolor{blue}{As illustrated in Fig.~\ref{fig:lane_changing}, depending on the motions of interactive vehicles (red), the autonomous vehicle can plan the different motions. If the interactive vehicles behave aggressively, the AV should choose the conservative motion planning, and vice versa. In addition, to avoid the too conservative or aggressive driving policy, the balanced motion planning is preferred in the actual application.
-	}
+	As illustrated in Fig.~\ref{fig:lane_changing}, depending on the motions of interactive vehicles (red), the autonomous vehicle can plan the different motions. If the interactive vehicles behave aggressively, the AV should choose the conservative motion planning, and vice versa. In addition, to avoid the too conservative or aggressive driving policy, the balanced motion planning is preferred in the actual application.
 	
-	\textcolor{blue}{The problem we treat is to model the intent of the interactive vehicles using game theoretical approach, then AV exploits the estimated interactive vehicle's driving intention when making the decision in real-time. The confidence level of the estimated intention is represented by dashed-dotted boxes in Fig.~\ref{fig:lane_changing} and their sizes are adjusted adaptively according to the confidence levels.}
-
+	The problem we treat is to model the intent of the interactive vehicles using game theoretical approach, then AV exploits the estimated interactive vehicle's driving intention when making the decision in real-time. The confidence level of the estimated intention is represented by dashed-dotted boxes in Fig.~\ref{fig:lane_changing} and their sizes are adjusted adaptively according to the confidence levels.
 
 	\begin{figure}
 		\begin{centering}
