@@ -53,11 +53,18 @@
 \newcommand{\ego}{\textrm{ego}}
 \newcommand{\other}{\textrm{other}}
 \newcommand{\nth}[1]{$#1^{\textrm{th}}$}
-\newcommand{\actseq}[1]{\boldsymbol{\gamma_{t}}[#1] = \left\{\gamma_{t}[#1],\,\gamma_{t+1}[#1],\,\cdots,\,\gamma_{t+N-1}[#1]\right\}}
-\newcommand{\actseqk}[2]{\boldsymbol{\gamma^{\left(#2\right)}_{t}}[#1] = \left\{\gamma^{\left(#2\right)}_{t}[#1],\,\gamma^{\left(#2\right)}_{t+1}[#1],\,\cdots,\,\gamma^{\left(#2\right)}_{t+N-1}[#1]\right\}}
+\newcommand{\actseq}[1]{\boldsymbol{\gamma_{t}[#1]} = \left\{\gamma_{t}[#1],\,\gamma_{t+1}[#1],\,\cdots,\,\gamma_{t+N-1}[#1]\right\}}
+\newcommand{\actseqk}[2]{\boldsymbol{\gamma^{\left(#2\right)}_{t}[#1]} = \left\{\gamma^{\left(#2\right)}_{t}[#1],\,\gamma^{\left(#2\right)}_{t+1}[#1],\,\cdots,\,\gamma^{\left(#2\right)}_{t+N-1}[#1]\right\}}
 \newcommand{\actk}[3]{\gamma^{\left(#2\right)}_{#3}[#1]}
 \newcommand{\actt}[3]{\gamma^{}[#1](#3)}
 \newcommand{\actseqkt}[3]{\left\{\gamma^{\left(#2\right)}_{t}[#1],\,\gamma^{\left(#2\right)}_{t+1}[#1],\,\cdots,\,\gamma^{\left(#2\right)}_{t+#3}[#1]\right\}}
+
+\newcommand{\optactseq}[1]{\boldsymbol{\gamma^{*}_{t}[#1]} = \left\{\gamma^{*}_{t}[#1],\,\gamma^{*}_{t+1}[#1],\,\cdots,\,\gamma^{*}_{t+N-1}[#1]\right\}}
+\newcommand{\optact}[1]{\gamma^{*}_{t}[#1]}
+\newcommand{\optactk}[3]{\gamma^{*\left(#2\right)}_{#3}[#1]}
+\newcommand{\optactseqk}[2]{\boldsymbol{\gamma^{*\left(#2\right)}_{t}[#1]} = \left\{\gamma^{*\left(#2\right)}_{t}[#1],\,\gamma^{*\left(#2\right)}_{t+1}[#1],\,\cdots,\,\gamma^{*\left(#2\right)}_{t+N-1}[#1]\right\}}
+\newcommand{\optactseqkt}[3]{\left\{\gamma^{\left(#2\right)}_{t}[#1],\,\gamma^{\left(#2\right)}_{t+1}[#1],\,\cdots,\,\gamma^{\left(#2\right)}_{t+#3}[#1]\right\}}
+
 \newcommand{\actseqktnopar}[3]{\gamma^{\left(#2\right)}_{t}[#1],\,\gamma^{\left(#2\right)}_{t+1}[#1],\,\cdots,\,\gamma^{\left(#2\right)}_{t+#3}[#1]}
 
 
@@ -226,7 +233,7 @@
 	
 	The decision making process of the vehicle in choosing the optimal input pair follows a receding horizon strategy. A sequence of actions, $\boldsymbol{\gamma_{t}} = \left\{\gamma_{t},\,\gamma_{t+1},\,\cdots,\,\gamma_{t+N-1}\right\}$, is chosen that maximizes a cumulative reward given by
 	\begin{align}
-	\mathcal{R}\left(\boldsymbol{\gamma_{t}}\right) = \sum_{j=0}^{N-1} \lambda^{j-1} R_{t+j},
+	\mathcal{R}\left(\boldsymbol{\gamma_{t}}\right) = \sum_{j=0}^{N-1} \lambda^{j} R_{t+j},
 	\label{eq:cum_reward}
 	\end{align}
 	
@@ -283,12 +290,15 @@
 	The level-k game theory was adapted to model the vehicle-to-vehicle interactions at an unsignalized four-way intersection in \cite{Li2018}. It is assumed that level-0 vehicles consider the other vehicles in the traffic scenario as stationary obstacles. Therefore, these level-0 drivers implicitly assume the others will yield the right of way, and can be regarded `aggressive'. And level-1 drivers consider other drivers to be aggressive and take `cautious' actions. In \cite{Li2018}, the drivers are categorized into level-0, 1 and 2. Since, the behavior of level-2 driver will be similar to that of the level-0 drivers, in this paper, only level-0 and 1 drivers are considered. The stage reward value obtained for \nth{l} level-$k$ agent at a prediction step $j$ for an action $\actk{l}{k}{t+j}$, depend on the current traffic state, $s_0$, the ego agent's actions, $\actseqkt{l}{k}{j-1}$, and the actions of other agents, $\actseqkt{i}{k-1}{j-1}$ $\forall i \in \mathcal{O}$, is given as
 	\begin{align}
 		R_{t+j}^{(k)}[l] = R_{t+j} & \left( \actk{l}{k}{t+j}  \left| s_0,\, \actseqktnopar{l}{k}{j-1},\right.\right. \nonumber\\
-		& \hspace{0.25cm} \left.\,\actseqktnopar{i}{k-1}{j-1}\right).
+		& \hspace{0.25cm} \left.\,\actseqktnopar{i}{k-1}{j-1}\right),
 		\label{eq:stage_reward_multi}
 	\end{align}
-
-
-	add the control action selection
+	
+	\noindent and its cumulative reward is
+	\begin{align}
+		\mathcal{R}^{(k)}\left(\boldsymbol{\gamma_{t}^{(k)}[l]}\right) = \sum_{j=0}^{N-1} \lambda^{j} R_{t+j}^{(k)}[l].
+		\label{eq:cum_reward_multi}
+	\end{align}
 
 
 	\subsection{Driver model estimation}
@@ -306,52 +316,19 @@
 	
 	\noindent where $\actt{i}{k}{t}$ and $\actk{i}{k}{t}$ represent the actual and predicted action taken by \nth{i} agent assuming level-$k$ model, respectively; $\Delta P >0 $ is a constant that denotes the rate of increment of the probability;  $\left\|\actt{i}{k}{t} - \actk{i}{k}{t}\right\| = \left| a\left(t\right) - a_t^{(k)} \right| + \left|  \delta_f\left(t\right) - \delta_{f,\,t}^{(k)} \right|$. When the input pair of the actual action is equal to that of the predicted action, the probability distribution remains unchanged.
 
-	In order to incorporate the multi-model strategy in the decision making process and select the optimal action according to the model of other agents, the expected cumulative reward for the \nth{l}  given sequence of action, is given by
+	In order to incorporate the multi-model strategy in the decision making process and select the optimal action according to the model of other agents, the expected cumulative reward for the \nth{l} agent, using \eqref{eq:stage_reward_multi} and \eqref{eq:cum_reward_multi}, is given by
 	\begin{align}
-		\mathcal{R}_P\left(\boldsymbol{\gamma_{t}}\right) = \sum_{j=0}^{N-1} \lambda^{j-1} R_{t+j}^{(k)}[l],
-		\label{eq:cum_reward}
+		\mathcal{R}_P\left(\boldsymbol{\gamma_{t}}[l]\right)  = \sum_{k=0}^{1} {P}_{K_{i}^l = k}\left(t\right)  \mathcal{R}^{(k)}\left(\boldsymbol{\gamma_{t}^{(k)}}[l]\right),\, \forall i \in \mathcal{O}.
+		\label{eq:cum_reward_prob}
 	\end{align}
-
-	
-	, and selects optimal actions according to the model of each of the drivers it is interacting with.
-
-
-
+	 
+	The optimal control action, $\optact{l}$, which is the first element of the control sequence, $\optactseq{l}$, is chosen such that the highest cumulative reward is expected by solving
 	\begin{align}
-		\boldsymbol{\gamma_{t}}^* = \arg \underset {\boldsymbol{\gamma_{t}} \in  \boldsymbol{\Gamma}} {\max}\, \mathcal{R}\left(\boldsymbol{\gamma_{t}}\right),
-	\end{align}
-
-	 
-	 
-	, where 
- 	
- 	\begin{align}
- 	\boldsymbol{\gamma_{t}}^* = \arg \underset {\boldsymbol{\gamma_{t}} \in  \boldsymbol{\Gamma}} {\max}\, \mathcal{R}\left(\boldsymbol{\gamma_{t}}\right),
+		\boldsymbol{\gamma^{*}_{t}[l]} = \arg \underset {\boldsymbol{\gamma_{t}[l]} \in  \boldsymbol{\Gamma}} {\max}\, \mathcal{R}_P\left(\boldsymbol{\gamma_{t}[l]}\right).
  	\end{align}
- 	
- 	\noindent
- 	
- 	
 	 
-
-	
-	
-	\begin{align}
-	u_{l}^K = \arg \, & \underset{u_{l} \in \mathcal{U}}{\max} \sum _{j=0}^{N-1} \gamma ^j R\left(x_{l}\left(j+1\right), x_{i\neq l}\left(j+1\right), u_{l}\left(j\right), u_{i \neq l}^{K-1}\left(j\right) \right)\nonumber
-	\end{align}
-	
-	
-	
-	Modified control policy taking model identification into account
-	
-	\begin{align}
-	{u}_{l}^D = \arg \, & \underset{u_{l} \in \mathcal{U}}{\max} \sum_{k = 0}^{1} P_{K_i = k}\left(t\right) \left[ \sum _{j=0}^{N-1} \gamma ^j R\left(x_{l}\left(j+1\right), x_{i\neq l}\left(j+1\right), u_{l}\left(j\right), u_{i \neq l}^{K_i}\left(j\right) \right)\right]\nonumber
-	\end{align}
-	
-	
-	
-	
-	
+	 
+	 
 	\subsection{Robust approach}
 	
 	
