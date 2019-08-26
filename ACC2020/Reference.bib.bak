@@ -105,13 +105,37 @@
   organization = {IEEE},
 }
 
-@InProceedings{JinI.Ge2019,
+@InProceedings{Jin2019,
   author       = {Jin, Ge I and Bastian, Schurmann and Richard, Murray M and Matthias, Althoff},
   title        = {Risk-aware motion planning for automated vehicle among human-driven cars},
   booktitle    = {2019 American Control Conference (ACC)},
   year         = {2019},
   pages        = {--},
   organization = {IEEE},
+}
+
+@Article{Costa-Gomes2006,
+  author  = {Costa-Gomes, Miguel A and Crawford, Vincent P},
+  title   = {Cognition and behavior in two-person guessing games: An experimental study},
+  journal = {American Economic Review},
+  year    = {2006},
+  volume  = {96},
+  number  = {5},
+  pages   = {1737--1768},
+}
+
+@Article{10.2307/40282755,
+  author    = {Miguel A. Costa-Gomes and Nagore Iriberri and Vincent P. Crawford},
+  title     = {Comparing Models of Strategic Thinking in Van Huyck, Battalio, and Beil's Coordination Games},
+  journal   = {Journal of the European Economic Association},
+  year      = {2009},
+  volume    = {7},
+  number    = {2/3},
+  pages     = {365--376},
+  issn      = {15424766, 15424774},
+  abstract  = {This paper compares the leading models of strategic thinking with subjects' initial responses to Van Huyck, Battalio, and Beil (1990, 1991) coordination games. Among the refined "equilibrium plus noise" models we compare, payoff-dominant equilibrium performs better than risk-dominant or maximin equilibrium. Among the individualistic models we compare, level-k and cognitive hierarchy models usually fit better than logit quantal response equilibrium or noisy introspection models. In Van Huyck, Battalio, and Beil games, payoff-dominant equilibrium usually fits better than level-k or cognitive hierarchy. The data favor versions of the models in which people model others as if they were perfectly correlated over the standard, independent versions.},
+  publisher = {Oxford University Press},
+  url       = {http://www.jstor.org/stable/40282755},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

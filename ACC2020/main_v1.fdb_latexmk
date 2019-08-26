@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex main_v1"] 1566741958 "main_v1.aux" "main_v1.bbl" "main_v1" 1566778768
+["bibtex main_v1"] 1566785407 "main_v1.aux" "main_v1.bbl" "main_v1" 1566785654
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/base/ieeetr.bst" 1480098433 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "Reference.bib" 1565103553 4579 bdbf548812cd1d59563eb421fefb837b ""
-  "main_v1.aux" 1566741958 5430 7d8cbf76ed0d4459816ae4ca579f0a76 ""
+  "Reference.bib" 1566784406 6153 b063fbcac0422965243a0f799a8d2ca3 ""
+  "main_v1.aux" 1566785654 5544 4a024e2c5b20705df185a793c7079536 ""
   (generated)
-  "main_v1.blg"
   "main_v1.bbl"
-["pdflatex"] 1566741956 "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.tex" "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.pdf" "main_v1" 1566778768
-  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.aux" 1566741958 5430 7d8cbf76ed0d4459816ae4ca579f0a76 ""
-  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.tex" 1566778768 39385 453ebdc80aa0bdb9c7487f8f7f74be77 ""
-  "/dev/null" 1566778768 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "main_v1.blg"
+["pdflatex"] 1566785651 "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.tex" "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.pdf" "main_v1" 1566785654
+  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.aux" 1566785654 5544 4a024e2c5b20705df185a793c7079536 ""
+  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.tex" 1566785651 37438 500428f5a4208e7365b2c2498092c992 ""
+  "/dev/null" 1566785651 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1480098688 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -312,14 +312,14 @@
   "Figures/plot_con6.jpg" 1565100815 877591 186ee23589afb89f7a9da758942bdb0a ""
   "Figures/plot_con8.jpg" 1565100815 883313 5b3486cf1a8521cfcdf2ddc7115eeeaa ""
   "Figures/red_car.pdf" 1565100815 43363 3acbd389e0f202e6b61c88cd3c98a123 ""
-  "main_v1.aux" 1566741958 5430 7d8cbf76ed0d4459816ae4ca579f0a76 ""
-  "main_v1.bbl" 1566741958 3067 aad499d4aa911855490daf2007964742 "bibtex main_v1"
-  "main_v1.out" 1566741958 693 3829541eeca93c0108dccc602082e297 ""
-  "main_v1.tex" 1566778768 39385 453ebdc80aa0bdb9c7487f8f7f74be77 ""
+  "main_v1.aux" 1566785654 5544 4a024e2c5b20705df185a793c7079536 ""
+  "main_v1.bbl" 1566785407 3558 6decb6e071534784bb632ff4ae37a285 "bibtex main_v1"
+  "main_v1.out" 1566785654 693 3829541eeca93c0108dccc602082e297 ""
+  "main_v1.tex" 1566785651 37438 500428f5a4208e7365b2c2498092c992 ""
   (generated)
-  "main_v1.out"
-  "main_v1.pdf"
-  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.log"
   "main_v1.log"
   "main_v1.aux"
+  "main_v1.out"
+  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.log"
+  "main_v1.pdf"
   "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.pdf"

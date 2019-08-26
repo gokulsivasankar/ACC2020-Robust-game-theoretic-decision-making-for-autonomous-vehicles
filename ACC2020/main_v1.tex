@@ -52,7 +52,9 @@
 
 \newcommand{\ego}{\textrm{ego}}
 \newcommand{\other}{\textrm{other}}
-\newcommand{\nth}{\textrm{th}}
+\newcommand{\nth}[1]{$#1^{\textrm{th}}$}
+\newcommand{\actseq}[1]{$\boldsymbol{\gamma_{t}}[#1] = \left\{\gamma_{t}[#1],\,\gamma_{t+1}[#1],\,\cdots,\,\gamma_{t+N-1}[#1]\right\}$}
+\newcommand{\actseqk}[2]{$\boldsymbol{\gamma^{\left(#2\right)}_{t}}[#1] = \left\{\gamma^{\left(#2\right)}_{t}[#1],\,\gamma^{\left(#2\right)}_{t+1}[#1],\,\cdots,\,\gamma^{\left(#2\right)}_{t+N-1}[#1]\right\}$}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -272,7 +274,15 @@
  	\subsection{Level-k framework}
 	\label{sec:level_k}
 
-	In a multi-agent traffic scenario, the interactive nature of the decision making process is taken into account by the features, $\phi_{1,\,t}$ and $\phi_{3,\,t}$, of the stage reward in \eqref{eq:stage_reward} that depend on the states of other vehicles. To compute the cumulative reward in \eqref{eq:cum_reward} for a given sequence of actions of the $l^{\nth}$ autonomous vehicle, $\boldsymbol{\gamma^{\left(l\right)}_{t}} = \left\{\gamma^{\left(l\right)}_{t},\,\gamma^{\left(l\right)}_{t+1},\,\cdots,\,\gamma^{\left(l\right)}_{t+N-1}\right\}$, it is required to predict the actions of other agents, $\boldsymbol{\gamma^{\left(k\right)}_{t}} = \left\{\gamma^{\left(k\right)}_{t},\,\gamma^{\left(k\right)}_{t+1},\,\cdots,\,\gamma^{\left(k\right)}_{t+N-1}\right\}$, where $k=\left\{k|k \in \mathbb{Z}_{\left[1,\,n\right]},\, k\neq l \right\}$ with $n$ representing the number of agents, and the corresponding state of the traffic, $s_{t+j}$,  at prediction steps $j=0,\,1,\,\cdots,\,N-1$, where $s_t = \left[x^{\left(1\right)}_t,\,y^{\left(1\right)}_t,\,v^{\left(1\right)}_t,\,\theta^{\left(1\right)}_t,\,\cdots,\,x^{\left(n\right)}_t,\,y^{\left(n\right)}_t,\,v^{\left(n\right)}_t,\,\theta^{\left(n\right)}_t\right]$. In this paper, level-k game theory is utilized to model the vehicle-to-vehicle interactions and thus predict the actions of the other agents over the horizon.
+	In a multi-agent traffic scenario, the interactive nature of the decision making process is taken into account by the features, $\phi_{1,\,t}$ and $\phi_{3,\,t}$, of the stage reward in \eqref{eq:stage_reward} that depend on the states of other vehicles. To compute the cumulative reward in \eqref{eq:cum_reward}, for a given sequence of actions of the \nth{l} autonomous vehicle, \actseq{l}, it is required to predict the actions of other agents, \actseq{i}, $\forall i \in \mathcal{O}$ where $\mathcal{O}=\left\{i|i \in \mathbb{Z}_{\left[1,\,n\right]},\, i\neq l \right\}$ with $n$ representing the number of agents, and the corresponding state of the traffic, $s_{t+j}$,  at prediction steps $j=0,\,1,\,\cdots,\,N-1$, where $s_t = \left[x_t{\left[1\right]},\,y_t{\left[1\right]},\,v_t{\left[1\right]},\,\theta_t{\left[1\right]},\,\cdots,\,x_t{\left[n\right]},\,y_t{\left[n\right]},\,v_t{\left[n\right]},\,\theta_t{\left[n\right]}\right]^T$. In this paper, level-k game theory \cite{Costa-Gomes2006,Costa-Gomes2009} is utilized to model the vehicle-to-vehicle interactions and thus predict the actions of the other agents over the horizon.
+
+	In level-$k$ game theory, it is assumed that the decisions taken by the strategic agents are based on the predictions of the actions of the other agents and the agents can have have different reasoning levels. The reasoning depth of an agent is indicated by $k \in \left\{0,\,1,\,\cdots\right\}$. The hierarchy begins with agents at level-0, where the agents make instinctive decisions to achieve the objective without accounting for the interactions between other agents. On the other hand, the agents at level-$k$ $\forall k>0$, consider the interactions by assuming that the other agents are at level-$(k-1)$ and take decisions accordingly. For instance, a \nth{l} level-1 agent assumes other agents are at level-0 and predicts their action sequences, \actseqk{i}{0}, $\forall i \in \mathcal{O}$, to compute its own action sequence, \actseqk{l}{1}.
+	
+
+
+	% This reasoning hierarchy has been observed in human interactions for other application domains by experimental studies and it is shown that humans are commonly level-0, 1 and 2 reasoners [13], [14].
+
+
 	
 
 
@@ -286,12 +296,7 @@
 
 	 
 	 
-	
-	 
-	 have to be known to compute the . 
- 	
- 	
- 	, where 
+	, where 
  	
  	\begin{align}
  	\boldsymbol{\gamma_{t}}^* = \arg \underset {\boldsymbol{\gamma_{t}} \in  \boldsymbol{\Gamma}} {\max}\, \mathcal{R}\left(\boldsymbol{\gamma_{t}}\right),
@@ -301,20 +306,11 @@
 	 
 	 $= R_{t+j}\left(\gamma_{t+j}| s_{t+j}\right)$
 	 
-	 $s_{t+j}$ is the traffic state  at prediction step $j$; 
+	
 	 
 	 $R_{t+j}\left(\gamma_{t+j}\right)$
  	
  	
- 	Numerous experimental results from psychology, cognitive science, and economics have suggested a hierarchical structure in human reasoning in games, see [13], [14], [15], [16]. The study of this reasoning hierarchy and its applications in game theoretic settings are addressed by the “level-k game theory.” In [5], [6], [17], the level-k game theory is exploited to model vehicle interactions in highway traffic. The model has been compared to human traffic data in [6]. In this paper, we also exploit level-k game theory to model vehicle interactions, in particular, at intersections. Recently, level-k modeling of human agents was also considered in aerospace and energy applications [18], [19], [20], where human-to- human and human-to-automation interactions play a central role.
- 	
- 	
-	 The model is premised on the idea that strategic agents (drivers/vehicles at an intersection, in our setting) have different reasoning levels. In particular, the level k indicates an agent’s reasoning depth. The reasoning hierarchy starts from level-0. A level-0 agent makes instinctive decisions to pursue its goal without considering the interactions between itself and the others. On the contrary, a level-1 agent takes into account such interactions in its decision making process, in particular, by assuming that all the other agents in the game are level-0. Specifically, a level-1 agent assumes that all the other agents are level-0 so they make instinctive decisions; the level-1 agent predicts their actions as well as the evolutions of the game resulting from their actions based on this assumption; the level-1 agent then makes its own decision as the best response to such evolutions to pursue its own goal. Similarly, a level-k agent assumes that all the other agents are level-(k-1), makes predictions based on this assumption, and responds accordingly.
-
-
-	% To obtain Γ∗ego(t), the ego vehicle needs to predict the sequence Γopp.(t) = {γopp.(t), · · · , γopp.(t + n − 1)}, which contains the actions that the opponent vehicle executes over the prediction horizon. Approaches such as data-driven driver behavior prediction may be used for such predictions [12]. In this paper, we exploit a game-theoretic approach for such predictions as it accounts for vehicle-to-vehicle interactions.
-
-	% Our approach is based on the level-k game theory [13]. Level-k game theory relies on a hierarchical cognitive struc- ture to model human reasoning in games. Each player is assumed to be of a particular reasoning level, indicated by k ∈ {0,1,···}. A level-k player assumes that all other players can be modeled as level-(k − 1) reasoners and acts accordingly. The development of the reasoning hierarchy starts from a level-0 player’s model, which usually repre- sents instinctive decision making without accounting for the interactions between players. Then a level-1 player’s model can be obtained by assuming that all the players except for the ego player can be modeled as level-0 players. Based on this assumption, a level-1 player’s model can predict the actions of the other level-0 players, e.g., the sequence in (4), and then compute its own optimal actions  based on (4). This procedure continues – a level- k player’s model is generated by assuming that all other players act according to level-(k−1) models, until the desired highest level is obtained. This reasoning hierarchy has been observed in human interactions for other application domains by experimental studies and it is shown that humans are commonly level-0, 1 and 2 reasoners [13], [14].
 	
 	%  In [6], such a level-k game-theoretic framework is em- ployed to model the driver and vehicle interactive behavior at an unsignalized four-way intersection. By assuming that a level-0 driver treats the other vehicles on the road as stationary obstacles (this way, a level-0 driver may be viewed as an aggressive driver in human traffic, who usually assumes that the others will yield the right of way) and constructing the corresponding level-1 and 2 driver models using the procedure described above, we observe that the behavior of a level-0 driver and that of a level-2 driver are similar as they both represent aggressive drivers. Therefore, instead of considering three driver levels (level-0, 1 and 2), we consider two driver types, type-1 and 2, in this paper.
 	
