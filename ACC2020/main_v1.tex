@@ -53,8 +53,8 @@
 \newcommand{\ego}{\textrm{ego}}
 \newcommand{\other}{\textrm{other}}
 \newcommand{\nth}[1]{$#1^{\textrm{th}}$}
-\newcommand{\actseq}[1]{$\boldsymbol{\gamma_{t}}[#1] = \left\{\gamma_{t}[#1],\,\gamma_{t+1}[#1],\,\cdots,\,\gamma_{t+N-1}[#1]\right\}$}
-\newcommand{\actseqk}[2]{$\boldsymbol{\gamma^{\left(#2\right)}_{t}}[#1] = \left\{\gamma^{\left(#2\right)}_{t}[#1],\,\gamma^{\left(#2\right)}_{t+1}[#1],\,\cdots,\,\gamma^{\left(#2\right)}_{t+N-1}[#1]\right\}$}
+\newcommand{\actseq}[1]{\boldsymbol{\gamma_{t}}[#1] = \left\{\gamma_{t}[#1],\,\gamma_{t+1}[#1],\,\cdots,\,\gamma_{t+N-1}[#1]\right\}}
+\newcommand{\actseqk}[2]{\boldsymbol{\gamma^{\left(#2\right)}_{t}}[#1] = \left\{\gamma^{\left(#2\right)}_{t}[#1],\,\gamma^{\left(#2\right)}_{t+1}[#1],\,\cdots,\,\gamma^{\left(#2\right)}_{t+N-1}[#1]\right\}}
 \newcommand{\actk}[3]{\gamma^{\left(#2\right)}_{#3}[#1]}
 \newcommand{\actt}[3]{\gamma^{}[#1](#3)}
 \newcommand{\actseqkt}[3]{\left\{\gamma^{\left(#2\right)}_{t}[#1],\,\gamma^{\left(#2\right)}_{t+1}[#1],\,\cdots,\,\gamma^{\left(#2\right)}_{t+#3}[#1]\right\}}
@@ -276,11 +276,11 @@
  	\subsection{Level-k framework}
 	\label{sec:level_k}
 
-	In a multi-agent traffic scenario, the interactive nature of the decision making process is taken into account by the features, $\phi_{1,\,t}$ and $\phi_{3,\,t}$, of the stage reward in \eqref{eq:stage_reward} that depend on the states of other vehicles. To compute the cumulative reward in \eqref{eq:cum_reward}, for a given sequence of actions of the \nth{l} autonomous vehicle, \actseq{l}, it is required to predict the actions of other agents, \actseq{i}, $\forall i \in \mathcal{O}$, where $\mathcal{O}=\left\{i|i \in \mathbb{Z}_{\left[1,\,n\right]},\, i\neq l \right\}$ with $n$ representing the number of agents, and the corresponding state of the traffic, $s_{t+j}$,  at prediction steps $j=0,\,1,\,\cdots,\,N-1$, where $s_t = \left[x_t{\left[1\right]},\,y_t{\left[1\right]},\,v_t{\left[1\right]},\,\theta_t{\left[1\right]},\,\cdots,\,x_t{\left[n\right]},\,y_t{\left[n\right]},\,v_t{\left[n\right]},\,\theta_t{\left[n\right]}\right]^T$. In this paper, level-k game theory \cite{Costa-Gomes2006,Costa-Gomes2009} is utilized to model the vehicle-to-vehicle interactions and thus predict the actions of the other agents over the horizon.
+	In a multi-agent traffic scenario, the interactive nature of the decision making process is taken into account by the features, $\phi_{1,\,t}$ and $\phi_{3,\,t}$, of the stage reward in \eqref{eq:stage_reward} that depend on the states of other vehicles. To compute the cumulative reward in \eqref{eq:cum_reward}, for a given sequence of actions of the \nth{l} autonomous vehicle, $\actseq{l}$, it is required to predict the actions of other agents, $\actseq{i}$, $\forall i \in \mathcal{O}$, where $\mathcal{O}=\left\{i|i \in \mathbb{Z}_{\left[1,\,n\right]},\, i\neq l \right\}$ with $n$ representing the number of agents, and the corresponding state of the traffic, $s_{t+j}$,  at prediction steps $j=0,\,1,\,\cdots,\,N-1$, where $s_t = \left[x_t{\left[1\right]},\,y_t{\left[1\right]},\,v_t{\left[1\right]},\,\theta_t{\left[1\right]},\,\cdots,\,x_t{\left[n\right]},\,y_t{\left[n\right]},\,v_t{\left[n\right]},\,\theta_t{\left[n\right]}\right]^T$. In this paper, level-k game theory \cite{Costa-Gomes2006,Costa-Gomes2009} is utilized to model the vehicle-to-vehicle interactions and thus predict the actions of the other agents over the horizon.
 
-	In level-$k$ game theory, it is assumed that the decisions taken by the strategic agents are based on the predictions of the actions of the other agents and the agents can have have different reasoning levels. The reasoning depth of an agent is indicated by $k \in \left\{0,\,1,\,\cdots\right\}$. The hierarchy begins with agents at level-0, where the agents make instinctive decisions to achieve the objective without accounting for the interactions between other agents. On the other hand, the agents at level-$k$ $\forall k>0$, consider the interactions by assuming that the other agents are at level-$(k-1)$ and take decisions accordingly. For instance, a \nth{l} level-1 agent assumes other agents are at level-0 and predicts their action sequences, \actseqk{i}{0}, $\forall i \in \mathcal{O}$, to compute its own action sequence, \actseqk{l}{1}.
+	In level-$k$ game theory, it is assumed that the decisions taken by the strategic agents are based on the predictions of the actions of the other agents and the agents can have have different reasoning levels. The reasoning depth of an agent is indicated by $k \in \left\{0,\,1,\,\cdots\right\}$. The hierarchy begins with agents at level-0, where the agents make instinctive decisions to achieve the objective without accounting for the interactions between other agents. On the other hand, the agents at level-$k$ $\forall k>0$, consider the interactions by assuming that the other agents are at level-$(k-1)$ and take decisions accordingly. For instance, a \nth{l} level-1 agent assumes other agents are at level-0 and predicts their action sequences, $\actseqk{i}{0}$ $\forall i \in \mathcal{O}$, to compute its own action sequence, $\actseqk{l}{1}$.
 	
-	The level-k game theory was adapted to model the vehicle-to-vehicle interactions at an unsignalized four-way intersection in \cite{Li2018}. It is assumed that level-0 vehicles consider the other vehicles in the traffic scenario as stationary obstacles. Therefore, these level-0 drivers implicitly assume the others will yield the right of way, and can be regarded `aggressive'. And level-1 drivers consider other drivers to be aggressive and take `cautious' actions. In \cite{Li2018}, the drivers are categorized into level-0, 1 and 2. Since, the behavior of level-2 driver will be similar to that of the level-0 drivers, in this paper, only level-0 and 1 drivers are considered. The stage reward value obtained for \nth{l} level-$k$ agent at a prediction step $j$ for an action $\actk{l}{k}{t+j}$, depend on the current traffic state, $s_0$, the ego agent's actions, $\actseqkt{l}{k}{j-1}$, and the actions of other agents, $\actseqkt{i}{k-1}{j-1},$ $\forall i \in \mathcal{O}$, is given as
+	The level-k game theory was adapted to model the vehicle-to-vehicle interactions at an unsignalized four-way intersection in \cite{Li2018}. It is assumed that level-0 vehicles consider the other vehicles in the traffic scenario as stationary obstacles. Therefore, these level-0 drivers implicitly assume the others will yield the right of way, and can be regarded `aggressive'. And level-1 drivers consider other drivers to be aggressive and take `cautious' actions. In \cite{Li2018}, the drivers are categorized into level-0, 1 and 2. Since, the behavior of level-2 driver will be similar to that of the level-0 drivers, in this paper, only level-0 and 1 drivers are considered. The stage reward value obtained for \nth{l} level-$k$ agent at a prediction step $j$ for an action $\actk{l}{k}{t+j}$, depend on the current traffic state, $s_0$, the ego agent's actions, $\actseqkt{l}{k}{j-1}$, and the actions of other agents, $\actseqkt{i}{k-1}{j-1}$ $\forall i \in \mathcal{O}$, is given as
 	\begin{align}
 		R_{t+j}^{(k)}[l] = R_{t+j} & \left( \actk{l}{k}{t+j}  \left| s_0,\, \actseqktnopar{l}{k}{j-1},\right.\right. \nonumber\\
 		& \hspace{0.25cm} \left.\,\actseqktnopar{i}{k-1}{j-1}\right).
@@ -288,9 +288,12 @@
 	\end{align}
 
 
+	add the control action selection
+
+
 	\subsection{Driver model estimation}
 
-	Initially, human drivers do not have perfect knowledge about other drivers. However, they gain better understandings of other driver's characteristics through interactions, and therefore, resolve conflicts effectively. Similarly, the autonomous vehicles in a multi-agent traffic scenario, hold an initial belief about the driver model (level-0 and 1) of the other vehicles as a probability distribution over both models. Subsequently, based on the actual action applied by the other agents, the estimate of the probability distribution is updated at every step.
+	Human drivers, initially, do not have perfect knowledge about other drivers. However, they gain better understandings of other driver's characteristics through interactions, and therefore, resolve conflicts effectively. Similarly, the autonomous vehicles in a multi-agent traffic scenario, hold an initial belief about the driver model (level-0 and 1) of the other vehicles as a probability distribution over both models. Subsequently, based on the actual action applied by the other agents, the estimate of the probability distribution is updated at every step.
 	
 	From the perspective of an \nth{l} autonomous agent, the probability that the \nth{i} other agent can be modeled as level-$k$ is represented by $P_{K_{i}^l = k}$. The probability of the model $k$ is increased when it matches the actual action by 
 	\begin{subequations}
@@ -303,8 +306,11 @@
 	
 	\noindent where $\actt{i}{k}{t}$ and $\actk{i}{k}{t}$ represent the actual and predicted action taken by \nth{i} agent assuming level-$k$ model, respectively; $\Delta P >0 $ is a constant that denotes the rate of increment of the probability;  $\left\|\actt{i}{k}{t} - \actk{i}{k}{t}\right\| = \left| a\left(t\right) - a_t^{(k)} \right| + \left|  \delta_f\left(t\right) - \delta_{f,\,t}^{(k)} \right|$. When the input pair of the actual action is equal to that of the predicted action, the probability distribution remains unchanged.
 
-	In order to incorporate the multi-model strategy in the decision making process and select the optimal action according to the model of each agent, the expected cumulative reward for a given sequence of action, is given by
-
+	In order to incorporate the multi-model strategy in the decision making process and select the optimal action according to the model of other agents, the expected cumulative reward for the \nth{l}  given sequence of action, is given by
+	\begin{align}
+		\mathcal{R}_P\left(\boldsymbol{\gamma_{t}}\right) = \sum_{j=0}^{N-1} \lambda^{j-1} R_{t+j}^{(k)}[l],
+		\label{eq:cum_reward}
+	\end{align}
 
 	
 	, and selects optimal actions according to the model of each of the drivers it is interacting with.
@@ -333,10 +339,6 @@
 	\begin{align}
 	u_{l}^K = \arg \, & \underset{u_{l} \in \mathcal{U}}{\max} \sum _{j=0}^{N-1} \gamma ^j R\left(x_{l}\left(j+1\right), x_{i\neq l}\left(j+1\right), u_{l}\left(j\right), u_{i \neq l}^{K-1}\left(j\right) \right)\nonumber
 	\end{align}
-	
-	
-	\subsection{Driver model identification}
-	
 	
 	
 	
