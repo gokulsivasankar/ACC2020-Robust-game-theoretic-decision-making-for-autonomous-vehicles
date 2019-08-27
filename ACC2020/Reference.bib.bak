@@ -124,7 +124,7 @@
   pages   = {1737--1768},
 }
 
-@Article{10.2307/40282755,
+@Article{Costa-Gomes2009,
   author    = {Miguel A. Costa-Gomes and Nagore Iriberri and Vincent P. Crawford},
   title     = {Comparing Models of Strategic Thinking in Van Huyck, Battalio, and Beil's Coordination Games},
   journal   = {Journal of the European Economic Association},
@@ -136,6 +136,17 @@
   abstract  = {This paper compares the leading models of strategic thinking with subjects' initial responses to Van Huyck, Battalio, and Beil (1990, 1991) coordination games. Among the refined "equilibrium plus noise" models we compare, payoff-dominant equilibrium performs better than risk-dominant or maximin equilibrium. Among the individualistic models we compare, level-k and cognitive hierarchy models usually fit better than logit quantal response equilibrium or noisy introspection models. In Van Huyck, Battalio, and Beil games, payoff-dominant equilibrium usually fits better than level-k or cognitive hierarchy. The data favor versions of the models in which people model others as if they were perfectly correlated over the standard, independent versions.},
   publisher = {Oxford University Press},
   url       = {http://www.jstor.org/stable/40282755},
+}
+
+@Article{scokaert1998min,
+  author    = {Scokaert, Pierre OM and Mayne, DQ},
+  title     = {Min-max feedback model predictive control for constrained linear systems},
+  journal   = {IEEE Transactions on Automatic control},
+  year      = {1998},
+  volume    = {43},
+  number    = {8},
+  pages     = {1136--1142},
+  publisher = {IEEE},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

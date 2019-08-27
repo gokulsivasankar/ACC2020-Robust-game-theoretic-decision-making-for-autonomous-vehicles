@@ -231,7 +231,19 @@
 	\subsection{Action choice}
 	\label{sec:action_choice}
 	
-	The decision making process of the vehicle in choosing the optimal input pair follows a receding horizon strategy. A sequence of actions, $\boldsymbol{\gamma_{t}} = \left\{\gamma_{t},\,\gamma_{t+1},\,\cdots,\,\gamma_{t+N-1}\right\}$, is chosen that maximizes a cumulative reward given by
+	The decision making process of the vehicle in choosing the optimal input pair follows a receding horizon strategy. The nominal model used within the prediction horizon is given by
+	\begin{subequations}
+		\begin{align}
+			x_{t+j+1} & = 	x_{t+j} + v_{t+j} \cos\left(\psi_{t+j} + \beta_{t+j} \right) \Delta t \\ 
+			y_{t+j+1} & = 	y_{t+j} + v_{t+j} \sin\left(\psi_{t+j} + \beta_{t+j} \right) \Delta t  \\ 
+			\psi_{t+j+1} & = 	\psi_{t+j} + \frac{v_{t+j}}{l_r} \sin\left( \beta _{t+j} \right) \Delta t \\ 
+			v_{t+j+1} & = 	v_{t+j} + a_{t+j}  \Delta t\\
+			\beta_{t+j} & = \arctan\left(\frac{l_r}{l_r+l_f}\tan\left(\delta_{f,\,{t+j}}\right)\right),
+		\end{align}
+	\label{eq:nom_mod}
+	\end{subequations}
+
+	\noindent where $j \in \mathbb{Z}_{\left(0,\,N-1\right)}$  represents the prediction step, and $\gamma_{t+j} = \left(a_{t+j},\, \delta_{f,\,t+j}\right)$ denotes the input pair applied to \eqref{eq:nom_mod} at a prediction step $j$. A sequence of actions, $\boldsymbol{\gamma_{t}} = \left\{\gamma_{t},\,\gamma_{t+1},\,\cdots,\,\gamma_{t+N-1}\right\}$, is chosen that maximizes a cumulative reward given by
 	\begin{align}
 	\mathcal{R}\left(\boldsymbol{\gamma_{t}}\right) = \sum_{j=0}^{N-1} \lambda^{j} R_{t+j},
 	\label{eq:cum_reward}
@@ -331,6 +343,19 @@
 
 	\subsection{Robust approach}
 	
+	The uncertainties might lead to collision
+
+	we require robust approaches that account for uncertainties while determining the control actions 
+
+	Feedback min-max \cite{Scokaert1998} strategy can be used
+
+	This does not account for the confidence on the driver model
+	
+	safe zone can be used to define the uncertainties in the vehicle dynamic model.. however we shd account for uncertainty in the driver model estimation
+
+	The uncertainty in the driver model can be translated to uncertainty in the x and y position.
+
+	safe zone is redefined as s $\oplus$ $\mathcal{W}$
 	
 	\begin{align}
 	\mathcal{W}_i' = P_{K_i = 0} \cdot \mathcal{W}_i \nonumber 
