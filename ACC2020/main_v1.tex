@@ -118,6 +118,13 @@
 	The rest of the paper is organized as follows. In Section II, the vehicle dynamic model with the bounded uncertainty is introduced. We next present the game-theoretic decision making algorithm and motion planning procedure in Section III, the effectiveness of the proposed approach is described in Section IV, and the paper is concluded in Section V.
 	
 	\subsection{Notation}
+	The symbol $\mathbb{Z}_{\left[a,\, b\right]}$ denotes a set of consecutive integers from $a$ to $b$ and $2\mathbb{Z}^{+}$ denotes set of positive even integers. The $L_1$ norm of a vector $x$ is denoted by $|x|$. The operator $\ominus$ denotes the Pontryagin difference, defined for the sets $\mathcal{A}$ and $\mathcal{B}$ as
+	\begin{equation}
+		\mathcal{A}\ominus\mathcal{B}\coloneqq\left\{ a|a+b\in\mathcal{A}\,\forall b\in\mathcal{B}\right\}.\label{eq:pontdiff}
+	\end{equation}
+	
+	$0_{m\times n}$ represents a zero matrix of size $m\times n$, $I_n$ denotes an $n\times n$ identity matrix and $\boldsymbol{1}_n$ is a $n \times 1$ vector of ones. The operator $\det\left(A\right)$ denotes the determinant of the matrix $A$. $A \succ 0$ represents a positive definite matrix $A$. ; ; and $\|A\|_{\max}\coloneqq\underset{i,j}{\max}\,\left|a_{ij}\right|$, where $\left|a_{ij}\right|$ is the absolute value of the element in $i^{th}$ row and $j^{th}$ column of the matrix $A$. 
+
 
 
 
@@ -192,7 +199,7 @@
 			\end{tikzpicture}
 			\par
 		\end{centering}
-	\protect\caption{Possible lane changing sequences; ``aggressive motion planning"= \{(A,A1),\,(A1,B1),\,(B1,B)\}, ``balanced motion planning"=$\{\left(A,A2\right),\,\left(A2,B2\right),\,\left(B2,B\right)\}$ and ``conservative motion planning"=$\left\{\left(A,A3\right),\,\left(A3,B3\right),\,\left(B3,B\right)\right\}$ that can be chosen by the autonomous vehicle (blue) based on the motion of other non-autonomous vehicles (red).}
+	\protect\caption{Possible lane changing sequences that can be chosen by the autonomous vehicle (blue) based on the motion of other non-autonomous vehicles (red) are $\left\{\left(A,A1\right),\,\left(A1,B1\right),\,\left(B1,B\right)\right\}$, $\left\{\left(A,A2\right),\,\left(A2,B2\right),\,\left(B2,B\right)\right\}$ and $\left\{\left(A,A3\right),\,\left(A3,B3\right),\,\left(B3,B\right)\right\}$.}
 	\label{fig:lane_changing}
 	\end{figure}
 	
@@ -243,7 +250,7 @@
 	\label{eq:nom_mod}
 	\end{subequations}
 
-	\noindent where $j \in \mathbb{Z}_{\left(0,\,N-1\right)}$  represents the prediction step, and $\gamma_{t+j} = \left(a_{t+j},\, \delta_{f,\,t+j}\right)$ denotes the input pair applied to \eqref{eq:nom_mod} at a prediction step $j$. A sequence of actions, $\boldsymbol{\gamma_{t}} = \left\{\gamma_{t},\,\gamma_{t+1},\,\cdots,\,\gamma_{t+N-1}\right\}$, is chosen that maximizes a cumulative reward given by
+	\noindent where $j \in \mathbb{Z}_{\left[0,\,N-1\right]}$  represents the prediction step, and $\gamma_{t+j} = \left(a_{t+j},\, \delta_{f,\,t+j}\right)$ denotes the input pair applied to \eqref{eq:nom_mod} at a prediction step $j$. A sequence of actions, $\boldsymbol{\gamma_{t}} = \left\{\gamma_{t},\,\gamma_{t+1},\,\cdots,\,\gamma_{t+N-1}\right\}$, is chosen that maximizes a cumulative reward given by
 	\begin{align}
 	\mathcal{R}\left(\boldsymbol{\gamma_{t}}\right) = \sum_{j=0}^{N-1} \lambda^{j} R_{t+j},
 	\label{eq:cum_reward}
@@ -448,7 +455,7 @@
 			
 			\end{tikzpicture}
 			\par\end{centering}
-		\protect\caption{Probability that vehicle 4 can be modeled as level-0 from the perspective of the ego vehicle.}
+		\protect\caption{Probability that vehicle 4 can be modeled as level-0 from the perspective of the autonomous vehicle 2.}
 		\label{fig:level_history}
 	\end{figure}
 	
