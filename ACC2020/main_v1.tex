@@ -325,7 +325,7 @@
 	Human drivers, initially, do not have perfect knowledge about other drivers. However, they gain better understandings of other driver's characteristics through interactions, and therefore, resolve conflicts effectively. Similarly, the autonomous vehicles in a multi-agent traffic scenario, hold an initial belief about the driver model (level-0 and 1) of the other vehicles as a probability distribution over both models. Subsequently, based on the actual action applied by the other agents, the estimate of the probability distribution is updated at every step.
 	
 	From the perspective of an \nth{l} autonomous agent, the probability that the \nth{i} other agent can be modeled as level-$k$ is represented by $P_{K_{i}^l = k}$. The probability of the model $k$ is increased when it matches the actual action by 
-	\begin{subequations}
+	\begin{subequations} \label{lv_est}
 		\begin{align}
 			&k^* = \arg \, \underset{k \in \left\{0,\,1 \right\}} {\min} \left\| \actt{i}{k}{t} - \actk{i}{k}{t}  \right\|  \\ 
 			& \tilde{P}_{K_{i}^l = k^*} \left(t\right) = {P}_{K_{i}^l = k^*} \left(t-1\right) + \Delta P  \\ 
@@ -385,7 +385,7 @@
 	
 	We next illustrate the results when adopting the conservative lane change strategy as shown in Fig.~\ref{fig:snapshots}(c). Unlike the previous case, the constant large uncertainty sizes are assumed to all interactive vehicles, meaning that the AV believes that the other vehicles will show the aggressive behaviors, which is not true. As a result, very conservative driving policy is designed as confirmed in Fig.~\ref{fig:snapshots}(c). Compared to the previous case, the AV changes the lane late (90$m$ - 100$m$) because incorrect beliefs of the aggressiveness of the interactive vehicles are utilized. Obviously, the AV can avoid the collision and safety is ensured with this conservative driving policy. However, compared to the human-decision making, it cannot be said to be reasonable motions.
 	
-	Now we show the effectiveness of the proposed approach in Fig.~\ref{fig:snapshots}(b).
+	As compared to two previous result, we show the effectiveness of the proposed approach through Fig.~\ref{fig:snapshots}(b). We can observe the more reasonable behavior of the AV. Starting from the belief of large uncertainty bound of the left HV, the AV adjusts its belief as the historical actions of the left HV are collected based on \eqref{lv_est}. As a result, the lane change happens around 70$m$ that is between the those of the previous results. The real-time level estimation is illustrated in Fig.~\ref{fig:level_history}. Initially, it is believe that the HV at the left is modeled as level-0 but it true level is identified within 3$s$. However, the initial beliefs to the two front HVs do not vary because their expected actions between level-0 and level-1 modeling are same for $4s$, so the AV is very cautious with the front HVs.
 	
 	\begin{figure*}
 		\begin{centering}
