@@ -76,7 +76,7 @@
 
 \begin{document}
 	
-	\title{Robust Game-Theoretic Decision-Making for Autonomous Vehicles}
+	\title{Robust Game-Theoretic Decision Making for Autonomous Vehicles}
 
 	\thispagestyle{empty}
 	% \pagestyle{empty}
@@ -118,14 +118,10 @@
 	The rest of the paper is organized as follows. In Section II, the vehicle dynamic model with the bounded uncertainty is introduced. We next present the game-theoretic decision making algorithm and motion planning procedure in Section III, the effectiveness of the proposed approach is described in Section IV, and the paper is concluded in Section V.
 	
 	\subsection{Notation}
-	The symbol $\mathbb{Z}_{\left[a,\, b\right]}$ denotes a set of consecutive integers from $a$ to $b$ and $2\mathbb{Z}^{+}$ denotes set of positive even integers. The $L_1$ norm of a vector $x$ is denoted by $|x|$. The operator $\ominus$ denotes the Pontryagin difference, defined for the sets $\mathcal{A}$ and $\mathcal{B}$ as
+	The symbol $\mathbb{Z}_{\left[a,\, b\right]}$ denotes a set of consecutive integers from $a$ to $b$ and $2\mathbb{Z}^{+}$ denotes set of positive even integers. For a vector $x$, $x>0$ denotes element-wise inequality. The operator $\oplus$ denotes the Minkowski addition, defined for the sets $\mathcal{A}$ and $\mathcal{B}$ as 
 	\begin{equation}
-		\mathcal{A}\ominus\mathcal{B}\coloneqq\left\{ a|a+b\in\mathcal{A}\,\forall b\in\mathcal{B}\right\}.\label{eq:pontdiff}
+		\mathcal{A}\oplus\mathcal{B}\coloneqq\left\{ a+b | a\in\mathcal{A}\,\forall b\in\mathcal{B}\right\}.\label{eq:mink_sum}
 	\end{equation}
-	
-	$0_{m\times n}$ represents a zero matrix of size $m\times n$, $I_n$ denotes an $n\times n$ identity matrix and $\boldsymbol{1}_n$ is a $n \times 1$ vector of ones. The operator $\det\left(A\right)$ denotes the determinant of the matrix $A$. $A \succ 0$ represents a positive definite matrix $A$. ; ; and $\|A\|_{\max}\coloneqq\underset{i,j}{\max}\,\left|a_{ij}\right|$, where $\left|a_{ij}\right|$ is the absolute value of the element in $i^{th}$ row and $j^{th}$ column of the matrix $A$. 
-
-
 
 
 	%==========================================================================%
@@ -228,14 +224,14 @@
 	%==========================================================================%
 
 	
-	\section{Game-theoretic decision making}
+	\section{Robust game-theoretic decision making}
 	\label{sec:controller}
 
 	At each time instant, each vehicle selects an input pair from the finite action set, $ \boldsymbol{\Gamma} = \left\{\left(0,\, 0\right),\,\left(0,\, \delta_{f,\,\textrm{nom}}\right),\,\left(0,\, -\delta_{f,\,\textrm{nom}}\right),\,\left(a_{\textrm{nom}},\, 0\right),\,\left(-a_{\textrm{nom}},\, 0\right),\right.$ $\left.\left(a_{\max},\, 0\right),\,\left(-a_{\max},\, 0\right),\,\left(a_{\textrm{nom}},\, \delta_{f,\,\max}\right),\,\left(a_{\textrm{nom}},\, -\delta_{f,\,\max}\right)\right\}$, where $a_{\textrm{nom}}$, $\delta_{f,\,\textrm{nom}}$ and $a_{\max}$, $\delta_{f,\,\max}$ are the nominal and maximum acceleration, front steer angle, respectively. The inputs pairs in $ \boldsymbol{\Gamma}$ correspond to the actions, \{``maintain", ``turn slightly left", ``turn slightly right", ``accelerate", ``decelerate", ``maximum acceleration", ``maximum deceleration", ``turn left and accelerate", `` turn right and accelerate'' \}, respectively. The input pair to be applied at every time step is decided based on optimizing a reward function.
 	
 
 
-	\subsection{Action choice}
+	\subsection{Reward function}
 	\label{sec:action_choice}
 	
 	The decision making process of the vehicle in choosing the optimal input pair follows a receding horizon strategy. The nominal model used within the prediction horizon is given by
@@ -335,6 +331,9 @@
 	
 	\noindent where $\actt{i}{k}{t}$ and $\actk{i}{k}{t}$ represent the actual and predicted action taken by \nth{i} agent assuming level-$k$ model, respectively; $\Delta P >0 $ is a constant that denotes the rate of increment of the probability;  $\left\|\actt{i}{k}{t} - \actk{i}{k}{t}\right\| = \left| a\left(t\right) - a_t^{(k)} \right| + \left|  \delta_f\left(t\right) - \delta_{f,\,t}^{(k)} \right|$. When the input pair of the actual action is equal to that of the predicted action, the probability distribution remains unchanged.
 
+
+	\subsection{Action choice}
+	
 	In order to incorporate the multi-model strategy in the decision making process and select the optimal action according to the model of other agents, the expected cumulative reward for the \nth{l} agent, using \eqref{eq:stage_reward_multi} and \eqref{eq:cum_reward_multi}, is given by
 	\begin{align}
 		\mathcal{R}_P\left(\boldsymbol{\gamma_{t}}[l]\right)  = \sum_{k=0}^{1} {P}_{K_{i}^l = k}\left(t\right)  \mathcal{R}^{(k)}\left(\boldsymbol{\gamma_{t}^{(k)}}[l]\right),\, \forall i \in \mathcal{O}.
@@ -344,11 +343,15 @@
 	The optimal control action, $\optact{l}$, which is the first element of the control sequence, $\optactseq{l}$, is chosen such that the highest cumulative reward is expected by solving
 	\begin{align}
 		\boldsymbol{\gamma^{*}_{t}[l]} = \arg \underset {\boldsymbol{\gamma_{t}[l]} \in  \boldsymbol{\Gamma}} {\max}\, \mathcal{R}_P\left(\boldsymbol{\gamma_{t}[l]}\right).
+		\label{eq:control_action_model}
  	\end{align}
 	 
-	 
 
-	\subsection{Robust approach}
+
+	\subsection{Robust decision making}
+
+	
+	The control 
 	
 	The uncertainties might lead to collision
 
@@ -431,9 +434,9 @@
 			\node (t3) [left = 0.25cm of agg4, inner sep = 0pt] {\Huge $t=3 s$};
 			\node (t4) [left = 0.25cm of agg5, inner sep = 0pt] {\Huge $t=4 s$};
 			
-			\node (agg) [above = 0.25cm of agg1, inner sep = 0pt] {\Huge (a) Aggressive};
+			\node (agg) [above = 0.25cm of agg1, inner sep = 0pt] {\Huge (a) Nominal};
 			\node (adp) [above = 0.25cm of adp1, inner sep = 0pt] {\Huge (b) Adaptive};
-			\node (con) [above = 0.25cm of con1, inner sep = 0pt] {\Huge (c) Conservative};
+			\node (con) [above = 0.25cm of con1, inner sep = 0pt] {\Huge (c) Robust};
 			
 			
 			\end{tikzpicture}

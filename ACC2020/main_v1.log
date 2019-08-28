@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.18)  27 AUG 2019 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.18)  27 AUG 2019 17:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1091,58 +1091,58 @@ Non-PDF special ignored!
 
 
 ]
-<Figures/blue_car.pdf, id=94, 401.5pt x 198.7425pt>
+<Figures/blue_car.pdf, id=98, 401.5pt x 198.7425pt>
 File: Figures/blue_car.pdf Graphic file (type pdf)
 <use Figures/blue_car.pdf>
-Package pdftex.def Info: Figures/blue_car.pdf  used on input line 152.
+Package pdftex.def Info: Figures/blue_car.pdf  used on input line 148.
 (pdftex.def)             Requested size: 40.15234pt x 19.87541pt.
-<Figures/red_car.pdf, id=95, 400.49625pt x 198.7425pt>
+<Figures/red_car.pdf, id=99, 400.49625pt x 198.7425pt>
 File: Figures/red_car.pdf Graphic file (type pdf)
 <use Figures/red_car.pdf>
-Package pdftex.def Info: Figures/red_car.pdf  used on input line 153.
+Package pdftex.def Info: Figures/red_car.pdf  used on input line 149.
 (pdftex.def)             Requested size: 40.05196pt x 19.87541pt.
 File: Figures/red_car.pdf Graphic file (type pdf)
 <use Figures/red_car.pdf>
-Package pdftex.def Info: Figures/red_car.pdf  used on input line 154.
+Package pdftex.def Info: Figures/red_car.pdf  used on input line 150.
 (pdftex.def)             Requested size: 40.05196pt x 19.87541pt.
 
-Underfull \hbox (badness 2753) in paragraph at lines 202--202
+Underfull \hbox (badness 2753) in paragraph at lines 198--198
 \OT1/ptm/m/n/8 Fig. 1.  []Possible lane chang-ing se-quences that can be cho-sen by
  []
 
 
-Underfull \hbox (badness 2828) in paragraph at lines 202--202
+Underfull \hbox (badness 2828) in paragraph at lines 198--198
 \OT1/ptm/m/n/8 the au-tonomous ve-hi-cle (blue) based on the mo-tion of other non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--202
+Underfull \hbox (badness 10000) in paragraph at lines 198--198
 \OT1/ptm/m/n/8 autonomous ve-hi-cles (red) are $[]$,
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 234.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 230.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 234.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 230.
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 []\OT1/ptm/m/n/10 At each time in-stant, each ve-hi-cle se-lects
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 \OT1/ptm/m/n/10 an in-put pair from the fi-nite ac-tion set, $[] \OT1/cmr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 []$\OT1/ptm/m/n/10 ,
  []
 
@@ -1150,157 +1150,158 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.260 	 \begin{align}
-                     pdfTeX warning (ext4): destination with the same identifier (name{equation.3.2}) has been already used, duplicate ignored
+l.259 	 \end{align}
+                   pdfTeX warning (ext4): destination with the same identifier (name{equation.3.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.260 	 \begin{align}
-                     pdfTeX warning (ext4): destination with the same identifier (name{equation.4.3}) has been already used, duplicate ignored
+l.259 	 \end{align}
+                   pdfTeX warning (ext4): destination with the same identifier (name{equation.4.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.260 	 \begin{align}
-                     pdfTeX warning (ext4): destination with the same identifier (name{equation.4.4}) has been already used, duplicate ignored
+l.259 	 \end{align}
+                   pdfTeX warning (ext4): destination with the same identifier (name{equation.4.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.260 	 \begin{align}
-                      </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/blue_car.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/red_car.pdf>]pdfTeX warning (ext4): destination with the same identifier (name{equation.4.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.263 	 \end{align}
-                   
-Underfull \hbox (badness 1824) in paragraph at lines 305--306
+l.259 	 \end{align}
+                    </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/blue_car.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/red_car.pdf>]
+Underfull \hbox (badness 1824) in paragraph at lines 301--302
 []$\OT1/ptm/m/n/10 , $\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 i \OMS/cmsy/m/n/10 2 O$\OT1/ptm/m/n/10 , where $\OMS/cmsy/m/n/10 O \OT1/cmr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 1603) in paragraph at lines 305--306
+Underfull \hbox (badness 1603) in paragraph at lines 301--302
 []$ \OT1/ptm/m/n/10 with $\OML/cmm/m/it/10 n$ \OT1/ptm/m/n/10 rep-re-sent-ing the num-ber of
  []
 
 
-Underfull \hbox (badness 3668) in paragraph at lines 305--306
+Underfull \hbox (badness 3668) in paragraph at lines 301--302
 [][]$\OT1/ptm/m/n/10 . In
  []
 
-[3]pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1}) has been already used, duplicate ignored
+[3pdfTeX warning (ext4): destination with the same identifier (name{equation.4.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.322 	
+       ]pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.333 		\end{align}
+l.329 		\end{align}
                    pdfTeX warning (ext4): destination with the same identifier (name{equation.4.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.333 		\end{align}
+l.329 		\end{align}
                    pdfTeX warning (ext4): destination with the same identifier (name{equation.4.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.333 		\end{align}
+l.329 		\end{align}
                    
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 []\OT1/ptm/m/n/10 The op-ti-mal con-trol ac-tion, $\OML/cmm/m/it/10 ^^M[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 l\OT1/cmr/m/n/10 ]$\OT1/ptm/m/n/10 , which is the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 \OT1/ptm/m/n/10 first el-e-ment of the con-trol se-quence, $[] \OT1/cmr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 1748) in paragraph at lines 344--345
+Underfull \hbox (badness 1748) in paragraph at lines 343--344
 []$\OT1/ptm/m/n/10 , is cho-sen such that the
  []
 
 
-Overfull \hbox (188.48463pt too wide) detected at line 374
+Overfull \hbox (188.48463pt too wide) detected at line 377
 []
  []
 
-<Figures/plot_adp0.jpg, id=177, 433.62pt x 216.81pt>
+<Figures/plot_adp0.jpg, id=182, 433.62pt x 216.81pt>
 File: Figures/plot_adp0.jpg Graphic file (type jpg)
 <use Figures/plot_adp0.jpg>
-Package pdftex.def Info: Figures/plot_adp0.jpg  used on input line 395.
+Package pdftex.def Info: Figures/plot_adp0.jpg  used on input line 398.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_agg0.jpg, id=179, 433.62pt x 216.81pt>
+<Figures/plot_agg0.jpg, id=184, 433.62pt x 216.81pt>
 File: Figures/plot_agg0.jpg Graphic file (type jpg)
 <use Figures/plot_agg0.jpg>
-Package pdftex.def Info: Figures/plot_agg0.jpg  used on input line 396.
+Package pdftex.def Info: Figures/plot_agg0.jpg  used on input line 399.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_con0.jpg, id=181, 433.62pt x 216.81pt>
+<Figures/plot_con0.jpg, id=186, 433.62pt x 216.81pt>
 File: Figures/plot_con0.jpg Graphic file (type jpg)
 <use Figures/plot_con0.jpg>
-Package pdftex.def Info: Figures/plot_con0.jpg  used on input line 397.
+Package pdftex.def Info: Figures/plot_con0.jpg  used on input line 400.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_adp2.jpg, id=183, 433.62pt x 216.81pt>
+<Figures/plot_adp2.jpg, id=188, 433.62pt x 216.81pt>
 File: Figures/plot_adp2.jpg Graphic file (type jpg)
 <use Figures/plot_adp2.jpg>
-Package pdftex.def Info: Figures/plot_adp2.jpg  used on input line 400.
+Package pdftex.def Info: Figures/plot_adp2.jpg  used on input line 403.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_agg2.jpg, id=185, 433.62pt x 216.81pt>
+<Figures/plot_agg2.jpg, id=190, 433.62pt x 216.81pt>
 File: Figures/plot_agg2.jpg Graphic file (type jpg)
 <use Figures/plot_agg2.jpg>
-Package pdftex.def Info: Figures/plot_agg2.jpg  used on input line 401.
+Package pdftex.def Info: Figures/plot_agg2.jpg  used on input line 404.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_con2.jpg, id=187, 433.62pt x 216.81pt>
+<Figures/plot_con2.jpg, id=192, 433.62pt x 216.81pt>
 File: Figures/plot_con2.jpg Graphic file (type jpg)
 <use Figures/plot_con2.jpg>
-Package pdftex.def Info: Figures/plot_con2.jpg  used on input line 402.
+Package pdftex.def Info: Figures/plot_con2.jpg  used on input line 405.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_adp4.jpg, id=189, 433.62pt x 216.81pt>
+<Figures/plot_adp4.jpg, id=194, 433.62pt x 216.81pt>
 File: Figures/plot_adp4.jpg Graphic file (type jpg)
 <use Figures/plot_adp4.jpg>
-Package pdftex.def Info: Figures/plot_adp4.jpg  used on input line 405.
+Package pdftex.def Info: Figures/plot_adp4.jpg  used on input line 408.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_agg4.jpg, id=191, 433.62pt x 216.81pt>
+<Figures/plot_agg4.jpg, id=196, 433.62pt x 216.81pt>
 File: Figures/plot_agg4.jpg Graphic file (type jpg)
 <use Figures/plot_agg4.jpg>
-Package pdftex.def Info: Figures/plot_agg4.jpg  used on input line 406.
+Package pdftex.def Info: Figures/plot_agg4.jpg  used on input line 409.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_con4.jpg, id=193, 433.62pt x 216.81pt>
+<Figures/plot_con4.jpg, id=198, 433.62pt x 216.81pt>
 File: Figures/plot_con4.jpg Graphic file (type jpg)
 <use Figures/plot_con4.jpg>
-Package pdftex.def Info: Figures/plot_con4.jpg  used on input line 407.
+Package pdftex.def Info: Figures/plot_con4.jpg  used on input line 410.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_adp6.jpg, id=195, 433.62pt x 216.81pt>
+<Figures/plot_adp6.jpg, id=200, 433.62pt x 216.81pt>
 File: Figures/plot_adp6.jpg Graphic file (type jpg)
 <use Figures/plot_adp6.jpg>
-Package pdftex.def Info: Figures/plot_adp6.jpg  used on input line 410.
+Package pdftex.def Info: Figures/plot_adp6.jpg  used on input line 413.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_agg6.jpg, id=197, 433.62pt x 216.81pt>
+<Figures/plot_agg6.jpg, id=202, 433.62pt x 216.81pt>
 File: Figures/plot_agg6.jpg Graphic file (type jpg)
 <use Figures/plot_agg6.jpg>
-Package pdftex.def Info: Figures/plot_agg6.jpg  used on input line 411.
+Package pdftex.def Info: Figures/plot_agg6.jpg  used on input line 414.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_con6.jpg, id=199, 433.62pt x 216.81pt>
+<Figures/plot_con6.jpg, id=204, 433.62pt x 216.81pt>
 File: Figures/plot_con6.jpg Graphic file (type jpg)
 <use Figures/plot_con6.jpg>
-Package pdftex.def Info: Figures/plot_con6.jpg  used on input line 412.
+Package pdftex.def Info: Figures/plot_con6.jpg  used on input line 415.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_adp8.jpg, id=201, 433.62pt x 216.81pt>
+<Figures/plot_adp8.jpg, id=206, 433.62pt x 216.81pt>
 File: Figures/plot_adp8.jpg Graphic file (type jpg)
 <use Figures/plot_adp8.jpg>
-Package pdftex.def Info: Figures/plot_adp8.jpg  used on input line 414.
+Package pdftex.def Info: Figures/plot_adp8.jpg  used on input line 417.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_agg8.jpg, id=203, 433.62pt x 216.81pt>
+<Figures/plot_agg8.jpg, id=208, 433.62pt x 216.81pt>
 File: Figures/plot_agg8.jpg Graphic file (type jpg)
 <use Figures/plot_agg8.jpg>
-Package pdftex.def Info: Figures/plot_agg8.jpg  used on input line 415.
+Package pdftex.def Info: Figures/plot_agg8.jpg  used on input line 418.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_con8.jpg, id=205, 433.62pt x 216.81pt>
+<Figures/plot_con8.jpg, id=210, 433.62pt x 216.81pt>
 File: Figures/plot_con8.jpg Graphic file (type jpg)
 <use Figures/plot_con8.jpg>
-Package pdftex.def Info: Figures/plot_con8.jpg  used on input line 416.
+Package pdftex.def Info: Figures/plot_con8.jpg  used on input line 419.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-LaTeX Font Info:    Calculating math sizes for size <24> on input line 428.
-<Figures/level_ratio_history_adp29.jpg, id=207, 462.528pt x 346.896pt>
+LaTeX Font Info:    Calculating math sizes for size <24> on input line 431.
+<Figures/level_ratio_history_adp29.jpg, id=212, 462.528pt x 346.896pt>
 File: Figures/level_ratio_history_adp29.jpg Graphic file (type jpg)
 <use Figures/level_ratio_history_adp29.jpg>
-Package pdftex.def Info: Figures/level_ratio_history_adp29.jpg  used on input line 450.
+Package pdftex.def Info: Figures/level_ratio_history_adp29.jpg  used on input line 453.
 (pdftex.def)             Requested size: 384.28201pt x 288.56708pt.
-LaTeX Font Info:    Calculating math sizes for size <20> on input line 454.
+LaTeX Font Info:    Calculating math sizes for size <20> on input line 457.
 [4]
-Underfull \hbox (badness 2277) in paragraph at lines 473--474
+Underfull \hbox (badness 2277) in paragraph at lines 476--477
 \OT1/ptm/m/n/10 as-sisted the re-search and it should be noted that the
  []
 
@@ -1313,30 +1314,30 @@ l.7
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.484 \end{document}
+l.487 \end{document}
                      </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/level_ratio_history_adp29.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 484.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 484.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 487.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 487.
  (/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 484.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 484.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 487.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 487.
 Package rerunfilecheck Info: File `main_v1.out' has not changed.
-(rerunfilecheck)             Checksum: 5ABF2B91C0D13497622CA7DCEE2C0DE3;689.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 484.
+(rerunfilecheck)             Checksum: 7045ED5AFC26C2D79EE46BEC5E04694C;768.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 487.
  ) 
 Here is how much of TeX's memory you used:
- 43852 strings out of 492616
- 1026241 string characters out of 6128982
+ 43855 strings out of 492616
+ 1026296 string characters out of 6128982
  1266445 words of memory out of 5000000
- 47071 multiletter control sequences out of 15000+600000
+ 47073 multiletter control sequences out of 15000+600000
  587383 words of font info for 167 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,14n,100p,1998b,864s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.pdf (6 pages, 15924055 bytes).
+Output written on /Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.pdf (6 pages, 15921478 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 277 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 500000)
- 295 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 359 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 303 words of extra memory for PDF output out of 10000 (max. 10000000)
 
