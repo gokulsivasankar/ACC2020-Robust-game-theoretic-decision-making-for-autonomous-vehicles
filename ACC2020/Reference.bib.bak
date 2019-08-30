@@ -138,7 +138,7 @@
   url       = {http://www.jstor.org/stable/40282755},
 }
 
-@Article{scokaert1998min,
+@Article{Scokaert1998,
   author    = {Scokaert, Pierre OM and Mayne, DQ},
   title     = {Min-max feedback model predictive control for constrained linear systems},
   journal   = {IEEE Transactions on Automatic control},
@@ -147,6 +147,31 @@
   number    = {8},
   pages     = {1136--1142},
   publisher = {IEEE},
+}
+
+@Article{Sankar2019a,
+  author   = {Gokul S. Sankar and Rohan C. Shekhar and Chris Manzie and Takeshi Sano and Hayato Nakada},
+  title    = {Model predictive controller with average emissions constraints for diesel airpath},
+  journal  = {Control Engineering Practice},
+  year     = {2019},
+  volume   = {90},
+  pages    = {182 - 189},
+  issn     = {0967-0661},
+  abstract = {Diesel airpath controllers are required to deliver good tracking performance whilst satisfying operational constraints and physical limitations of the actuators. Due to explicit constraint handling capabilities, model predictive controllers (MPC) have been successfully deployed in diesel airpath applications. Previous MPC implementations have considered instantaneous constraints on engine-out emissions in order to meet legislated emissions regulations. However, the emissions standards are specified over a drive cycle, and hence, can be satisfied on average rather than just instantaneously, potentially allowing the controller to exploit the trade-off between emissions and fuel economy. In this work, an MPC is formulated to maximise the fuel efficiency whilst tracking boost pressure and exhaust gas recirculation (EGR) rate references, and in the face of uncertainties, adhering to the input, safety constraints and constraints on emissions averaged over some finite time period. The tracking performance and satisfaction of average emissions constraints using the proposed controller are demonstrated through an experimental study considering the new European drive cycle.},
+  doi      = {https://doi.org/10.1016/j.conengprac.2019.06.021},
+  keywords = {Model predictive control, Robust control, Average constraints, Diesel engine, Controller calibration},
+  url      = {http://www.sciencedirect.com/science/article/pii/S0967066119301005},
+}
+
+@Article{Sankar2019,
+  author   = {G. S. {Sankar} and R. C. {Shekhar} and C. {Manzie} and T. {Sano} and H. {Nakada}},
+  title    = {Fast Calibration of a Robust Model Predictive Controller for Diesel Engine Airpath},
+  journal  = {IEEE Transactions on Control Systems Technology},
+  year     = {2019},
+  pages    = {1-15},
+  issn     = {1063-6536},
+  doi      = {10.1109/TCST.2019.2917686},
+  keywords = {Calibration;Switches;Atmospheric modeling;Tuning;Diesel engines;Controller calibration;diesel engine;model predictive control (MPC);robust control;switched linear time-invariant (LTI) MPC},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

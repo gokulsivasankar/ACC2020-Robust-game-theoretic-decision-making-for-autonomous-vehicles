@@ -61,6 +61,33 @@ G.~I. Jin, S.~Bastian, M.~M. Richard, and A.~Matthias, ``Risk-aware motion
   planning for automated vehicle among human-driven cars,'' in {\em 2019
   American Control Conference (ACC)}, pp.~--, IEEE, 2019.
 
+\bibitem{Scokaert1998}
+P.~O. Scokaert and D.~Mayne, ``Min-max feedback model predictive control for
+  constrained linear systems,'' {\em IEEE Transactions on Automatic control},
+  vol.~43, no.~8, pp.~1136--1142, 1998.
+
+\bibitem{Mayne2005}
+D.~Q. Mayne, M.~M. Seron, and S.~Rakovi{\'c}, ``Robust model predictive control
+  of constrained linear systems with bounded disturbances,'' {\em Automatica},
+  vol.~41, no.~2, pp.~219--224, 2005.
+
+\bibitem{Richards2003}
+A.~Richards and J.~P. How, ``Model predictive control of vehicle maneuvers with
+  guaranteed completion time and robust feasibility,'' in {\em American Control
+  Conference, 2003. Proceedings of the 2003}, vol.~5, pp.~4034--4040 vol.5,
+  June 2003.
+
+\bibitem{Sankar2019}
+G.~S. {Sankar}, R.~C. {Shekhar}, C.~{Manzie}, T.~{Sano}, and H.~{Nakada},
+  ``Fast calibration of a robust model predictive controller for diesel engine
+  airpath,'' {\em IEEE Transactions on Control Systems Technology}, pp.~1--15,
+  2019.
+
+\bibitem{Sankar2019a}
+G.~S. Sankar, R.~C. Shekhar, C.~Manzie, T.~Sano, and H.~Nakada, ``Model
+  predictive controller with average emissions constraints for diesel
+  airpath,'' {\em Control Engineering Practice}, vol.~90, pp.~182 -- 189, 2019.
+
 \bibitem{Kong2015}
 J.~Kong, M.~Pfeiffer, G.~Schildbach, and F.~Borrelli, ``Kinematic and dynamic
   vehicle models for autonomous driving control design,'' in {\em 2015 IEEE
@@ -76,10 +103,5 @@ M.~A. Costa-Gomes, N.~Iriberri, and V.~P. Crawford, ``Comparing models of
   strategic thinking in van huyck, battalio, and beil's coordination games,''
   {\em Journal of the European Economic Association}, vol.~7, no.~2/3,
   pp.~365--376, 2009.
-
-\bibitem{Scokaert1998}
-P.~O. Scokaert and D.~Mayne, ``Min-max feedback model predictive control for
-  constrained linear systems,'' {\em IEEE Transactions on Automatic control},
-  vol.~43, no.~8, pp.~1136--1142, 1998.
 
 \end{thebibliography}

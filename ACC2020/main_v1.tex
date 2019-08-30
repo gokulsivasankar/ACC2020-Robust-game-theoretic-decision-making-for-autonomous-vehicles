@@ -116,6 +116,16 @@
 	The contributions of this paper are summarized as follows. Firstly, we modeled the human-driven vehicle's decision-making processes at high way using game theory, representing the a degree of the aggressiveness. Secondly, the uncertainties that is imposed in vehicle position is represented by the identified drivers aggressiveness and these bounds are utilized to make the robust decision-making strategy for the autonomous vehicles. Lastly, we verify the benefit of the proposed approach through simulations when comparing with the results that do not consider the position uncertainty.
 	
 	The rest of the paper is organized as follows. In Section II, the vehicle dynamic model with the bounded uncertainty is introduced. We next present the game-theoretic decision making algorithm and motion planning procedure in Section III, the effectiveness of the proposed approach is described in Section IV, and the paper is concluded in Section V.
+
+	\cite{Scokaert1998}
+	\cite{Mayne2005}
+
+	\cite{Richards2003}
+
+	\cite{Sankar2019}
+
+	\cite{Sankar2019a}
+
 	
 	\subsection{Notation}
 	The symbol $\mathbb{Z}_{\left[a,\, b\right]}$ denotes a set of consecutive integers from $a$ to $b$ and $2\mathbb{Z}^{+}$ denotes set of positive even integers. For a vector $x$, $x>0$ denotes element-wise inequality. The operator $\oplus$ denotes the Minkowski addition, defined for the sets $\mathcal{A}$ and $\mathcal{B}$ as 
@@ -124,6 +134,7 @@
 	\end{equation}
 
 
+	
 	%==========================================================================%
 
 	\section{Probelm statement}
@@ -218,7 +229,12 @@
 	\end{subequations}
 
 
-	\noindent where  $t$ denotes the discrete time instant; the pair $\left(x\left(t\right),\,y\left(t\right)\right)$  represent the global position of the center of mass of the vehicle; the vehicle's speed is denoted by $v\left(t\right)$; 	$\beta\left(t\right)$ is the angle of $v\left(t\right)$ with respect to the longitudinal axis of the vehicle; $\psi\left(t\right)$ denotes the vehicle’s yaw angle (the angle between the vehicle’s heading direction and the global x-direction); $a\left(t\right)$ denotes the vehicle’s acceleration at time $t$;  $\Delta t$ denotes the time step size; $\delta_f\left(t\right)$  represents the front steering angle; and  $l_f$  and $l_r$  are the distance of the center of the mass of the vehicle to the front and rear axles, respectively; $w_x\left(t\right)$  and $w_x\left(t\right)$ denote the uncertainty in the position of the center of mass, respectively. It is assumed the uncertainties originate from a closed and compact disturbance set, ${\mathcal{W}} \coloneqq  \left\{ w = \left(w_x,\,w_y\right) |\zeta w\leq\theta,\,\zeta\in\mathbb{R}^{a\times 2},\,\theta\in\mathbb{R}^{b}\right\}$, with $b \in 2\mathbb{Z}^{+}$. The disturbance set is assumed to contain the origin. Furthermore, it is assumed that the rear wheels cannot be steered. Therefore, the control input to the model \eqref{eq:mod}, represented by $\gamma\left(t\right) = \left(a\left(t\right),\, \delta_f\left(t\right)\right)$, is the acceleration and front steering angle pair. 
+	\noindent where  $t$ denotes the discrete time instant; the pair $\left(x\left(t\right),\,y\left(t\right)\right)$  represent the global position of the center of mass of the vehicle; the vehicle's speed is denoted by $v\left(t\right)$; 	$\beta\left(t\right)$ is the angle of $v\left(t\right)$ with respect to the longitudinal axis of the vehicle; $\psi\left(t\right)$ denotes the vehicle’s yaw angle (the angle between the vehicle’s heading direction and the global x-direction); $a\left(t\right)$ denotes the vehicle’s acceleration at time $t$;  $\Delta t$ denotes the time step size; $\delta_f\left(t\right)$  represents the front steering angle; and  $l_f$  and $l_r$  are the distance of the center of the mass of the vehicle to the front and rear axles, respectively; $w_x\left(t\right)$  and $w_x\left(t\right)$ denote the uncertainty in the position of the center of mass, respectively. It is assumed the uncertainties originate from a closed and compact disturbance set defined as 
+	\begin{align}
+		{\mathcal{W}} \coloneqq  \left\{ w = \left(w_x,\,w_y\right) |\zeta w\leq\theta,\,\zeta\in\mathbb{R}^{a\times 2},\,\theta\in\mathbb{R}^{b}\right\},
+		\label{eq:dist_set}
+	\end{align}
+	where $b \in 2\mathbb{Z}^{+}$. The disturbance set is assumed to contain the origin. Furthermore, it is assumed that the rear wheels cannot be steered. Therefore, the control input to the model \eqref{eq:mod}, represented by $\gamma\left(t\right) = \left(a\left(t\right),\, \delta_f\left(t\right)\right)$, is the acceleration and front steering angle pair. 
 
 	
 	%==========================================================================%
@@ -232,16 +248,16 @@
 
 
 	\subsection{Reward function}
-	\label{sec:action_choice}
+	\label{sec:reward_function}
 	
 	The decision making process of the vehicle in choosing the optimal input pair follows a receding horizon strategy. The nominal model used within the prediction horizon is given by
 	\begin{subequations}
 		\begin{align}
 			x_{t+j+1} & = 	x_{t+j} + v_{t+j} \cos\left(\psi_{t+j} + \beta_{t+j} \right) \Delta t \\ 
 			y_{t+j+1} & = 	y_{t+j} + v_{t+j} \sin\left(\psi_{t+j} + \beta_{t+j} \right) \Delta t  \\ 
-			\psi_{t+j+1} & = 	\psi_{t+j} + \frac{v_{t+j}}{l_r} \sin\left( \beta _{t+j} \right) \Delta t \\ 
-			v_{t+j+1} & = 	v_{t+j} + a_{t+j}  \Delta t\\
-			\beta_{t+j} & = \arctan\left(\frac{l_r}{l_r+l_f}\tan\left(\delta_{f,\,{t+j}}\right)\right),
+			\psi_{t+j+1} & = 	\psi_{t+j} + \frac{v_{t+j}}{l_r} \sin\left( \beta _{t+j} \right) \Delta t \label{eq:psi_pred}\\ 
+			v_{t+j+1} & = 	v_{t+j} + a_{t+j}  \Delta t \label{eq:v_pred}\\
+			\beta_{t+j} & = \arctan\left(\frac{l_r}{l_r+l_f}\tan\left(\delta_{f,\,{t+j}}\right)\right) \label{eq:beta_pred},
 		\end{align}
 	\label{eq:nom_mod}
 	\end{subequations}
@@ -260,13 +276,13 @@
 	
 	\noindent where $\boldsymbol{{\phi}_{t+j}} = \left\{\phi_{1,\,{t+j}},\,\phi_{2,\,{t+j}},\,\cdots,\,\phi_{m,\,{t+j}}\right\}$ is the feature vector at step $j$ and the weights for these features are in  $\boldsymbol{{\alpha}} = \left\{\alpha_{1},\,\alpha_{2},\,\cdots,\,\alpha_{m}\right\}$, in which $\alpha_{i}>0,\,\forall \, i\in \mathbb{Z}_{\left[0:m\right]}$. For the lane changing scenario in  Fig.~\ref{fig:lane_changing}, the  features considered are described below. 
 	
-	Rectangular outer approximation of the geometric contour of each vehicle is considered as shown by the dash-dotted boxes in Fig.~\ref{fig:lane_changing}. This outer approximation is referred as the collision avoidance zone (c-zone). The features, $\phi_{1,\,{t}},\,\phi_{2,\,{t}}$ and $\phi_{3,\,{t}}$, are indicator functions based on the c-zone of the vehicles that respectively characterize:
+	Rectangular outer approximation of the geometric contour of each vehicle is considered as shown by the dash-dotted boxes in Fig.~\ref{fig:lane_changing}. This outer approximation is referred as the collision avoidance zone (c). The features, $\phi_{1,\,{t}},\,\phi_{2,\,{t}}$ and $\phi_{3,\,{t}}$, are indicator functions based on the collision avoidance zone of the vehicles that respectively characterize:
 	\begin{itemize}
-		\item Collision status - The intersection of the c-zone of the ego vehicle with that of any other vehicle indicates a collision or a danger of collision. If an overlap is detected then $\phi_{1,\,{t}}$ is assigned a value $-1$; and $0$, otherwise.
+		\item Collision status - The intersection of the collision avoidance zone of the ego vehicle with that of any other vehicle indicates a collision or a danger of collision. If an overlap is detected then $\phi_{1,\,{t}}$ is assigned a value $-1$; and $0$, otherwise.
 		
-		\item On-road status - The intersection of the c-zone of the ego vehicle with that of green regions shown in Fig.~\ref{fig:lane_changing} indicates that the ego vehicle is outside the road boundaries. The feature $\phi_{2,\,{t}} = -1$ if an overlap is detected; $\phi_{2,\,{t}} = 0$, otherwise.
+		\item On-road status - The intersection of the collision avoidance zone of the ego vehicle with that of green regions shown in Fig.~\ref{fig:lane_changing} indicates that the ego vehicle is outside the road boundaries. The feature $\phi_{2,\,{t}} = -1$ if an overlap is detected; $\phi_{2,\,{t}} = 0$, otherwise.
 		
-		\item Safe zone violation status - A safe zone (s-zone) of a vehicle is a rectangular area that subsumes the c-zone of the vehicles with a safety margin. The safety margin is chosen based on the minimum distance to be maintained from the surrounding vehicles. If an overlap of the s-zone of the ego vehicle with that of another vehicle is detected then $\phi_{3,\,{t}}$ is assigned a value $-1$; and $0$, otherwise.		
+		\item Safe zone violation status - A safe zone (s) of a vehicle is a rectangular area that subsumes the collision avoidance zone of the vehicles with a safety margin. The safety margin is chosen based on the minimum distance to be maintained from the surrounding vehicles. If an overlap of the safe zone of the ego vehicle with that of another vehicle is detected then $\phi_{3,\,{t}}$ is assigned a value $-1$; and $0$, otherwise.		
 		
 		
 	\end{itemize}
@@ -316,7 +332,7 @@
 	\end{align}
 
 
-	\subsection{Driver model estimation}
+	\subsection{Multi-model strategy}
 
 	Human drivers, initially, do not have perfect knowledge about other drivers. However, they gain better understandings of other driver's characteristics through interactions, and therefore, resolve conflicts effectively. Similarly, the autonomous vehicles in a multi-agent traffic scenario, hold an initial belief about the driver model (level-0 and 1) of the other vehicles as a probability distribution over both models. Subsequently, based on the actual action applied by the other agents, the estimate of the probability distribution is updated at every step.
 	
@@ -331,8 +347,6 @@
 	
 	\noindent where $\actt{i}{k}{t}$ and $\actk{i}{k}{t}$ represent the actual and predicted action taken by \nth{i} agent assuming level-$k$ model, respectively; $\Delta P >0 $ is a constant that denotes the rate of increment of the probability;  $\left\|\actt{i}{k}{t} - \actk{i}{k}{t}\right\| = \left| a\left(t\right) - a_t^{(k)} \right| + \left|  \delta_f\left(t\right) - \delta_{f,\,t}^{(k)} \right|$. When the input pair of the actual action is equal to that of the predicted action, the probability distribution remains unchanged.
 
-
-	\subsection{Action choice}
 	
 	In order to incorporate the multi-model strategy in the decision making process and select the optimal action according to the model of other agents, the expected cumulative reward for the \nth{l} agent, using \eqref{eq:stage_reward_multi} and \eqref{eq:cum_reward_multi}, is given by
 	\begin{align}
@@ -340,30 +354,56 @@
 		\label{eq:cum_reward_prob}
 	\end{align}
 	 
-	The optimal control action, $\optact{l}$, which is the first element of the control sequence, $\optactseq{l}$, is chosen such that the highest cumulative reward is expected by solving
-	\begin{align}
-		\boldsymbol{\gamma^{*}_{t}[l]} = \arg \underset {\boldsymbol{\gamma_{t}[l]} \in  \boldsymbol{\Gamma}} {\max}\, \mathcal{R}_P\left(\boldsymbol{\gamma_{t}[l]}\right).
-		\label{eq:control_action_model}
- 	\end{align}
-	 
 
 
 	\subsection{Robust decision making}
 
+	The mismatch between the actual position of the center of mass of the vehicle which is used to determine the rectangular outer approximation of the vehicle (see Section \ref{sec:reward_function}) and its predictions obtained using the dynamic model in \eqref{eq:nom_mod} might lead to collision. In the multi-agent traffic scenario under consideration, there are two sources of modeling errors: (i) the uncertainties, $w^{(m)} = \left(w_x^{(m)},\,w_y^{(m)}\right) \in \mathcal{W}_m$, resulting due to the use of a simplified model in \eqref{eq:nom_mod}; and (ii) the uncertainty, $w^{(d)} = \left(w_x^{(d)},\,w_y^{(d)}\right) \in \mathcal{W}_d$, arising due to improper estimation of the driver model. Hence, the disturbance set defined in \eqref{eq:dist_set} is $\mathcal{W} = \mathcal{W}_m \oplus \mathcal{W}_d$. 
 	
-	The control 
 	
-	The uncertainties might lead to collision
+	Robust approaches are required that can account for these uncertainties while computing the control actions. 
 
-	we require robust approaches that account for uncertainties while determining the control actions 
 
+	\begin{align}
+		\bar{\mathcal{W}}_{i}^{l} = \mathcal{W}_m \oplus P_{K_{i}^l = 0} \mathcal{W}_d
+	\end{align}
+
+	The safe zone of an agent $i$ from the perspective of the ego vehicle $l$, $s_{i}^{l}$, is defined as
+	\begin{align}
+		s_{i}^{l} = c_{i} \oplus \bar{\mathcal{W}}_{i}^{l},	
+	\end{align}
+
+	\noindent where $c_{i}$ is the collision avoidance zone of $i$.
+
+	If the driver is level-0 (aggressive), we 
+	
+	
+	
 	Feedback min-max \cite{Scokaert1998} strategy can be used
+	
+	Level-1 drivers are cautious and 
+
+
+
+
+	The optimal control action chosen by an autonomous agent $l$, $\optact{l}$, which is the first element of the control sequence, $\optactseq{l}$, is chosen such that the highest cumulative reward is expected by solving
+	\begin{subequations}
+		\begin{align}
+			\boldsymbol{\gamma^{*}_{t}[l]} =  & \arg \underset {\boldsymbol{\gamma_{t}[l]} \in  \boldsymbol{\Gamma}} {\max}\, \, \underset{w_{t+j}^{p} \in \mathcal{W}'_i}{\min} \, \, \mathcal{R}_P\left(\boldsymbol{\gamma_{t}[l]}\right) \\
+			\textrm{s. t.} \forall &  j \in \mathbb{Z}_{0,\,N-1},\, \eqref{eq:psi_pred},\, \eqref{eq:v_pred},\, \eqref{eq:beta_pred} \nonumber \\
+			\tilde{x}_{t+j+1} & = 	\tilde{x}_{t+j} + v_{t+j} \cos\left(\psi_{t+j} + \beta_{t+j} \right) \Delta t + w_{x,\,t+j}^{p}\\ 
+			\tilde{y}_{t+j+1} & = 	\tilde{y}_{t+j} + v_{t+j} \sin\left(\psi_{t+j} + \beta_{t+j} \right) \Delta t + w_{x,\,t+j}^{p},
+			\label{eq:control_action_model}
+		\end{align}
+	\end{subequations}
+
+	
+	\noindent where $w_{t+j}^{p} = \left(w_{x,\,t+j}^{p},\, w_{y,\,t+j}^{p}\right)$
+	
 
 	This does not account for the confidence on the driver model
 	
 	safe zone can be used to define the uncertainties in the vehicle dynamic model.. however we shd account for uncertainty in the driver model estimation
-
-	The uncertainty in the driver model can be translated to uncertainty in the x and y position.
 
 	safe zone is redefined as s $\oplus$ $\mathcal{W}$
 	
@@ -372,10 +412,6 @@
 	\end{align}
 	
 	
-	\begin{align}
-	\tilde{u}_{l}^D = \arg \, & \underset{u_{l} \in \mathcal{U}}{\max} \,\,\underset{w_x,\, w_y \in \mathcal{W}'_i}{\min} \left[ \sum_{k = 0}^{1} P_{K_i = k}\left(t\right) \left[ \sum _{j=0}^{N-1} \gamma ^j R\left(x_{l}\left(j+1\right), x_{i\neq l}\left(j+1\right), u_{l}\left(j\right), u_{i \neq l}^{K_i}\left(j\right), w_x,\,w_y \right)\right]\right]\nonumber
-	\end{align}
-	
 	
 
 	%==========================================================================%
@@ -383,13 +419,7 @@
 	\section{Simulation results}
 	\label{sec:sim_results}
 	The effectiveness of the proposed approach is verified through the case studies. Starting from the same initial conditions, the AV (blue car) switches to the left lane and the HVs (red cars) keep the lane as illustrated in Fig.~\ref{fig:snapshots}. We specify the level-1 decision making strategy to all HVs. That is, cautious drivers are assumed, but unknown to AV. The sampling time is set to 0.5 sec and two time step of prediction of the interactive vehicle's behavior is considered. Also, the three interactive vehicles are assumed and we observed the manageable computation time for each time step.
-	
-	The five panels on the left in Fig.~\ref{fig:snapshots}(a) shows the behavior of each vehicle at 1 second intervals when the AV changes the lane aggressively. The uncertainty size from the perspective of AV is illustrated by red dashed line. In this case study, there is almost no safety margin as the AV takes an aggressive lane change strategy. As a result, the left steering input is initiated as soon as the simulation begins and lane change occurs between 60$m$ and 70$m$. Looking more closely, due to the close distance between AV, the HV slightly moves to left at time $t=2s \text{ and } 3s$. It is possible to avoid collision because HV is cautious driver, but collision may happen if there is aggressive driver. This aggressive strategy should not be adopted because a certain degree of conservatism is preferred rather than car crashes.
-	
-	We next illustrate the results when adopting the conservative lane change strategy as shown in Fig.~\ref{fig:snapshots}(c). Unlike the previous case, the constant large uncertainty sizes are assumed to all interactive vehicles, meaning that the AV believes that the other vehicles will show the aggressive behaviors, which is not true. As a result, very conservative driving policy is designed as confirmed in Fig.~\ref{fig:snapshots}(c). Compared to the previous case, the AV changes the lane late (90$m$ - 100$m$) because incorrect beliefs of the aggressiveness of the interactive vehicles are utilized. Obviously, the AV can avoid the collision and safety is ensured with this conservative driving policy. However, compared to the human-decision making, it cannot be said to be reasonable motions.
-	
-	As compared to two previous result, we show the effectiveness of the proposed approach through Fig.~\ref{fig:snapshots}(b). We can observe the more reasonable behavior of the AV. Starting from the belief of large uncertainty bound of the left HV, the AV adjusts its belief as the historical actions of the left HV are collected based on \eqref{lv_est}. As a result, the lane change happens around 70$m$ that is between the those of the previous results. The real-time level estimation is illustrated in Fig.~\ref{fig:level_history}. Initially, it is believe that the HV at the left is modeled as level-0 but it true level is identified within 3$s$. However, the initial beliefs to the two front HVs do not vary because their expected actions between level-0 and level-1 modeling are same for $4s$, so the AV is very cautious with the front HVs.
-	
+
 	\begin{figure*}
 		\begin{centering}
 			\begin{tikzpicture}[scale=0.4,transform shape]
@@ -444,6 +474,14 @@
 		\protect\caption{.}
 		\label{fig:snapshots}
 	\end{figure*}
+	
+	The five panels on the left in Fig.~\ref{fig:snapshots}(a) shows the behavior of each vehicle at 1 second intervals when the AV changes the lane aggressively. The uncertainty size from the perspective of AV is illustrated by red dashed line. In this case study, there is almost no safety margin as the AV takes an aggressive lane change strategy. As a result, the left steering input is initiated as soon as the simulation begins and lane change occurs between 60$m$ and 70$m$. Looking more closely, due to the close distance between AV, the HV slightly moves to left at time $t=2s \text{ and } 3s$. It is possible to avoid collision because HV is cautious driver, but collision may happen if there is aggressive driver. This aggressive strategy should not be adopted because a certain degree of conservatism is preferred rather than car crashes.
+	
+	We next illustrate the results when adopting the conservative lane change strategy as shown in Fig.~\ref{fig:snapshots}(c). Unlike the previous case, the constant large uncertainty sizes are assumed to all interactive vehicles, meaning that the AV believes that the other vehicles will show the aggressive behaviors, which is not true. As a result, very conservative driving policy is designed as confirmed in Fig.~\ref{fig:snapshots}(c). Compared to the previous case, the AV changes the lane late (90$m$ - 100$m$) because incorrect beliefs of the aggressiveness of the interactive vehicles are utilized. Obviously, the AV can avoid the collision and safety is ensured with this conservative driving policy. However, compared to the human-decision making, it cannot be said to be reasonable motions.
+	
+	As compared to two previous result, we show the effectiveness of the proposed approach through Fig.~\ref{fig:snapshots}(b). We can observe the more reasonable behavior of the AV. Starting from the belief of large uncertainty bound of the left HV, the AV adjusts its belief as the historical actions of the left HV are collected based on \eqref{lv_est}. As a result, the lane change happens around 70$m$ that is between the those of the previous results. The real-time level estimation is illustrated in Fig.~\ref{fig:level_history}. Initially, it is believe that the HV at the left is modeled as level-0 but it true level is identified within 3$s$. However, the initial beliefs to the two front HVs do not vary because their expected actions between level-0 and level-1 modeling are same for $4s$, so the AV is very cautious with the front HVs.
+	
+	
 
 	\begin{figure}
 		\begin{centering}
