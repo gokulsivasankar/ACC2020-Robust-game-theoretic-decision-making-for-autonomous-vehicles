@@ -68,6 +68,10 @@
 \newcommand{\actseqktnopar}[3]{\gamma^{\left(#2\right)}_{t}[#1],\,\gamma^{\left(#2\right)}_{t+1}[#1],\,\cdots,\,\gamma^{\left(#2\right)}_{t+#3}[#1]}
 
 
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%
 
@@ -118,6 +122,7 @@
 	The rest of the paper is organized as follows. In Section II, the vehicle dynamic model with the bounded uncertainty is introduced. We next present the game-theoretic decision making algorithm and motion planning procedure in Section III, the effectiveness of the proposed approach is described in Section IV, and the paper is concluded in Section V.
 
 	\cite{Scokaert1998}
+
 	\cite{Mayne2005}
 
 	\cite{Richards2003}
@@ -357,30 +362,19 @@
 	 
 
 
-	\subsection{Robust decision making}
+	\subsection{Adaptive robust decision making}
 
 	The mismatch between the actual position of the center of mass of the vehicle which is used to determine the rectangular outer approximation of the vehicle (see Section \ref{sec:reward_function}) and its predictions obtained using the dynamic model in \eqref{eq:nom_mod} might lead to collision. In the multi-agent traffic scenario under consideration, there are two sources of modeling errors: (i) the uncertainties, $w^{(m)} = \left(w_x^{(m)},\,w_y^{(m)}\right) \in \mathcal{W}_m$, resulting due to the use of a simplified model in \eqref{eq:nom_mod}; and (ii) the uncertainty, $w^{(d)} = \left(w_x^{(d)},\,w_y^{(d)}\right) \in \mathcal{W}_d$, arising due to unknown driver model. Hence, the disturbance set defined in \eqref{eq:dist_set} is $\mathcal{W} = \mathcal{W}_m \oplus \mathcal{W}_d$. 	
 	
 	
-	Robust approaches can be used to account for these uncertainties while computing the control actions. Since a discrete set of input actions is considered in this work, feedback min-max strategy \cite{Scokaert1998} is utilized in this work for considering the uncertainties originating from the disturbance set $\mathcal{W}$. Since the autonomous agents update the driver models of the other agents in the multi-agent traffic scenario at each step according to \eqref{eq:model_update}, an adaptive scheme is proposed to incorporate the confidence on the driver models and leverage the fact that level-1 drivers are cautious. The disturbance set considered at each time step is modified  of the other agents and leverage .
-
-	
-
+	Robust approaches can be used to account for these uncertainties while computing the control actions. Since a discrete set of input actions is considered in this work, feedback min-max strategy \cite{Scokaert1998} is utilized in this work for considering the uncertainties originating from the disturbance set $\mathcal{W}$. Since the autonomous agents update the driver model of the other agents in the multi-agent traffic scenario at each step according to \eqref{eq:model_update}, an adaptive scheme is proposed to incorporate the confidence on the driver models and leverage the fact that level-1 drivers are cautious. It is achieved by considering the following adaptive disturbance set in the robust decision making process of the autonomous agent $l$,
 	\begin{align}
-		\bar{\mathcal{W}}_{i}^{l}(t) = \mathcal{W}_m \oplus P_{K_{i}^l = 0}(t) \mathcal{W}_d
+		\bar{\mathcal{W}}_{i}^{l}(t) = \mathcal{W}_m \oplus P_{K_{i}^l = 0}(t) \mathcal{W}_d, \forall i \in \mathcal{O}
 	\end{align}
 
-	\noindent where $P_{K_{i}^l = 0}$ is the probability that the \nth{i} agent is a level-0 driver from the perspective of the \nth{l} autonomous agent.
+	\noindent where at time $t$, $P_{K_{i}^l = 0} (t) $ is the probability that the \nth{i} agent is a level-0 driver from the perspective of the \nth{l} autonomous agent, and $\bar{\mathcal{W}}_{i}^{l}(t)$ denotes the disturbance set. It is assumed that, initially, all the agents are level-0 drivers, i.e., $P_{K_{i}^l = 0} (0) = 1,\, \forall i \in \mathcal{O}$. Essentially, this assumption allows the autonomous agent to be cautious with another interacting agent when there is no/less information about that agent. If an \nth{i} agent is level-0, as time evolves, $P_{K_{i}^l = 0} (t)$ will continue to be equal to one, and hence, the autonomous agent take conservative actions (or behave like level-1 driver). On the other hand, when the \nth{i} agent is a level-1 driver, $P_{K_{i}^l = 0} (t)$ will decrease, resulting in a reduced disturbance set size, thereby, allowing the autonomous agent to take less conservative actions.
 
-	% The safe zone of an agent $i$ in the perspective of the ego vehicle $l$, $s_{i}^{l}$, is defined as
-	% \begin{align}
-	% 	s_{i}^{l} = c_{i} \oplus \bar{\mathcal{W}}_{i}^{l} (t),	
-	% \end{align}
-
-	% \noindent where $c_{i}$ is the collision avoidance zone of $i$.
-
-
-	When interacting with an agent $i\in \mathcal{O}$, the objective the autonomous agent $l$ is to maximize the expected cumulative reward \eqref{eq:cum_reward_multi}, while accounting for the effect of the worst-case uncertainty from the possible disturbance realizations. The optimal control sequence, $\optactseq{l}$, is obtained by solving the following optimization problem
+	When interacting with an agent $i\in \mathcal{O}$, the objective the autonomous agent $l$ is to maximize the expected cumulative reward \eqref{eq:cum_reward_multi}, while accounting for the effect of the worst-case uncertainty from the possible disturbance realizations from the adaptive disturbance set, $\bar{\mathcal{W}}_{i}^{l}(t)$. The optimal control sequence, $\optactseq{l}$, is obtained by solving the following optimization problem
 	\begin{subequations}
 		\begin{align}
 			\boldsymbol{\gamma^{*}_{t}[l]} =  & \arg \underset {\boldsymbol{\gamma_{t}[l]} \in  \boldsymbol{\Gamma}} {\max}\, \, \underset{w_{t+j}^{p} \in \bar{\mathcal{W}}_{i}^{l}(t)}{\min} \, \, \mathcal{R}_P\left(\boldsymbol{\gamma_{t}[l]}\right) \\
@@ -405,7 +399,7 @@
 	
 	\section{Simulation results}
 	\label{sec:sim_results}
-	The effectiveness of the proposed approach is verified through the case studies. Starting from the same initial conditions, the AV (blue car) switches to the left lane and the HVs (red cars) keep the lane as illustrated in Fig.~\ref{fig:snapshots}. We specify the level-1 decision making strategy to all HVs. That is, cautious drivers are assumed, but unknown to AV. The sampling time is set to 0.5 sec and two time step of prediction of the interactive vehicle's behavior is considered. Also, the three interactive vehicles are assumed and we observed the manageable computation time for each time step.
+	The effectiveness of the proposed approach is verified through the case studies. Starting from the same initial conditions, the AV (blue car) switches to the left lane and the HVs (red cars) keep the lane as illustrated in Fig.~\ref{fig:snapshots}. We specify the level-1 decision making strategy to all HVs. That is, cautious drivers are assumed, but unknown to AV. The sampling time is set to 0.5 sec and two time step of prediction of the interactive vehicle's behavior is considered. Also, the three interactive vehicles are assumed and we observed the manageable computation time for each time step. 
 
 	\begin{figure*}
 		\begin{centering}
@@ -498,7 +492,7 @@
 	%==========================================================================%
 
 	\section*{Acknowledgement}
-	We would like to express out appreciation to Anouck Girard and Nan Li who provided expertise that greatly assisted the research and it should be noted that the code publicly available (\url{https://github.com/gokulsivasankar/RobustDecisionMaking}) is based on his previous study \cite{Li2018}.
+	We would like to express our appreciation to Anouck Girard and Nan Li who provided expertise that greatly assisted the research and it should be noted that the code publicly available (\url{https://github.com/gokulsivasankar/RobustDecisionMaking}) is based on his previous study \cite{Li2018}.
 
 
 
