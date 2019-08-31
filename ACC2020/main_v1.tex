@@ -268,7 +268,7 @@
 	\label{eq:cum_reward}
 	\end{align}
 	
-	\noindent where $R_{t+j}$ is the stage reward at a prediction step $j$ determined at time step $t$ for an input, $\gamma_{t+j} \in  \boldsymbol{\Gamma}$; $\lambda \in \left[0,\,1\right]$ is the discount factor. By the receding horizon strategy, the input applied to \eqref{eq:mod}, $\gamma\left(t\right)$, is the first element of $\boldsymbol{\gamma_{t}}^* = \left\{\gamma_{t}^*,\,\gamma_{t+1}^*,\,\cdots,\,\gamma_{t+N-1}^*\right\}$ is applied at each time instant $t$, i.e.,  $\gamma\left(t\right) = \gamma_{t}^*$. The stage reward at a prediction step $j$, $R_{t+j}$, is defined as
+	\noindent where $R_{t+j}$ is the stage reward at a prediction step $j$ determined at time step $t$ for an input, $\gamma_{t+j} \in  \boldsymbol{\Gamma}$; $\lambda \in \left[0,\,1\right]$ is the discount factor. By the receding horizon strategy, the input applied to \eqref{eq:mod}, $\gamma\left(t\right)$, is the first element of $\boldsymbol{\gamma_{t}}^* = \left\{\gamma_{t}^*,\,\gamma_{t+1}^*,\,\cdots,\,\gamma_{t+N-1}^*\right\}$ is applied at each time instant $t$. The stage reward at a prediction step $j$, $R_{t+j}$, is defined as
 	 \begin{align}
 	 R_{t+j} = \boldsymbol{{\alpha}}^T \boldsymbol{\phi_{t+j}},
 	 \label{eq:stage_reward}
@@ -343,6 +343,7 @@
 			& \tilde{P}_{K_{i}^l = k^*} \left(t\right) = {P}_{K_{i}^l = k^*} \left(t-1\right) + \Delta P  \\ 
 			& {P}_{K_{i}^l = k}\left(t\right) = \frac{\tilde{P}_{K_{i}^l = k}\left(t\right) }{\sum_{\tilde{k} = 0}^{1} \tilde{P}_{K_{i}^l = \tilde{k}}\left(t\right) },  \forall k \in \left\{0,\,1 \right\},
 		\end{align}
+		\label{eq:model_update}
 	\end{subequations}
 	
 	\noindent where $\actt{i}{k}{t}$ and $\actk{i}{k}{t}$ represent the actual and predicted action taken by \nth{i} agent assuming level-$k$ model, respectively; $\Delta P >0 $ is a constant that denotes the rate of increment of the probability;  $\left\|\actt{i}{k}{t} - \actk{i}{k}{t}\right\| = \left| a\left(t\right) - a_t^{(k)} \right| + \left|  \delta_f\left(t\right) - \delta_{f,\,t}^{(k)} \right|$. When the input pair of the actual action is equal to that of the predicted action, the probability distribution remains unchanged.
@@ -358,39 +359,32 @@
 
 	\subsection{Robust decision making}
 
-	The mismatch between the actual position of the center of mass of the vehicle which is used to determine the rectangular outer approximation of the vehicle (see Section \ref{sec:reward_function}) and its predictions obtained using the dynamic model in \eqref{eq:nom_mod} might lead to collision. In the multi-agent traffic scenario under consideration, there are two sources of modeling errors: (i) the uncertainties, $w^{(m)} = \left(w_x^{(m)},\,w_y^{(m)}\right) \in \mathcal{W}_m$, resulting due to the use of a simplified model in \eqref{eq:nom_mod}; and (ii) the uncertainty, $w^{(d)} = \left(w_x^{(d)},\,w_y^{(d)}\right) \in \mathcal{W}_d$, arising due to improper estimation of the driver model. Hence, the disturbance set defined in \eqref{eq:dist_set} is $\mathcal{W} = \mathcal{W}_m \oplus \mathcal{W}_d$. 
+	The mismatch between the actual position of the center of mass of the vehicle which is used to determine the rectangular outer approximation of the vehicle (see Section \ref{sec:reward_function}) and its predictions obtained using the dynamic model in \eqref{eq:nom_mod} might lead to collision. In the multi-agent traffic scenario under consideration, there are two sources of modeling errors: (i) the uncertainties, $w^{(m)} = \left(w_x^{(m)},\,w_y^{(m)}\right) \in \mathcal{W}_m$, resulting due to the use of a simplified model in \eqref{eq:nom_mod}; and (ii) the uncertainty, $w^{(d)} = \left(w_x^{(d)},\,w_y^{(d)}\right) \in \mathcal{W}_d$, arising due to unknown driver model. Hence, the disturbance set defined in \eqref{eq:dist_set} is $\mathcal{W} = \mathcal{W}_m \oplus \mathcal{W}_d$. 	
 	
 	
-	Robust approaches are required that can account for these uncertainties while computing the control actions. 
+	Robust approaches can be used to account for these uncertainties while computing the control actions. Since a discrete set of input actions is considered in this work, feedback min-max strategy \cite{Scokaert1998} is utilized in this work for considering the uncertainties originating from the disturbance set $\mathcal{W}$. Since the autonomous agents update the driver models of the other agents in the multi-agent traffic scenario at each step according to \eqref{eq:model_update}, an adaptive scheme is proposed to incorporate the confidence on the driver models and leverage the fact that level-1 drivers are cautious. The disturbance set considered at each time step is modified  of the other agents and leverage .
 
+	
 
 	\begin{align}
-		\bar{\mathcal{W}}_{i}^{l} = \mathcal{W}_m \oplus P_{K_{i}^l = 0} \mathcal{W}_d
+		\bar{\mathcal{W}}_{i}^{l}(t) = \mathcal{W}_m \oplus P_{K_{i}^l = 0}(t) \mathcal{W}_d
 	\end{align}
 
-	The safe zone of an agent $i$ from the perspective of the ego vehicle $l$, $s_{i}^{l}$, is defined as
-	\begin{align}
-		s_{i}^{l} = c_{i} \oplus \bar{\mathcal{W}}_{i}^{l},	
-	\end{align}
+	\noindent where $P_{K_{i}^l = 0}$ is the probability that the \nth{i} agent is a level-0 driver from the perspective of the \nth{l} autonomous agent.
 
-	\noindent where $c_{i}$ is the collision avoidance zone of $i$.
+	% The safe zone of an agent $i$ in the perspective of the ego vehicle $l$, $s_{i}^{l}$, is defined as
+	% \begin{align}
+	% 	s_{i}^{l} = c_{i} \oplus \bar{\mathcal{W}}_{i}^{l} (t),	
+	% \end{align}
 
-	If the driver is level-0 (aggressive), we 
-	
-	
-	
-	Feedback min-max \cite{Scokaert1998} strategy can be used
-	
-	Level-1 drivers are cautious and 
+	% \noindent where $c_{i}$ is the collision avoidance zone of $i$.
 
 
-
-
-	The optimal control action chosen by an autonomous agent $l$, $\optact{l}$, which is the first element of the control sequence, $\optactseq{l}$, is chosen such that the highest cumulative reward is expected by solving
+	When interacting with an agent $i\in \mathcal{O}$, the objective the autonomous agent $l$ is to maximize the expected cumulative reward \eqref{eq:cum_reward_multi}, while accounting for the effect of the worst-case uncertainty from the possible disturbance realizations. The optimal control sequence, $\optactseq{l}$, is obtained by solving the following optimization problem
 	\begin{subequations}
 		\begin{align}
-			\boldsymbol{\gamma^{*}_{t}[l]} =  & \arg \underset {\boldsymbol{\gamma_{t}[l]} \in  \boldsymbol{\Gamma}} {\max}\, \, \underset{w_{t+j}^{p} \in \mathcal{W}'_i}{\min} \, \, \mathcal{R}_P\left(\boldsymbol{\gamma_{t}[l]}\right) \\
-			\textrm{s. t.} \forall &  j \in \mathbb{Z}_{0,\,N-1},\, \eqref{eq:psi_pred},\, \eqref{eq:v_pred},\, \eqref{eq:beta_pred} \nonumber \\
+			\boldsymbol{\gamma^{*}_{t}[l]} =  & \arg \underset {\boldsymbol{\gamma_{t}[l]} \in  \boldsymbol{\Gamma}} {\max}\, \, \underset{w_{t+j}^{p} \in \bar{\mathcal{W}}_{i}^{l}(t)}{\min} \, \, \mathcal{R}_P\left(\boldsymbol{\gamma_{t}[l]}\right) \\
+			\textrm{s. t.} \forall &  j \in \mathbb{Z}_{0,\,N-1},\, \eqref{eq:psi_pred},\, \eqref{eq:v_pred},\, \eqref{eq:beta_pred} ,\,\forall i \in \mathcal{O},\, \forall p \in \mathcal{P} \nonumber \\
 			\tilde{x}_{t+j+1} & = 	\tilde{x}_{t+j} + v_{t+j} \cos\left(\psi_{t+j} + \beta_{t+j} \right) \Delta t + w_{x,\,t+j}^{p}\\ 
 			\tilde{y}_{t+j+1} & = 	\tilde{y}_{t+j} + v_{t+j} \sin\left(\psi_{t+j} + \beta_{t+j} \right) \Delta t + w_{x,\,t+j}^{p},
 			\label{eq:control_action_model}
@@ -398,19 +392,12 @@
 	\end{subequations}
 
 	
-	\noindent where $w_{t+j}^{p} = \left(w_{x,\,t+j}^{p},\, w_{y,\,t+j}^{p}\right)$
+	\noindent where $w_{t+j}^{p} = \left(w_{x,\,t+j}^{p},\, w_{y,\,t+j}^{p}\right)$ denote a possible realization of the uncertainty in the global position of the center of mass in $x$ and $y$ directions, respectively; and $\mathcal{P}$ represents the set of indexes of the realizations. The autonomous agent then applies the first element $\optact{l}$ of the optimal control action sequence, i.e.,  $\gamma\left(t\right) = \optact{l}$.
 	
 
-	This does not account for the confidence on the driver model
+	% This does not account for the confidence on the driver model
 	
-	safe zone can be used to define the uncertainties in the vehicle dynamic model.. however we shd account for uncertainty in the driver model estimation
-
-	safe zone is redefined as s $\oplus$ $\mathcal{W}$
-	
-	\begin{align}
-	\mathcal{W}_i' = P_{K_i = 0} \cdot \mathcal{W}_i \nonumber 
-	\end{align}
-	
+	% safe zone can be used to define the uncertainties in the vehicle dynamic model.. however we shd account for uncertainty in the driver model estimation
 	
 	
 
