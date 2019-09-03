@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.18)  3 SEP 2019 08:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.18)  3 SEP 2019 11:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1094,58 +1094,58 @@ Non-PDF special ignored!
 <Figures/blue_car.pdf, id=94, 401.5pt x 198.7425pt>
 File: Figures/blue_car.pdf Graphic file (type pdf)
 <use Figures/blue_car.pdf>
-Package pdftex.def Info: Figures/blue_car.pdf  used on input line 160.
+Package pdftex.def Info: Figures/blue_car.pdf  used on input line 156.
 (pdftex.def)             Requested size: 40.15234pt x 19.87541pt.
 <Figures/red_car.pdf, id=95, 400.49625pt x 198.7425pt>
 File: Figures/red_car.pdf Graphic file (type pdf)
 <use Figures/red_car.pdf>
-Package pdftex.def Info: Figures/red_car.pdf  used on input line 161.
+Package pdftex.def Info: Figures/red_car.pdf  used on input line 157.
 (pdftex.def)             Requested size: 40.05196pt x 19.87541pt.
 File: Figures/red_car.pdf Graphic file (type pdf)
 <use Figures/red_car.pdf>
-Package pdftex.def Info: Figures/red_car.pdf  used on input line 162.
+Package pdftex.def Info: Figures/red_car.pdf  used on input line 158.
 (pdftex.def)             Requested size: 40.05196pt x 19.87541pt.
 
-Underfull \hbox (badness 2753) in paragraph at lines 210--210
+Underfull \hbox (badness 2753) in paragraph at lines 206--206
 \OT1/ptm/m/n/8 Fig. 1.  []Possible lane chang-ing se-quences that can be cho-sen by
  []
 
 
-Underfull \hbox (badness 2828) in paragraph at lines 210--210
+Underfull \hbox (badness 2828) in paragraph at lines 206--206
 \OT1/ptm/m/n/8 the au-tonomous ve-hi-cle (blue) based on the mo-tion of other non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--210
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
 \OT1/ptm/m/n/8 autonomous ve-hi-cles (red) are $[]$,
  []
 
 
-Underfull \vbox (badness 5939) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 247.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 243.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 247.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 243.
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
 []\OT1/ptm/m/n/10 At each time in-stant, each ve-hi-cle se-lects
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
 \OT1/ptm/m/n/10 an in-put pair from the fi-nite ac-tion set, $[] \OT1/cmr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
 []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
 []$\OT1/ptm/m/n/10 ,
  []
 
@@ -1153,29 +1153,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.262 		\end{align}
+l.258 		\end{align}
                    pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.262 		\end{align}
+l.258 		\end{align}
                    pdfTeX warning (ext4): destination with the same identifier (name{equation.3.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.262 		\end{align}
+l.258 		\end{align}
                     </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/blue_car.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/red_car.pdf>]
-Underfull \hbox (badness 1824) in paragraph at lines 318--319
+Underfull \hbox (badness 1824) in paragraph at lines 314--315
 []$\OT1/ptm/m/n/10 , $\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 i \OMS/cmsy/m/n/10 2 O$\OT1/ptm/m/n/10 , where $\OMS/cmsy/m/n/10 O \OT1/cmr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 1603) in paragraph at lines 318--319
+Underfull \hbox (badness 1603) in paragraph at lines 314--315
 []$ \OT1/ptm/m/n/10 with $\OML/cmm/m/it/10 n$ \OT1/ptm/m/n/10 rep-re-sent-ing the num-ber of
  []
 
 
-Underfull \hbox (badness 3668) in paragraph at lines 318--319
+Underfull \hbox (badness 3668) in paragraph at lines 314--315
 [][]$\OT1/ptm/m/n/10 . In
  []
 
@@ -1183,51 +1183,51 @@ Underfull \hbox (badness 3668) in paragraph at lines 318--319
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.323 	\begin{align}
+l.319 	\begin{align}
                     pdfTeX warning (ext4): destination with the same identifier (name{equation.4.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.323 	\begin{align}
+l.319 	\begin{align}
                     pdfTeX warning (ext4): destination with the same identifier (name{equation.4.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.323 	\begin{align}
+l.319 	\begin{align}
                     ]pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.346 		\end{align}
+l.342 		\end{align}
                    pdfTeX warning (ext4): destination with the same identifier (name{equation.4.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.346 		\end{align}
+l.342 		\end{align}
                    pdfTeX warning (ext4): destination with the same identifier (name{equation.4.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.346 		\end{align}
+l.342 		\end{align}
                    
-Underfull \hbox (badness 1360) in paragraph at lines 383--385
+Underfull \hbox (badness 1360) in paragraph at lines 379--381
 []\OT1/ptm/m/n/10 When in-ter-act-ing with an agent $\OML/cmm/m/it/10 i \OMS/cmsy/m/n/10 2 O$\OT1/ptm/m/n/10 , the ob-jec-
  []
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 383--385
+Underfull \hbox (badness 2088) in paragraph at lines 379--381
 \OT1/ptm/m/n/10 of the worst-case un-cer-tainty from the pos-si-ble dis-tur-
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.391 		\end{align}
+l.387 		\end{align}
                    pdfTeX warning (ext4): destination with the same identifier (name{equation.4.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.391 		\end{align}
+l.387 		\end{align}
                    pdfTeX warning (ext4): destination with the same identifier (name{equation.4.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.391 		\end{align}
+l.387 		\end{align}
                    
 Underfull \vbox (badness 6961) has occurred while \output is active []
 
@@ -1235,85 +1235,85 @@ Underfull \vbox (badness 6961) has occurred while \output is active []
 <Figures/plot_adp0.jpg, id=221, 433.62pt x 216.81pt>
 File: Figures/plot_adp0.jpg Graphic file (type jpg)
 <use Figures/plot_adp0.jpg>
-Package pdftex.def Info: Figures/plot_adp0.jpg  used on input line 408.
+Package pdftex.def Info: Figures/plot_adp0.jpg  used on input line 404.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_agg0.jpg, id=223, 433.62pt x 216.81pt>
 File: Figures/plot_agg0.jpg Graphic file (type jpg)
 <use Figures/plot_agg0.jpg>
-Package pdftex.def Info: Figures/plot_agg0.jpg  used on input line 409.
+Package pdftex.def Info: Figures/plot_agg0.jpg  used on input line 405.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_con0.jpg, id=225, 433.62pt x 216.81pt>
 File: Figures/plot_con0.jpg Graphic file (type jpg)
 <use Figures/plot_con0.jpg>
-Package pdftex.def Info: Figures/plot_con0.jpg  used on input line 410.
+Package pdftex.def Info: Figures/plot_con0.jpg  used on input line 406.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_adp2.jpg, id=227, 433.62pt x 216.81pt>
 File: Figures/plot_adp2.jpg Graphic file (type jpg)
 <use Figures/plot_adp2.jpg>
-Package pdftex.def Info: Figures/plot_adp2.jpg  used on input line 413.
+Package pdftex.def Info: Figures/plot_adp2.jpg  used on input line 409.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_agg2.jpg, id=229, 433.62pt x 216.81pt>
 File: Figures/plot_agg2.jpg Graphic file (type jpg)
 <use Figures/plot_agg2.jpg>
-Package pdftex.def Info: Figures/plot_agg2.jpg  used on input line 414.
+Package pdftex.def Info: Figures/plot_agg2.jpg  used on input line 410.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_con2.jpg, id=231, 433.62pt x 216.81pt>
 File: Figures/plot_con2.jpg Graphic file (type jpg)
 <use Figures/plot_con2.jpg>
-Package pdftex.def Info: Figures/plot_con2.jpg  used on input line 415.
+Package pdftex.def Info: Figures/plot_con2.jpg  used on input line 411.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_adp4.jpg, id=233, 433.62pt x 216.81pt>
 File: Figures/plot_adp4.jpg Graphic file (type jpg)
 <use Figures/plot_adp4.jpg>
-Package pdftex.def Info: Figures/plot_adp4.jpg  used on input line 418.
+Package pdftex.def Info: Figures/plot_adp4.jpg  used on input line 414.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_agg4.jpg, id=235, 433.62pt x 216.81pt>
 File: Figures/plot_agg4.jpg Graphic file (type jpg)
 <use Figures/plot_agg4.jpg>
-Package pdftex.def Info: Figures/plot_agg4.jpg  used on input line 419.
+Package pdftex.def Info: Figures/plot_agg4.jpg  used on input line 415.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_con4.jpg, id=237, 433.62pt x 216.81pt>
 File: Figures/plot_con4.jpg Graphic file (type jpg)
 <use Figures/plot_con4.jpg>
-Package pdftex.def Info: Figures/plot_con4.jpg  used on input line 420.
+Package pdftex.def Info: Figures/plot_con4.jpg  used on input line 416.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_adp6.jpg, id=239, 433.62pt x 216.81pt>
 File: Figures/plot_adp6.jpg Graphic file (type jpg)
 <use Figures/plot_adp6.jpg>
-Package pdftex.def Info: Figures/plot_adp6.jpg  used on input line 423.
+Package pdftex.def Info: Figures/plot_adp6.jpg  used on input line 419.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_agg6.jpg, id=241, 433.62pt x 216.81pt>
 File: Figures/plot_agg6.jpg Graphic file (type jpg)
 <use Figures/plot_agg6.jpg>
-Package pdftex.def Info: Figures/plot_agg6.jpg  used on input line 424.
+Package pdftex.def Info: Figures/plot_agg6.jpg  used on input line 420.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_con6.jpg, id=243, 433.62pt x 216.81pt>
 File: Figures/plot_con6.jpg Graphic file (type jpg)
 <use Figures/plot_con6.jpg>
-Package pdftex.def Info: Figures/plot_con6.jpg  used on input line 425.
+Package pdftex.def Info: Figures/plot_con6.jpg  used on input line 421.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_adp8.jpg, id=245, 433.62pt x 216.81pt>
 File: Figures/plot_adp8.jpg Graphic file (type jpg)
 <use Figures/plot_adp8.jpg>
-Package pdftex.def Info: Figures/plot_adp8.jpg  used on input line 427.
+Package pdftex.def Info: Figures/plot_adp8.jpg  used on input line 423.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_agg8.jpg, id=247, 433.62pt x 216.81pt>
 File: Figures/plot_agg8.jpg Graphic file (type jpg)
 <use Figures/plot_agg8.jpg>
-Package pdftex.def Info: Figures/plot_agg8.jpg  used on input line 428.
+Package pdftex.def Info: Figures/plot_agg8.jpg  used on input line 424.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 <Figures/plot_con8.jpg, id=249, 433.62pt x 216.81pt>
 File: Figures/plot_con8.jpg Graphic file (type jpg)
 <use Figures/plot_con8.jpg>
-Package pdftex.def Info: Figures/plot_con8.jpg  used on input line 429.
+Package pdftex.def Info: Figures/plot_con8.jpg  used on input line 425.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-LaTeX Font Info:    Calculating math sizes for size <24> on input line 449.
+LaTeX Font Info:    Calculating math sizes for size <24> on input line 445.
 <Figures/level_ratio_history_adp29.jpg, id=256, 462.528pt x 346.896pt>
 File: Figures/level_ratio_history_adp29.jpg Graphic file (type jpg)
 <use Figures/level_ratio_history_adp29.jpg>
-Package pdftex.def Info: Figures/level_ratio_history_adp29.jpg  used on input line 479.
+Package pdftex.def Info: Figures/level_ratio_history_adp29.jpg  used on input line 475.
 (pdftex.def)             Requested size: 384.28201pt x 288.56708pt.
-LaTeX Font Info:    Calculating math sizes for size <20> on input line 483.
+LaTeX Font Info:    Calculating math sizes for size <20> on input line 479.
  (/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.bbl [5]
 Underfull \vbox (badness 3068) has occurred while \output is active []
 
@@ -1326,32 +1326,32 @@ Underfull \vbox (badness 3068) has occurred while \output is active []
                                                   \fi \fi 
 l.95 
       </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp0.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg0.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con0.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp2.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg2.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con2.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp4.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg4.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con4.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp6.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg6.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con6.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp8.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg8.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con8.jpg>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 520.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 520.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 516.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 516.
  [7pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.520 \end{document}
+l.516 \end{document}
                     
 
  </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/level_ratio_history_adp29.jpg>] (/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 520.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 520.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 516.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 516.
 Package rerunfilecheck Info: File `main_v1.out' has not changed.
 (rerunfilecheck)             Checksum: F282E11D99B7A3CBE897D86F22376344;702.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 520.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 516.
  ) 
 Here is how much of TeX's memory you used:
  43899 strings out of 492616
  1026904 string characters out of 6128982
- 1267444 words of memory out of 5000000
+ 1267445 words of memory out of 5000000
  47110 multiletter control sequences out of 15000+600000
  588968 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,14n,100p,1998b,862s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.pdf (7 pages, 15945701 bytes).
+Output written on /Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v1.pdf (7 pages, 15945793 bytes).
 PDF statistics:
  417 PDF objects out of 1000 (max. 8388607)
  314 compressed objects within 4 object streams
