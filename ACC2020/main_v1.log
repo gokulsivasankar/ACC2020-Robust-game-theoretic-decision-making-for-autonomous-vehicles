@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.18)  4 SEP 2019 11:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.18)  4 SEP 2019 14:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1094,43 +1094,40 @@ Non-PDF special ignored!
 <Figures/blue_car.pdf, id=103, 401.5pt x 198.7425pt>
 File: Figures/blue_car.pdf Graphic file (type pdf)
 <use Figures/blue_car.pdf>
-Package pdftex.def Info: Figures/blue_car.pdf  used on input line 160.
+Package pdftex.def Info: Figures/blue_car.pdf  used on input line 164.
 (pdftex.def)             Requested size: 40.15234pt x 19.87541pt.
 <Figures/red_car.pdf, id=104, 400.49625pt x 198.7425pt>
 File: Figures/red_car.pdf Graphic file (type pdf)
 <use Figures/red_car.pdf>
-Package pdftex.def Info: Figures/red_car.pdf  used on input line 161.
+Package pdftex.def Info: Figures/red_car.pdf  used on input line 165.
 (pdftex.def)             Requested size: 40.05196pt x 19.87541pt.
 File: Figures/red_car.pdf Graphic file (type pdf)
 <use Figures/red_car.pdf>
-Package pdftex.def Info: Figures/red_car.pdf  used on input line 162.
+Package pdftex.def Info: Figures/red_car.pdf  used on input line 166.
 (pdftex.def)             Requested size: 40.05196pt x 19.87541pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 247.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 255.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 247.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 255.
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 []\OT1/ptm/m/n/10 At each time in-stant, each ve-hi-cle se-lects
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 \OT1/ptm/m/n/10 an in-put pair from the fi-nite ac-tion set, $[] \OT1/cmr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 []$\OT1/ptm/m/n/10 ,
  []
 
@@ -1138,15 +1135,104 @@ Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.248 	
+l.256 	
        pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.248 	
+l.256 	
        pdfTeX warning (ext4): destination with the same identifier (name{equation.3.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.248 	
-        </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/blue_car.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicle
+l.256 	
+        </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/blue_car.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/red_car.pdf>]
+Underfull \hbox (badness 1824) in paragraph at lines 326--327
+[]$\OT1/ptm/m/n/10 , $\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 i \OMS/cmsy/m/n/10 2 O$\OT1/ptm/m/n/10 , where $\OMS/cmsy/m/n/10 O \OT1/cmr/m/n/10 =
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 326--327
+[]$ \OT1/ptm/m/n/10 with $\OML/cmm/m/it/10 n$ \OT1/ptm/m/n/10 rep-re-sent-ing the num-ber of
+ []
+
+
+Underfull \hbox (badness 3668) in paragraph at lines 326--327
+[][]$\OT1/ptm/m/n/10 . In
+ []
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{equation.4.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.329 	
+       pdfTeX warning (ext4): destination with the same identifier (name{equation.4.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.329 	
+       pdfTeX warning (ext4): destination with the same identifier (name{equation.4.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.329 	
+       ]pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.354 		\end{align}
+                   pdfTeX warning (ext4): destination with the same identifier (name{equation.4.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.354 		\end{align}
+                   pdfTeX warning (ext4): destination with the same identifier (name{equation.4.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.354 		\end{align}
+                   
+Underfull \hbox (badness 1360) in paragraph at lines 391--393
+[]\OT1/ptm/m/n/10 When in-ter-act-ing with an agent $\OML/cmm/m/it/10 i \OMS/cmsy/m/n/10 2 O$\OT1/ptm/m/n/10 , the ob-jec-
+ []
+
+
+Underfull \hbox (badness 2088) in paragraph at lines 391--393
+\OT1/ptm/m/n/10 of the worst-case un-cer-tainty from the pos-si-ble dis-tur-
+ []
+
+[4]pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.399 		\end{align}
+                   pdfTeX warning (ext4): destination with the same identifier (name{equation.4.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.399 		\end{align}
+                   pdfTeX warning (ext4): destination with the same identifier (name{equation.4.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.399 		\end{align}
+                   
+<Figures/plot_adp0.jpg, id=225, 433.62pt x 216.81pt>
+File: Figures/plot_adp0.jpg Graphic file (type jpg)
+<use Figures/plot_adp0.jpg>
+Package pdftex.def Info: Figures/plot_adp0.jpg  used on input line 416.
+(pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
+<Figures/plot_agg0.jpg, id=227, 433.62pt x 216.81pt>
+File: Figures/plot_agg0.jpg Graphic file (type jpg)
+<use Figures/plot_agg0.jpg>
+Package pdftex.def Info: Figures/plot_agg0.jpg  used on input line 417.
+(pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
+<Figures/plot_con0.jpg, id=229, 433.62pt x 216.81pt>
+File: Figures/plot_con0.jpg Graphic file (type jpg)
+<use Figures/plot_con0.jpg>
+Package pdftex.def Info: Figures/plot_con0.jpg  used on input line 418.
+(pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
+<Figures/plot_adp2.jpg, id=231, 433.62pt x 216.81pt>
+File: Figures/plot_adp2.jpg Graphic file (type jpg)
+<use Figures/plot_adp2.jpg>
+Package pdftex.def Info: Figures/plot_adp2.jpg  used on input line 421.
+(pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
+<Figures/plot_agg2.jpg, id=233, 433.62pt x 216.81pt>
+File: Figures/plot_agg2.jpg Graphic file (type jpg)
+<use Figures/plot_agg2.jpg>
+Package pdftex.def Info: Figures/plot_agg2.jpg  used on input line 422.
+(pdftex.def)             Requested size: 3

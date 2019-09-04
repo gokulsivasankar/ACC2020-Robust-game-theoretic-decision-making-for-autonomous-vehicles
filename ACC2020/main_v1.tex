@@ -137,9 +137,13 @@
 	\section{Problem statement}
 	\label{sec:problem_statement}
 
-	Consider a highway driving traffic scenario shown in the Fig.~\ref{fig:lane_changing} with human driven vehicles shown in red and the autonomous vehicle in blue. The goal of the AV is to perform a lane change. A subset of the possible lane changing trajectories are also shown in the Fig.~\ref{fig:lane_changing}. The AV is required to complete the maneuver while considering the motion of the HVs 
-
+	Consider a highway driving traffic scenario shown in the Fig.~\ref{fig:lane_changing} with human driven vehicles shown in red and the autonomous vehicle in blue. The goal of the AV is to perform a lane change. A subset of the possible lane changing trajectories are also shown in the Fig.~\ref{fig:lane_changing}. The trajectory $\left\{\left(A,A1\right),\,\left(A1,B1\right),\,\left(B1,B\right)\right\}$ is considered to be an aggressive maneuver as the lane change occurs closer to the human vehicle $3$ and might lead to collision, while $\left\{\left(A,A3\right),\,\left(A3,B3\right),\,\left(B3,B\right)\right\}$ is considered conservative as the AV completes the maneuver by performing the lane change farthest from the HV 3.
 	
+	$\left\{\left(A,A2\right),\,\left(A2,B2\right),\,\left(B2,B\right)\right\}$ 
+	
+	The AV is required to complete the maneuver while considering the motion of the HVs 
+
+
 	
 	If the interactive vehicles behave aggressively, the AV should plan the motion conservatively, and vice versa. In addition, to avoid the too conservative or aggressive driving policy, the balanced motion planning is preferred in the actual application.
 	
@@ -203,6 +207,10 @@
 			\node[above left = 1.15cm and -5.5cm of blue,]{B2};
 			\node[above left = 1.15cm and -6.5cm of blue,]{B3};
 			\node[above left = 1.15cm and -7.5cm of blue,]{B};
+
+			\node(car1) [below left = -0.67cm and 0.1cm of red2, inner sep = 0pt, draw, circle, minimum height = 0.5cm, minimum width = 0.5cm] {1};
+			\node(car2) [below left = -0.67cm and 0.1cm of blue, inner sep = 0pt, draw, circle, minimum height = 0.5cm, minimum width = 0.5cm] {2};
+			\node(car3) [below left = -0.67cm and 0.1cm of red1, inner sep = 0pt, draw, circle, minimum height = 0.5cm, minimum width = 0.5cm] {3};
 			
 			\end{tikzpicture}
 			\par
@@ -438,9 +446,9 @@
 			\node (xlabelcon) [below = 1cm of con5, inner sep = 0pt] {\Huge Distance (m)};
 
 			\node(car1) [below left = -2.79cm and -6.75cm of agg1, inner sep = 0pt, draw, circle, minimum height = 0.7cm, minimum width = 0.7cm] {\LARGE 1};
-			\node(car3) [below left = -3.79cm and -7.95cm of agg1, inner sep = 0pt, draw, circle, minimum height = 0.7cm, minimum width = 0.7cm] {\LARGE 3};
 			\node(car2) [below left = -3.79cm and -2.45cm of agg1, inner sep = 0pt, draw, circle, minimum height = 0.7cm, minimum width = 0.7cm] {\LARGE 2};
-			\node(car3) [below left = -4.79cm and -2.45cm of agg1, inner sep = 0pt, draw, circle, minimum height = 0.7cm, minimum width = 0.7cm] {\LARGE 4};
+			\node(car3) [below left = -3.79cm and -7.95cm of agg1, inner sep = 0pt, draw, circle, minimum height = 0.7cm, minimum width = 0.7cm] {\LARGE 3};
+			\node(car4) [below left = -4.79cm and -2.45cm of agg1, inner sep = 0pt, draw, circle, minimum height = 0.7cm, minimum width = 0.7cm] {\LARGE 4};
 
 			\node(lane1) [below left = -2.76cm and -11.85cm of agg1, inner sep = 0pt] {\LARGE I};
 			\node(lane1) [below left = -3.76cm and -11.95cm of agg1, inner sep = 0pt] {\LARGE II};
