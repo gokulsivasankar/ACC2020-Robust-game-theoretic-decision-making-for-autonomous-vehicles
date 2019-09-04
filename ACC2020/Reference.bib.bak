@@ -174,4 +174,46 @@
   keywords = {Calibration;Switches;Atmospheric modeling;Tuning;Diesel engines;Controller calibration;diesel engine;model predictive control (MPC);robust control;switched linear time-invariant (LTI) MPC},
 }
 
+@InProceedings{Richards2003,
+  author    = {Richards, Arthur and How, Jonathan P.},
+  title     = {Model predictive control of vehicle maneuvers with guaranteed completion time and robust feasibility},
+  booktitle = {American Control Conference, 2003. Proceedings of the 2003},
+  year      = {2003},
+  volume    = {5},
+  pages     = {4034-4040 vol.5},
+  month     = {June},
+}
+
+@Article{Mayne2005,
+  author    = {Mayne, David Q and Seron, Mar{\'\i}a M and Rakovi{\'c}, SV},
+  title     = {Robust model predictive control of constrained linear systems with bounded disturbances},
+  journal   = {Automatica},
+  year      = {2005},
+  volume    = {41},
+  number    = {2},
+  pages     = {219--224},
+  publisher = {Elsevier},
+}
+
+@Article{Chen2017,
+  author    = {Chen, Yuxiao and Peng, Huei and Grizzle, Jessy W},
+  title     = {Fast trajectory planning and robust trajectory tracking for pedestrian avoidance},
+  journal   = {Ieee Access},
+  year      = {2017},
+  volume    = {5},
+  pages     = {9304--9317},
+  publisher = {IEEE},
+}
+
+@Article{althoff2009model,
+  author    = {Althoff, Matthias and Stursberg, Olaf and Buss, Martin},
+  title     = {Model-based probabilistic collision detection in autonomous driving},
+  journal   = {IEEE Transactions on Intelligent Transportation Systems},
+  year      = {2009},
+  volume    = {10},
+  number    = {2},
+  pages     = {299--310},
+  publisher = {IEEE},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
