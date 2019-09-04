@@ -130,25 +130,6 @@
 	The symbol $\mathbb{Z}_{\left[a,\, b\right]}$ denotes a set of consecutive integers from $a$ to $b$ and $2\mathbb{Z}^{+}$ denotes set of positive even integers; $\emptyset$ denotes an empty set. For a vector $x$, $x>0$ denotes element-wise inequality. The operator $\oplus$ denotes the Minkowski addition, defined for the sets $\mathcal{A}$ and $\mathcal{B}$ as $	\mathcal{A}\oplus\mathcal{B}\coloneqq\left\{ a+b | a\in\mathcal{A}\,\forall b\in\mathcal{B}\right\}$.
 	
 
-
-	
-	%==========================================================================%
-
-	\section{Problem statement}
-	\label{sec:problem_statement}
-
-	Consider a highway driving traffic scenario shown in the Fig.~\ref{fig:lane_changing} with human driven vehicles shown in red and the autonomous vehicle in blue. The goal of the AV is to perform a lane change. A subset of the possible lane changing trajectories are also shown in the Fig.~\ref{fig:lane_changing}. The trajectory $\left\{\left(A,A1\right),\,\left(A1,B1\right),\,\left(B1,B\right)\right\}$ is considered to be an aggressive maneuver as the lane change occurs closer to the human vehicle $3$ and might lead to collision, while $\left\{\left(A,A3\right),\,\left(A3,B3\right),\,\left(B3,B\right)\right\}$ is considered conservative as the AV completes the maneuver by performing the lane change farthest from the HV 3.
-	
-	$\left\{\left(A,A2\right),\,\left(A2,B2\right),\,\left(B2,B\right)\right\}$ 
-	
-	The AV is required to complete the maneuver while considering the motion of the HVs 
-
-
-	
-	If the interactive vehicles behave aggressively, the AV should plan the motion conservatively, and vice versa. In addition, to avoid the too conservative or aggressive driving policy, the balanced motion planning is preferred in the actual application.
-	
-	The problem we treat is to model the intent of the interactive vehicles using game theoretical approach, then AV exploits the estimated interactive vehicle's driving intention when making the decision. The confidence level of the estimated intention is represented by dashed-dotted boxes in Fig.~\ref{fig:lane_changing} and their sizes are adjusted adaptively according to the estimated confidence levels.
-
 	\begin{figure}
 		\begin{centering}
 			\begin{tikzpicture}
@@ -218,6 +199,16 @@
 	\protect\caption{Sample lane changing sequences that can be chosen by the autonomous vehicle (blue) based on the motion of other non-autonomous vehicles (red) are $\left\{\left(A,A1\right),\,\left(A1,B1\right),\,\left(B1,B\right)\right\}$, $\left\{\left(A,A2\right),\,\left(A2,B2\right),\,\left(B2,B\right)\right\}$ and $\left\{\left(A,A3\right),\,\left(A3,B3\right),\,\left(B3,B\right)\right\}$.}
 	\label{fig:lane_changing}
 	\end{figure}
+
+	
+	%==========================================================================%
+
+	\section{Problem statement}
+	\label{sec:problem_statement}
+
+	Consider a highway driving traffic scenario shown in the Fig.~\ref{fig:lane_changing} with human driven vehicles shown in red and the autonomous vehicle in blue. The goal of the AV is to perform a lane change. A subset of the possible lane changing trajectories are shown in the Fig.~\ref{fig:lane_changing}. The trajectory $\left\{\left(A,A1\right),\,\left(A1,B1\right),\,\left(B1,B\right)\right\}$ is considered to be an aggressive maneuver as the lane change occurs closer to the human vehicle $3$ and might lead to collision. On the other hand, $\left\{\left(A,A3\right),\,\left(A3,B3\right),\,\left(B3,B\right)\right\}$ is considered conservative as the AV completes the maneuver by performing the lane change farthest from the HV 3. Being conservative can lead to road congestion and disharmony as mentioned earlier. Therefore, it is desirable to develop an adaptive control strategy for the AV that is able to perform the desired maneuver with reduced conservatism whilst planning a safe motion to avoid collision as in $\left\{\left(A,A2\right),\,\left(A2,B2\right),\,\left(B2,B\right)\right\}$. The strategy should be able to  modify the behavior of the AV according to the confidence on the estimated behavior of the interacting vehicles. 
+	
+	
 	
 	
 	%==========================================================================%
