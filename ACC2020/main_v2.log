@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.18)  5 SEP 2019 13:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.18)  5 SEP 2019 14:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1206,80 +1206,80 @@ l.390 		\end{align}
                    \relax 
 l.390 		\end{align}
                     [4]
-<Figures/plot_adp0.jpg, id=225, 433.62pt x 216.81pt>
-File: Figures/plot_adp0.jpg Graphic file (type jpg)
-<use Figures/plot_adp0.jpg>
-Package pdftex.def Info: Figures/plot_adp0.jpg  used on input line 407.
+<Figures/plot_adp0.pdf, id=225, 433.62pt x 216.81pt>
+File: Figures/plot_adp0.pdf Graphic file (type pdf)
+<use Figures/plot_adp0.pdf>
+Package pdftex.def Info: Figures/plot_adp0.pdf  used on input line 407.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_agg0.jpg, id=227, 433.62pt x 216.81pt>
-File: Figures/plot_agg0.jpg Graphic file (type jpg)
-<use Figures/plot_agg0.jpg>
-Package pdftex.def Info: Figures/plot_agg0.jpg  used on input line 408.
+<Figures/plot_agg0.pdf, id=227, 433.62pt x 216.81pt>
+File: Figures/plot_agg0.pdf Graphic file (type pdf)
+<use Figures/plot_agg0.pdf>
+Package pdftex.def Info: Figures/plot_agg0.pdf  used on input line 408.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_con0.jpg, id=229, 433.62pt x 216.81pt>
-File: Figures/plot_con0.jpg Graphic file (type jpg)
-<use Figures/plot_con0.jpg>
-Package pdftex.def Info: Figures/plot_con0.jpg  used on input line 409.
+<Figures/plot_con0.pdf, id=229, 433.62pt x 216.81pt>
+File: Figures/plot_con0.pdf Graphic file (type pdf)
+<use Figures/plot_con0.pdf>
+Package pdftex.def Info: Figures/plot_con0.pdf  used on input line 409.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_adp2.jpg, id=231, 433.62pt x 216.81pt>
-File: Figures/plot_adp2.jpg Graphic file (type jpg)
-<use Figures/plot_adp2.jpg>
-Package pdftex.def Info: Figures/plot_adp2.jpg  used on input line 412.
+<Figures/plot_adp2.pdf, id=231, 433.62pt x 216.81pt>
+File: Figures/plot_adp2.pdf Graphic file (type pdf)
+<use Figures/plot_adp2.pdf>
+Package pdftex.def Info: Figures/plot_adp2.pdf  used on input line 412.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_agg2.jpg, id=233, 433.62pt x 216.81pt>
-File: Figures/plot_agg2.jpg Graphic file (type jpg)
-<use Figures/plot_agg2.jpg>
-Package pdftex.def Info: Figures/plot_agg2.jpg  used on input line 413.
+<Figures/plot_agg2.pdf, id=233, 433.62pt x 216.81pt>
+File: Figures/plot_agg2.pdf Graphic file (type pdf)
+<use Figures/plot_agg2.pdf>
+Package pdftex.def Info: Figures/plot_agg2.pdf  used on input line 413.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_con2.jpg, id=235, 433.62pt x 216.81pt>
-File: Figures/plot_con2.jpg Graphic file (type jpg)
-<use Figures/plot_con2.jpg>
-Package pdftex.def Info: Figures/plot_con2.jpg  used on input line 414.
+<Figures/plot_con2.pdf, id=235, 433.62pt x 216.81pt>
+File: Figures/plot_con2.pdf Graphic file (type pdf)
+<use Figures/plot_con2.pdf>
+Package pdftex.def Info: Figures/plot_con2.pdf  used on input line 414.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_adp4.jpg, id=237, 433.62pt x 216.81pt>
-File: Figures/plot_adp4.jpg Graphic file (type jpg)
-<use Figures/plot_adp4.jpg>
-Package pdftex.def Info: Figures/plot_adp4.jpg  used on input line 417.
+<Figures/plot_adp4.pdf, id=237, 433.62pt x 216.81pt>
+File: Figures/plot_adp4.pdf Graphic file (type pdf)
+<use Figures/plot_adp4.pdf>
+Package pdftex.def Info: Figures/plot_adp4.pdf  used on input line 417.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_agg4.jpg, id=239, 433.62pt x 216.81pt>
-File: Figures/plot_agg4.jpg Graphic file (type jpg)
-<use Figures/plot_agg4.jpg>
-Package pdftex.def Info: Figures/plot_agg4.jpg  used on input line 418.
+<Figures/plot_agg4.pdf, id=239, 433.62pt x 216.81pt>
+File: Figures/plot_agg4.pdf Graphic file (type pdf)
+<use Figures/plot_agg4.pdf>
+Package pdftex.def Info: Figures/plot_agg4.pdf  used on input line 418.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_con4.jpg, id=241, 433.62pt x 216.81pt>
-File: Figures/plot_con4.jpg Graphic file (type jpg)
-<use Figures/plot_con4.jpg>
-Package pdftex.def Info: Figures/plot_con4.jpg  used on input line 419.
+<Figures/plot_con4.pdf, id=241, 433.62pt x 216.81pt>
+File: Figures/plot_con4.pdf Graphic file (type pdf)
+<use Figures/plot_con4.pdf>
+Package pdftex.def Info: Figures/plot_con4.pdf  used on input line 419.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_adp6.jpg, id=243, 433.62pt x 216.81pt>
-File: Figures/plot_adp6.jpg Graphic file (type jpg)
-<use Figures/plot_adp6.jpg>
-Package pdftex.def Info: Figures/plot_adp6.jpg  used on input line 422.
+<Figures/plot_adp6.pdf, id=243, 433.62pt x 216.81pt>
+File: Figures/plot_adp6.pdf Graphic file (type pdf)
+<use Figures/plot_adp6.pdf>
+Package pdftex.def Info: Figures/plot_adp6.pdf  used on input line 422.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_agg6.jpg, id=245, 433.62pt x 216.81pt>
-File: Figures/plot_agg6.jpg Graphic file (type jpg)
-<use Figures/plot_agg6.jpg>
-Package pdftex.def Info: Figures/plot_agg6.jpg  used on input line 423.
+<Figures/plot_agg6.pdf, id=245, 433.62pt x 216.81pt>
+File: Figures/plot_agg6.pdf Graphic file (type pdf)
+<use Figures/plot_agg6.pdf>
+Package pdftex.def Info: Figures/plot_agg6.pdf  used on input line 423.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_con6.jpg, id=247, 433.62pt x 216.81pt>
-File: Figures/plot_con6.jpg Graphic file (type jpg)
-<use Figures/plot_con6.jpg>
-Package pdftex.def Info: Figures/plot_con6.jpg  used on input line 424.
+<Figures/plot_con6.pdf, id=247, 433.62pt x 216.81pt>
+File: Figures/plot_con6.pdf Graphic file (type pdf)
+<use Figures/plot_con6.pdf>
+Package pdftex.def Info: Figures/plot_con6.pdf  used on input line 424.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_adp8.jpg, id=249, 433.62pt x 216.81pt>
-File: Figures/plot_adp8.jpg Graphic file (type jpg)
-<use Figures/plot_adp8.jpg>
-Package pdftex.def Info: Figures/plot_adp8.jpg  used on input line 426.
+<Figures/plot_adp8.pdf, id=249, 433.62pt x 216.81pt>
+File: Figures/plot_adp8.pdf Graphic file (type pdf)
+<use Figures/plot_adp8.pdf>
+Package pdftex.def Info: Figures/plot_adp8.pdf  used on input line 426.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_agg8.jpg, id=251, 433.62pt x 216.81pt>
-File: Figures/plot_agg8.jpg Graphic file (type jpg)
-<use Figures/plot_agg8.jpg>
-Package pdftex.def Info: Figures/plot_agg8.jpg  used on input line 427.
+<Figures/plot_agg8.pdf, id=251, 433.62pt x 216.81pt>
+File: Figures/plot_agg8.pdf Graphic file (type pdf)
+<use Figures/plot_agg8.pdf>
+Package pdftex.def Info: Figures/plot_agg8.pdf  used on input line 427.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
-<Figures/plot_con8.jpg, id=253, 433.62pt x 216.81pt>
-File: Figures/plot_con8.jpg Graphic file (type jpg)
-<use Figures/plot_con8.jpg>
-Package pdftex.def Info: Figures/plot_con8.jpg  used on input line 428.
+<Figures/plot_con8.pdf, id=253, 433.62pt x 216.81pt>
+File: Figures/plot_con8.pdf Graphic file (type pdf)
+<use Figures/plot_con8.pdf>
+Package pdftex.def Info: Figures/plot_con8.pdf  used on input line 428.
 (pdftex.def)             Requested size: 348.26093pt x 202.58316pt.
 LaTeX Font Info:    Calculating math sizes for size <24> on input line 448.
 <Figures/level_ratio.pdf, id=260, 461.725pt x 346.29375pt>
@@ -1299,7 +1299,7 @@ Underfull \vbox (badness 3068) has occurred while \output is active []
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.95 
-      </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp0.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg0.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con0.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp2.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg2.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con2.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp4.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg4.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con4.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp6.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg6.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con6.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp8.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg8.jpg> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con8.jpg>])
+      </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp0.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg0.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con0.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp2.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg2.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con2.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp4.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg4.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con4.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp6.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg6.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con6.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_adp8.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_agg8.pdf> </Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/Figures/plot_con8.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 521.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 521.
  [7pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
@@ -1317,18 +1317,18 @@ Package rerunfilecheck Info: File `main_v2.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 521.
  ) 
 Here is how much of TeX's memory you used:
- 43947 strings out of 492616
- 1027722 string characters out of 6128982
+ 43946 strings out of 492616
+ 1028078 string characters out of 6128982
  1267445 words of memory out of 5000000
  47157 multiletter control sequences out of 15000+600000
  592535 words of font info for 183 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,14n,100p,1998b,1205s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v2.pdf (7 pages, 13335747 bytes).
+Output written on /Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020-Robust-game-theoretic-decision-making-for-autonomous-vehicles/ACC2020/main_v2.pdf (7 pages, 2766453 bytes).
 PDF statistics:
- 429 PDF objects out of 1000 (max. 8388607)
- 324 compressed objects within 4 object streams
+ 550 PDF objects out of 1000 (max. 8388607)
+ 414 compressed objects within 5 object streams
  65 named destinations out of 1000 (max. 500000)
  295 words of extra memory for PDF output out of 10000 (max. 10000000)
 
