@@ -274,7 +274,7 @@
 	 \label{eq:stage_reward}
 	 \end{align}
 	
-	\noindent where $\boldsymbol{{\phi}_{t+j}} = \left\{\phi_{1,\,{t+j}},\,\phi_{2,\,{t+j}},\,\cdots,\,\phi_{m,\,{t+j}}\right\}$ is the feature vector at step $j$ and the weights for these features are in  $\boldsymbol{{\alpha}} = \left\{\alpha_{1},\,\alpha_{2},\,\cdots,\,\alpha_{m}\right\}$, in which $\alpha_{i}>0,\,\forall \, i\in \mathbb{Z}_{\left[0:m\right]}$. For the lane changing scenario in  Fig.~\ref{fig:lane_changing}, the  features considered are described below. 
+	\noindent where $\boldsymbol{{\phi}_{t+j}} = \left\{\phi_{1,\,{t+j}},\,\phi_{2,\,{t+j}},\,\cdots,\,\phi_{m,\,{t+j}}\right\}$ is the feature vector at step $j$ and the weights for these features are in  $\boldsymbol{{\alpha}} = \left\{\alpha_{1},\,\alpha_{2},\,\cdots,\,\alpha_{m}\right\}$, in which $\alpha_{i}>0,\,\forall \, i\in \mathbb{Z}_{\left[1,\,m\right]}$. For the lane changing scenario in  Fig.~\ref{fig:lane_changing}, the  features considered are described below. 
 	
 	Rectangular outer approximation of the geometric contour of each vehicle is considered as shown by the dash-dotted boxes in Fig.~\ref{fig:lane_changing}. This outer approximation is referred as the collision avoidance zone (c). The features, $\phi_{1,\,{t}},\,\phi_{2,\,{t}}$ and $\phi_{3,\,{t}}$, are indicator functions based on the collision avoidance zone of the vehicles that respectively characterize:
 	\begin{itemize}

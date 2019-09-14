@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex main_v3"] 1568413491 "main_v3.aux" "main_v3.bbl" "main_v3" 1568484168
+["bibtex main_v3"] 1568413491 "main_v3.aux" "main_v3.bbl" "main_v3" 1568484291
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/base/ieeetr.bst" 1480098433 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
   "Reference.bib" 1567548450 10306 b0f92ee23fe0232c0044911e6eb3836c ""
-  "main_v3.aux" 1568413535 8373 b3b91b0fbd07cf4872a65aa389e67288 ""
+  "main_v3.aux" 1568484291 8373 b3b91b0fbd07cf4872a65aa389e67288 ""
   (generated)
   "main_v3.bbl"
   "main_v3.blg"
-["pdflatex"] 1568413534 "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020_arxiv/main_v3.tex" "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020_arxiv/main_v3.pdf" "main_v3" 1568484168
-  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020_arxiv/main_v3.aux" 1568413535 8373 b3b91b0fbd07cf4872a65aa389e67288 ""
-  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020_arxiv/main_v3.tex" 1568484168 50649 c4ebc7e9a22dfe822b02702f89c97a2b ""
-  "/dev/null" 1568484168 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1568484289 "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020_arxiv/main_v3.tex" "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020_arxiv/main_v3.pdf" "main_v3" 1568484291
+  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020_arxiv/main_v3.aux" 1568484291 8373 b3b91b0fbd07cf4872a65aa389e67288 ""
+  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020_arxiv/main_v3.tex" 1568484289 50651 d63c98ae11d38329c444b3dae91d51f8 ""
+  "/dev/null" 1568484291 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1480098688 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -315,14 +315,14 @@
   "Figures/plot_con6.pdf" 1568483444 226384 4cd204c2c9db2ff03135ff18b9acedab ""
   "Figures/plot_con8.pdf" 1568483444 227260 9c2dba28fa012058993c5d7b71245476 ""
   "Figures/red_car.pdf" 1565100815 43363 3acbd389e0f202e6b61c88cd3c98a123 ""
-  "main_v3.aux" 1568413535 8373 b3b91b0fbd07cf4872a65aa389e67288 ""
+  "main_v3.aux" 1568484291 8373 b3b91b0fbd07cf4872a65aa389e67288 ""
   "main_v3.bbl" 1568413491 5013 1f2f4b6afe0765e1e2c1acf8596033cf "bibtex main_v3"
-  "main_v3.out" 1568413535 702 aed7ddb53ff82816f757e38d388c25ee ""
-  "main_v3.tex" 1568484168 50649 c4ebc7e9a22dfe822b02702f89c97a2b ""
+  "main_v3.out" 1568484291 702 aed7ddb53ff82816f757e38d388c25ee ""
+  "main_v3.tex" 1568484289 50651 d63c98ae11d38329c444b3dae91d51f8 ""
   (generated)
   "main_v3.log"
-  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020_arxiv/main_v3.log"
-  "main_v3.pdf"
-  "main_v3.out"
   "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020_arxiv/main_v3.pdf"
+  "main_v3.out"
+  "/Users/goks/GoogleDrive/US/Post_doc/Autonomous_driving/Reports/ACC2020_arxiv/main_v3.log"
   "main_v3.aux"
+  "main_v3.pdf"
