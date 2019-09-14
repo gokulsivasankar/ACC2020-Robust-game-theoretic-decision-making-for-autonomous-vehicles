@@ -95,7 +95,8 @@
 	
 	\begin{abstract}
 		
-		In a typical traffic scenario, autonomous vehicles are required to share the road with other road participants, e.g., human driven vehicles, pedestrians, etc. To successfully navigate the traffic, a cognitive hierarchy theory such as level-k framework, can be used by the autonomous agents to categorize the agents based on their depth of strategic thought and act accordingly. However, mismatch between the vehicle dynamics and its predictions, and improper classification of the agents can lead to undesirable behavior or collision. Robust approaches can handle the  uncertainties, however, might result in a conservative behavior of the autonomous vehicle. This paper proposes an adaptive robust decision making strategy for autonomous vehicles to handle model mismatches in the prediction model while utilizing the confidence of the driver behavior to obtain less conservative actions. The effectiveness of the proposed approach is validated for a lane change maneuver in a highway driving scenario.
+		In a typical traffic scenario, autonomous vehicles are required to share the road with other road participants, e.g., human driven vehicles, pedestrians, etc. To successfully navigate the traffic, \textcolor{blue}{an adaptive level-\textit{k} framework }%a cognitive hierarchy theory such as level-k framework, 
+		can be used by the autonomous agents to categorize the agents based on their depth of strategic thought and act accordingly. However, mismatch between the vehicle dynamics and its predictions, and improper classification of the agents can lead to undesirable behavior or collision. Robust approaches can handle the  uncertainties, however, might result in a conservative behavior of the autonomous vehicle. This paper proposes an adaptive robust decision making strategy for autonomous vehicles to handle model mismatches in the prediction model while utilizing the confidence of the driver behavior to obtain less conservative actions. The effectiveness of the proposed approach is validated for a lane change maneuver in a highway driving scenario.
 	
 	\end{abstract}
 	
@@ -234,7 +235,7 @@
 		{\mathcal{W}} \coloneqq  \left\{ w = \left(w_x,\,w_y\right) |\zeta w\leq\theta,\,\zeta\in\mathbb{R}^{a\times 2},\,\theta\in\mathbb{R}^{b}\right\},
 		\label{eq:dist_set}
 	\end{align}
-	where $a,\, b \in 2\mathbb{Z}^{+}$. The disturbance set is assumed to contain the origin. Furthermore, it is assumed that the rear wheels cannot be steered. Therefore, the control input to the model \eqref{eq:mod}, represented by $\gamma\left(t\right) = \left(a\left(t\right),\, \delta_f\left(t\right)\right)$, is the acceleration and front steering angle pair. 
+	where $a,\, b \in 2\mathbb{Z}^{+}$. The disturbance set is assumed to \textcolor{blue}{be bounded by appropriate values and} contain the origin. Furthermore, it is assumed that the rear wheels cannot be steered. Therefore, the control input to the model \eqref{eq:mod}, represented by $\gamma\left(t\right) = \left(a\left(t\right),\, \delta_f\left(t\right)\right)$, is the acceleration and front steering angle pair. 
 
 	
 	%==========================================================================%
@@ -307,8 +308,13 @@
 	 	\end{align}
 	 	where the reference velocity is typically chosen as the legislated speed limit.
 	\end{itemize}
- 
-
+	
+ \textcolor{blue}{Intuitively, we impose higher weights on first three vectors to avoid catastrophes, otherwise the weights are relaxed as,}
+ \begin{equation}\label{weights_order}
+    \color{blue}
+     \phi_1 > \phi_2 > \phi_3 \gg \phi_4 > \phi_5 > \phi_6. \nonumber
+ \end{equation}
+\textcolor{blue}{and these are tuning parameters that vary depending on prioritized tasks.}
 
  
  	\subsection{Level-k framework}
@@ -377,9 +383,9 @@
 		\label{eq:adaptive_dist_set}
 	\end{align}
 
-	\noindent where at time $t$, $P_{K_{i}^l = 0} (t) $ is the probability that the \nth{i} agent is a level-0 driver from the perspective of the \nth{l} autonomous agent, and $\bar{\mathcal{W}}_{i}^{l}(t)$ denotes the disturbance set. It is assumed that, initially, all the agents are level-0 drivers, i.e., $P_{K_{i}^l = 0} (0) = 1,\, \forall i \in \mathcal{O}$. Essentially, this assumption allows the autonomous agent to be cautious with another interacting agent when there is no/less information about that agent. If an \nth{i} agent is level-0, as time evolves, $P_{K_{i}^l = 0} (t)$ will continue to be equal to one, and hence, the autonomous agent take conservative actions (or behave like level-1 driver). On the other hand, when the \nth{i} agent is a level-1 driver, $P_{K_{i}^l = 0} (t)$ will decrease, resulting in a reduced disturbance set size, thereby, allowing the autonomous agent to take less conservative actions and adapt to the behavior of the interacting agents while capable of handling the uncertainties arising due to the use of a simple prediction model. 
+	\noindent where at time $t$, $P_{K_{i}^l = 0} (t) $ is the probability that the \nth{i} agent is a level-0 driver from the perspective of the \nth{l} autonomous agent, and $\bar{\mathcal{W}}_{i}^{l}(t)$ denotes the disturbance set. \textcolor{blue}{Due to continuous nature of probability, it facilitates the expression of a driver's degree of aggressiveness (or conservatism) between level-0 and level-1. }It is assumed that, initially, all the agents are level-0 drivers, i.e., $P_{K_{i}^l = 0} (0) = 1,\, \forall i \in \mathcal{O}$. Essentially, this assumption allows the autonomous agent to be cautious with another interacting agent when there is no/less information about that agent. If an \nth{i} agent is level-0, as time evolves, $P_{K_{i}^l = 0} (t)$ will continue to be equal to one, and hence, the autonomous agent take conservative actions (or behave like level-1 driver). On the other hand, when the \nth{i} agent is a level-1 driver, $P_{K_{i}^l = 0} (t)$ will decrease, resulting in a reduced disturbance set size, thereby, allowing the autonomous agent to take less conservative actions and adapt to the behavior of the interacting agents while capable of handling the uncertainties arising due to the use of a simple prediction model. 
 
-	When interacting with an agent $i\in \mathcal{O}$, the objective the autonomous agent $l$ is to maximize the expected cumulative reward \eqref{eq:cum_reward_multi}, while accounting for the effect of the worst-case uncertainty from the possible disturbance realizations. The optimal control sequence, $\optactseq{l}$, is obtained by solving the following optimization problem
+	When interacting with an agent $i\in \mathcal{O}$, the objective the autonomous agent $l$ is to maximize the expected cumulative reward \eqref{eq:cum_reward_multi}, while accounting for the effect of the worst-case uncertainty from the possible disturbance realizations. The optimal control sequence, $\optactseq{l}$, is obtained by solving the following optimization problem  \textcolor{blue}{that is based on decision tree.}
 	\begin{subequations}
 		\begin{align}
 			\boldsymbol{\gamma^{*}_{t}[l]} =  & \arg \underset {\boldsymbol{\gamma_{t}[l]} \in  \boldsymbol{\Gamma}} {\max}\, \, \underset{w_{t+j}^{p} \in \bar{\mathcal{W}}_{i}^{l}(t)}{\min} \, \, \mathcal{R}_P\left(\boldsymbol{\gamma_{t}[l]}\right) \\
